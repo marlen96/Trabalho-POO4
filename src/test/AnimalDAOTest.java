@@ -8,7 +8,7 @@ import model.Animal;
 
 public class AnimalDAOTest extends BasicDAOTest{
 
-	public Animal animalteste = new Animal();
+	private Animal animalteste = new Animal();
 	
 	@Before
 	public void setUp() {

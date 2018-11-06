@@ -1,7 +1,7 @@
 package model;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -24,7 +24,7 @@ public class ProdutoServico extends BasicModel  {
     private String marca;
     private BigDecimal precoDeVenda;
     private BigDecimal precoDeCompra;
-    private Date validade;
+    private Calendar validade;
     private String lote;
     private Tipo tipo;
     private List<FornecedorProdutoServico> fornecedoresProdutosServicos;
@@ -69,11 +69,11 @@ public class ProdutoServico extends BasicModel  {
 
 	@Temporal(TemporalType.DATE)
     @Column(name = "validade")
-	public Date getValidade() {
+	public Calendar getValidade() {
         return validade;
     }
 
-    public void setValidade(Date validade) {
+    public void setValidade(Calendar validade) {
         this.validade = validade;
     }
     

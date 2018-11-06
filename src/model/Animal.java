@@ -13,7 +13,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 
 import org.hibernate.annotations.Cascade;
 
@@ -106,19 +105,5 @@ public class Animal extends BasicModel{
         this.fichasAnimais = fichasAnimais;
     }
 
-    @Override
-    public String toString() {
-        return nome;
-    }
-    
-    @Transient
-    @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Animal) {
-            Animal i = (Animal) obj;
-            return i.getId().equals(this.getId());
-        }
-        return false;
-    }
 
 }
