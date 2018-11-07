@@ -12,16 +12,8 @@
 </head>
 <body>
 <% 		
-			Animal animalteste = new Animal();
-			Calendar c = Calendar.getInstance();
-			c.set(2012, 12, 1);
-			animalteste.setNome("rubens");
-			animalteste.setPesoOuPorte("medio");
-			animalteste.setDataNascimento(c);
-			animalteste.setEspecie("teste");
-			animalteste.setRaca("teste2");
-			
-			new BasicDAO<Animal>(animalteste).remover();
+
+			AnimalDAO.getInstance().buscarTodas();
 			%>
 </body>
 </html>

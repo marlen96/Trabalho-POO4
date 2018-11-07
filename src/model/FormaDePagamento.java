@@ -5,19 +5,36 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Cascade;
 
 @Entity
 @Table(name = "forma_de_pagamento")
-public class FormaDePagamento extends BasicModel {
+public class FormaDePagamento{
    
+	private Long id;
     private String descricao;
-    private List<VendaServicoFormaDePagamento> vendasServicosFormasDePagamentos;
+    private List<VendaServico> vendasServico;
 
-    @Column(name = "descricao")
+    
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence_geral")
+	@SequenceGenerator(name = "sequence_geral", sequenceName = "sequence_geral", allocationSize = 1)
+	@Column(name="id_forma_de_pagamento")
+    public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	@Column(name = "descricao")
     public String getDescricao() {
         return descricao;
     }
@@ -25,18 +42,17 @@ public class FormaDePagamento extends BasicModel {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+    
+    @ManyToMany(mappedBy="formasdepagamentos", cascade=CascadeType.ALL)
+    public List<VendaServico> getVendasServico() {
+		return vendasServico;
+	}
 
-    @OneToMany(mappedBy = "formaDePagamento", cascade = CascadeType.ALL)
-    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
-    public List<VendaServicoFormaDePagamento> getVendasServicosFormasDePagamentos() {
-        return vendasServicosFormasDePagamentos;
-    }
+	public void setVendasServico(List<VendaServico> vendasServico) {
+		this.vendasServico = vendasServico;
+	}
 
-    public void setVendasServicosFormasDePagamentos(List<VendaServicoFormaDePagamento> vendasServicosFormasDePagamentos) {
-        this.vendasServicosFormasDePagamentos = vendasServicosFormasDePagamentos;
-    }
-
-    @Override
+	@Override
     public String toString() {
         return descricao;
     }
