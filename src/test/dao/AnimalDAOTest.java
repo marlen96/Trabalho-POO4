@@ -1,29 +1,31 @@
 package test.dao;
 
-import static org.junit.Assert.assertEquals;
+import java.util.Calendar;
 
 import org.junit.Before;
-import org.junit.Test;
 
-import dao.BasicDAO;
 import model.Animal;
-import test.AbstractTestCase;
 
-public class AnimalDAOTest extends AbstractTestCase{
-
-	private Animal animalteste = new Animal();
+public class AnimalDAOTest extends BasicDAOTest{
+	
+	private Animal animal = new Animal();
 	
 	@Before
 	public void setUp() {
-			animalteste = getAnimalFake();
+		animal = new Animal();
+		Calendar c = Calendar.getInstance();
+		c.set(2012, 12, 1);
+		animal.setNome("rubens");
+		animal.setPesoOuPorte("medio");
+		animal.setDataNascimento(c);
+		animal.setEspecie("teste");
+		animal.setRaca("teste2");
+		animal.setSexo("macho");
 	}
 
-	@Test
-	public void persisitirInserirTest(){
-		animalteste = (Animal) new BasicDAO<Animal>(animalteste).persistir(); 
-		assertEquals(true, animalteste.getId() != null);
-		
+	@Override
+	public Object getObjectTest() {
+	   return animal;
 	}
-
 
 }

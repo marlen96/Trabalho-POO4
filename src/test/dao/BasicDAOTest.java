@@ -37,4 +37,14 @@ public abstract class BasicDAOTest {
 		Object c = new BasicDAO<Object>(getObjectTest()).buscarPorId(new BasicDAO<Object>(getObjectTest()).consultaPrimeiroID());
 		assertNotNull(c);
 	}
+	
+	@Test
+	public void removerIdTest(){
+		BasicModel objectTeste = (BasicModel) new BasicDAO<Object>(getObjectTest()).
+				buscarPorId((Long)new BasicDAO<Object>(getObjectTest()).
+						consultaPrimeiroID());
+		
+		assertEquals(true, new BasicDAO<Object>(objectTeste).remover());
+	}
+	
 }

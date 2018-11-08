@@ -3,6 +3,8 @@ package test;
 import java.math.BigDecimal;
 import java.util.Calendar;
 
+import javax.persistence.MappedSuperclass;
+
 import model.AgendamentoConsulta;
 import model.Anamnese;
 import model.Animal;

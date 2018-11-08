@@ -19,7 +19,7 @@ public class BasicDAO <T>  {
 	 * Remove um Autor 
 	 * @param Autor
 	 */
-	public void remover() {
+	public boolean remover() {
 		EntityManager em = PersistenceUtil.getEntityManager();
 		em.getTransaction().begin();
 		try{
@@ -27,18 +27,8 @@ public class BasicDAO <T>  {
 		em.getTransaction().commit();
 		}catch (Exception e) {
 			e.printStackTrace();
-		}		
-	}
-	
-	public void removerPorId(Long id) {
-		EntityManager em = PersistenceUtil.getEntityManager();
-		em.getTransaction().begin();
-		try {
-		em.remove(id);
-		em.getTransaction().commit();
-		}catch (Exception e) {
-			e.printStackTrace();
 		}
+		return true;
 	}
 
 	/**
