@@ -7,15 +7,11 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -24,9 +20,8 @@ import org.hibernate.annotations.Cascade;
 
 @Entity
 @Table(name = "venda_servico")
-public class VendaServico{
-
-	private Long id;
+public class VendaServico extends BasicModel{
+	
     private BigDecimal valorTotal;
     private String descricao;
     private Calendar dataServico;
@@ -34,19 +29,6 @@ public class VendaServico{
     private Funcionario funcionario;
     private List<ProdutoServicoVendaServico> produtosServicosVendasServicos;
     private List<FormaDePagamento> formasdepagamentos;
-
-    
-	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence_geral")
-	@SequenceGenerator(name = "sequence_geral", sequenceName = "sequence_geral", allocationSize = 1)
-	@Column(name="id_venda_servico")
-    public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	@Column(name = "valor_total")
     public BigDecimal getValorTotal() {
@@ -107,7 +89,7 @@ public class VendaServico{
 	}
     
     @ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "venda_servico_forma_de_pagamento", joinColumns = { @JoinColumn(name = "id_forma_de_pagamento") }, inverseJoinColumns = { @JoinColumn(name = "id_venda_servico") })
+	@JoinTable(name = "venda_servico_forma_de_pagamento", joinColumns = { @JoinColumn(name = "id_venda_servico") }, inverseJoinColumns = { @JoinColumn(name = "id_forma_de_pagamento") })
     public List<FormaDePagamento> getFormasdepagamentos() {
 		return formasdepagamentos;
 	}

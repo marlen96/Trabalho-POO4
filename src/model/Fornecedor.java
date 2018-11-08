@@ -5,23 +5,18 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Cascade;
 
 @Entity
 @Table(name = "fornecedor")
-public class Fornecedor{
-    
-	private Long id;
+public class Fornecedor extends BasicModel{
+
     private String nomeFantasia;
     private String cnpj;
     private String razaoSocial;
@@ -34,19 +29,6 @@ public class Fornecedor{
     private List<ContasAPagar> contasAPagar;
     private List<ProdutoServico> produtoServico;
     
-   
-    @Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence_geral")
-	@SequenceGenerator(name = "sequence_geral", sequenceName = "sequence_geral", allocationSize = 1)
-	@Column(name="id_fornecedor")
-    public Long getId() {
-    	return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
 	@Column(name = "nome_fantasia")
     public String getNomeFantasia() {
         return nomeFantasia;
@@ -138,7 +120,7 @@ public class Fornecedor{
     }
 
     @ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "fornecedor_produto_servico", joinColumns = { @JoinColumn(name = "id_produto_servico") }, inverseJoinColumns = { @JoinColumn(name = "id_fornecedor") })
+	@JoinTable(name = "fornecedor_produto_servico", joinColumns = { @JoinColumn(name = "id_fornecedor") }, inverseJoinColumns = { @JoinColumn(name = "id_produto_servico") })
 	public List<ProdutoServico> getProdutoServico() {
 		return produtoServico;
 	}

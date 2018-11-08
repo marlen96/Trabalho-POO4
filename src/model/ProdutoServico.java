@@ -7,14 +7,10 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -23,9 +19,8 @@ import org.hibernate.annotations.Cascade;
 
 @Entity
 @Table(name = "produto_servico")
-public class ProdutoServico {
+public class ProdutoServico extends BasicModel {
     
-	private Long id;
     private String nome;
     private String marca;
     private BigDecimal precoDeVenda;
@@ -34,21 +29,9 @@ public class ProdutoServico {
     private String lote;
     private Tipo tipo;
     private List<Fornecedor> fornecedor;
-    private List<ProdutoServicoAgendamentoConsulta> fornecedoresServicosAgendamentosConsultas;
+    private List<AgendamentoConsulta> agendamentoConsulta;
     private List<ProdutoServicoVendaServico> produtosServicosVendasServicos;
     
-    
-    @Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequence_geral")
-	@SequenceGenerator(name = "sequence_geral", sequenceName = "sequence_geral", allocationSize = 1)
-	@Column(name="id_produto_servico")
-    public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 	
 	@ManyToMany(mappedBy="produtoServico", cascade=CascadeType.ALL)
 	public List<Fornecedor> getFornecedor() {
@@ -124,17 +107,16 @@ public class ProdutoServico {
         this.tipo = tipo;
     }
     
-    @OneToMany(mappedBy = "produtoServico", cascade = CascadeType.ALL)
-    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
-    public List<ProdutoServicoAgendamentoConsulta> getFornecedoresServicosAgendamentosConsultas() {
-        return fornecedoresServicosAgendamentosConsultas;
-    }
+    @ManyToMany(mappedBy="produtoServico", cascade=CascadeType.ALL)
+    public List<AgendamentoConsulta> getAgendamentoConsulta() {
+		return agendamentoConsulta;
+	}
 
-    public void setFornecedoresServicosAgendamentosConsultas(List<ProdutoServicoAgendamentoConsulta> fornecedoresServicosAgendamentosConsultas) {
-        this.fornecedoresServicosAgendamentosConsultas = fornecedoresServicosAgendamentosConsultas;
-    }
+	public void setAgendamentoConsulta(List<AgendamentoConsulta> agendamentoConsulta) {
+		this.agendamentoConsulta = agendamentoConsulta;
+	}
 
-    @OneToMany(mappedBy = "produtoServico", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "produtoServico", cascade = CascadeType.ALL)
     @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     public List<ProdutoServicoVendaServico> getProdutosServicosVendasServicos() {
         return produtosServicosVendasServicos;
