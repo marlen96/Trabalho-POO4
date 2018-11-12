@@ -86,19 +86,5 @@ public class Vacina extends BasicModel {
     public void setTipoDeVacina(TipoDeVacina tipoDeVacina) {
         this.tipoDeVacina = tipoDeVacina;
     }
-
-    @Override
-    public String toString() {
-        return marca;
-    }
-    
-     @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Vacina) {
-            Vacina i = (Vacina) obj;
-            return i.getId().equals(this.getId());
-        }
-        return false;
-    }
     
 }

@@ -35,19 +35,5 @@ public class TipoDeConta extends BasicModel {
     public void setContasAPagar(List<ContasAPagar> contasAPagar) {
         this.contasAPagar = contasAPagar;
     }
-
-    @Override
-    public String toString() {
-        return descricao;
-    }
-   
-     @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof TipoDeConta) {
-            TipoDeConta i = (TipoDeConta) obj;
-            return i.getId().equals(this.getId());
-        }
-        return false;
-    }
     
 }

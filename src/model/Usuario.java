@@ -46,19 +46,5 @@ public class Usuario extends BasicModel{
     public void setFuncionarios(List<Funcionario> funcionarios) {
         this.funcionarios = funcionarios;
     }
-
-    @Override
-    public String toString() {
-        return login;
-    }
-    
-     @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Usuario) {
-            Usuario i = (Usuario) obj;
-            return i.getId().equals(this.getId());
-        }
-        return false;
-    }
     
 }

@@ -97,19 +97,5 @@ public class VendaServico extends BasicModel{
 	public void setFormasdepagamentos(List<FormaDePagamento> formasdepagamentos) {
 		this.formasdepagamentos = formasdepagamentos;
 	}
-
-	@Override
-    public String toString() {
-        return descricao;
-                }
-
-	@Override
-    public boolean equals(Object obj) {
-        if (obj instanceof VendaServico) {
-            VendaServico i = (VendaServico) obj;
-            return i.getId().equals(this.getId());
-        }
-        return false;
-    }
     
 }

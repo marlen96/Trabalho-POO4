@@ -25,10 +25,12 @@ public class BasicDAO <T>  {
 		try{
 		em.remove(this.objeto);
 		em.getTransaction().commit();
+		return true;
 		}catch (Exception e) {
 			e.printStackTrace();
+			return false;
 		}
-		return true;
+		
 	}
 
 	/**

@@ -1,9 +1,19 @@
 package test.dao;
 
-import org.junit.Before;
+import static org.junit.Assert.assertNotNull;
 
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import dao.BasicDAO;
+import dao.FuncionarioDAO;
 import model.EstadoCivilEnum;
 import model.Funcionario;
+import model.Usuario;
+import model.VendaServico;
 
 public class FuncionarioDAOTest extends BasicDAOTest {
 
@@ -25,8 +35,18 @@ public class FuncionarioDAOTest extends BasicDAOTest {
 		funcionario.setRua("ruateste");
 		funcionario.setTelefone("3212312321");
 		funcionario.setTituloDeEleitor("422873420108");
+		funcionario.setUsuarios((Usuario) new BasicDAO<Usuario>(new Usuario()).buscarPorId(new BasicDAO<Usuario>(new Usuario()).consultaUltimoID()));
+		VendaServico c = (VendaServico) new BasicDAO<VendaServico>(new VendaServico()).buscarPorId(new BasicDAO<VendaServico>(new VendaServico()).consultaUltimoID());
+		List<VendaServico> listc = Arrays.asList(c);
+		funcionario.setVendasServicos(listc);
 	}
 
+	@Test
+	public void consultaTotalRegsTest() {
+		Long a = FuncionarioDAO.getInstance().consultaTotalRegs();
+		assertNotNull(a);
+	}
+	
 	@Override
 	public Object getObjectTest() {
 		return funcionario;

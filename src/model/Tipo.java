@@ -1,6 +1,5 @@
 package model;
 
-import java.beans.Transient;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -36,21 +35,6 @@ public class Tipo extends BasicModel {
 
     public void setProdutosServicos(List<ProdutoServico> produtosServicos) {
         this.produtosServicos = produtosServicos;
-    }
-
-    @Override
-    public String toString() {
-        return descricao;
-    }
-    
-    @Transient
-     @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Tipo) {
-            Tipo i = (Tipo) obj;
-            return i.getId().equals(this.getId());
-        }
-        return false;
     }
     
 }

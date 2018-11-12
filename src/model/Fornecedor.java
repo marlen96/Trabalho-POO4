@@ -128,19 +128,5 @@ public class Fornecedor extends BasicModel{
 	public void setProdutoServico(List<ProdutoServico> produtoServico) {
 		this.produtoServico = produtoServico;
 	}
-
-	@Override
-    public String toString() {
-        return nomeFantasia;
-    }
-    
-     @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Fornecedor) {
-            Fornecedor i = (Fornecedor) obj;
-            return i.getId().equals(this.getId());
-        }
-        return false;
-    }
     
 }

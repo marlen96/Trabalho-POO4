@@ -1,6 +1,5 @@
 package model;
 
-import java.beans.Transient;
 import java.math.BigDecimal;
 import java.util.Calendar;
 
@@ -61,13 +60,4 @@ public class ContasAPagar extends BasicModel {
         this.tipoDeConta = tipoDeConta;
     }
 
-    @Transient
-     @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof ContasAPagar) {
-            ContasAPagar i = (ContasAPagar) obj;
-            return i.getId().equals(this.getId());
-        }
-        return false;
-    }
 }

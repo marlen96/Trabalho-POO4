@@ -1,6 +1,10 @@
 package dao;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
 import model.Fornecedor;
+import util.PersistenceUtil;
 
 public class FornecedorDAO extends BasicDAO<Object>{
 
@@ -15,5 +19,12 @@ public class FornecedorDAO extends BasicDAO<Object>{
 		return fornecedorDAO;
 	}
 	
+	public Long consultaTotalRegs() {
+		EntityManager em = PersistenceUtil.getEntityManager();
+
+		Query query = em.createQuery("select count(f.id) from Fornecedor as f");
+		
+		return (Long) query.getSingleResult();
+	}
 	
 }

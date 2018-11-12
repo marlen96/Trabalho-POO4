@@ -6,7 +6,6 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 import org.hibernate.annotations.Cascade;
 
@@ -49,16 +48,6 @@ public class Cliente extends Pessoas{
 
     public void setVendasServico(List<VendaServico> vendasServico) {
         this.vendasServico = vendasServico;
-    }
-
-    @Transient
-    @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Cliente) {
-            Cliente i = (Cliente) obj;
-            return i.getId().equals(this.getId());
-        }
-        return false;
     }
 
 }

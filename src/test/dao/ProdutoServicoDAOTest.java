@@ -1,10 +1,22 @@
 package test.dao;
 
+import static org.junit.Assert.assertNotNull;
+
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.List;
 
 import org.junit.Before;
+import org.junit.Test;
+
+import dao.BasicDAO;
+import dao.ProdutoServicoDAO;
+import model.AgendamentoConsulta;
+import model.Fornecedor;
 import model.ProdutoServico;
+import model.ProdutoServicoVendaServico;
+import model.Tipo;
 
 public class ProdutoServicoDAOTest extends BasicDAOTest {
 
@@ -15,12 +27,29 @@ public class ProdutoServicoDAOTest extends BasicDAOTest {
 		produtoServico.setLote("231231038sdsd");
 		produtoServico.setMarca("topterp");
 		produtoServico.setNome("topterm philipsbalita");
-		produtoServico.setPrecoDeCompra(BigDecimal.valueOf(10.00));
-		produtoServico.setPrecoDeVenda(BigDecimal.valueOf(12.00));
+		produtoServico.setPrecoDeCompra(BigDecimal.TEN);
+		produtoServico.setPrecoDeVenda(BigDecimal.TEN);
 		Calendar c = Calendar.getInstance();
 		c.set(2012, 12, 1);
 		produtoServico.setValidade(c);
+		Fornecedor a = (Fornecedor) new BasicDAO<Fornecedor>(new Fornecedor()).buscarPorId(new BasicDAO<Fornecedor>(new Fornecedor()).consultaUltimoID());
+		List<Fornecedor> lista = Arrays.asList(a);
+		produtoServico.setFornecedor(lista);
+		AgendamentoConsulta b = (AgendamentoConsulta) new BasicDAO<AgendamentoConsulta>(new AgendamentoConsulta()).buscarPorId(new BasicDAO<AgendamentoConsulta>(new AgendamentoConsulta()).consultaUltimoID());
+		List<AgendamentoConsulta> listb = Arrays.asList(b);
+		produtoServico.setAgendamentoConsulta(listb);
+		ProdutoServicoVendaServico p = (ProdutoServicoVendaServico) new BasicDAO<ProdutoServicoVendaServico>(new ProdutoServicoVendaServico()).buscarPorId(new BasicDAO<ProdutoServicoVendaServico>(new ProdutoServicoVendaServico()).consultaUltimoID());
+		List<ProdutoServicoVendaServico> listc = Arrays.asList(p);
+		produtoServico.setProdutosServicosVendasServicos(listc);
+		produtoServico.setTipo((Tipo) new BasicDAO<Tipo>(new Tipo()).buscarPorId(new BasicDAO<Tipo>(new Tipo()).consultaUltimoID()));
 		
+		
+	}
+	
+	@Test
+	public void consultaTotalRegsTest() {
+		Long a = ProdutoServicoDAO.getInstance().consultaTotalRegs();
+		assertNotNull(a);
 	}
 
 	@Override

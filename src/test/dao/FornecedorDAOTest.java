@@ -2,10 +2,19 @@ package test.dao;
 
 
 
+import static org.junit.Assert.assertNotNull;
+
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.Before;
+import org.junit.Test;
 
-
+import dao.BasicDAO;
+import dao.FornecedorDAO;
+import model.ContasAPagar;
 import model.Fornecedor;
+import model.ProdutoServico;
 
 public class FornecedorDAOTest extends BasicDAOTest {
 
@@ -22,6 +31,13 @@ public class FornecedorDAOTest extends BasicDAOTest {
 		fornecedor.setRazaoSocial("testerazaosocial");
 		fornecedor.setRua("ruateste");
 		fornecedor.setTelefone("3212312321");
+		ContasAPagar a = (ContasAPagar) new BasicDAO<ContasAPagar>(new ContasAPagar()).buscarPorId(new BasicDAO<ContasAPagar>(new ContasAPagar()).consultaUltimoID());
+		List<ContasAPagar> lista = Arrays.asList(a);
+		fornecedor.setContasAPagar(lista);
+		ProdutoServico b = (ProdutoServico) new BasicDAO<ProdutoServico>(new ProdutoServico()).buscarPorId(new BasicDAO<ProdutoServico>(new ProdutoServico()).consultaUltimoID());
+		List<ProdutoServico> listb = Arrays.asList(b);
+		fornecedor.setProdutoServico(listb);
+
 	}
 
 	@Override
@@ -29,5 +45,10 @@ public class FornecedorDAOTest extends BasicDAOTest {
 		return fornecedor;
 	}
 
+	@Test
+	public void consultaTotalRegsTest() {
+		Long a = FornecedorDAO.getInstance().consultaTotalRegs();
+		assertNotNull(a);
+	}
 	
 }

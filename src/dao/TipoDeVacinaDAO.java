@@ -1,6 +1,10 @@
 package dao;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
 import model.TipoDeVacina;
+import util.PersistenceUtil;
 
 public class TipoDeVacinaDAO extends BasicDAO<Object> {
 
@@ -17,4 +21,11 @@ public class TipoDeVacinaDAO extends BasicDAO<Object> {
 	}
 	
 
+	public Long consultaTotalRegs() {
+		EntityManager em = PersistenceUtil.getEntityManager();
+
+		Query query = em.createQuery("select count(t.id) from TipoDeVacina as t");
+		
+		return (Long) query.getSingleResult();
+	}
 }

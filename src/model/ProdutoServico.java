@@ -125,19 +125,5 @@ public class ProdutoServico extends BasicModel {
     public void setProdutosServicosVendasServicos(List<ProdutoServicoVendaServico> produtosServicosVendasServicos) {
         this.produtosServicosVendasServicos = produtosServicosVendasServicos;
     }
-
-    @Override
-    public String toString() {
-        return nome;
-                }
-    
-     @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof ProdutoServico) {
-            ProdutoServico i = (ProdutoServico) obj;
-            return i.getId().equals(this.getId());
-        }
-        return false;
-    }
     
 }

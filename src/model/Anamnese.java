@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
 @Table(name = "anamnese")
@@ -64,16 +63,6 @@ public class Anamnese extends BasicModel {
 
     public void setFichaAnimal(FichaAnimal fichaAnimal) {
         this.fichaAnimal = fichaAnimal;
-    }
-
-    @Transient
-     @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Anamnese) {
-            Anamnese i = (Anamnese) obj;
-            return i.getId().equals(this.getId());
-        }
-        return false;
     }
    
 }

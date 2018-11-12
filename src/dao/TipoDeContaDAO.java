@@ -1,6 +1,10 @@
 package dao;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
 import model.TipoDeConta;
+import util.PersistenceUtil;
 
 public class TipoDeContaDAO extends BasicDAO<Object>{
 
@@ -15,4 +19,11 @@ public class TipoDeContaDAO extends BasicDAO<Object>{
 		return tipoDeContaDAO;
 	}
 
+	public Long consultaTotalRegs() {
+		EntityManager em = PersistenceUtil.getEntityManager();
+
+		Query query = em.createQuery("select count(t.id) from TipoDeConta as t");
+		
+		return (Long) query.getSingleResult();
+	}
 }

@@ -1,6 +1,5 @@
 package model;
 
-import java.beans.Transient;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -82,16 +81,6 @@ public class Funcionario extends Pessoas{
 
     public void setVendasServicos(List<VendaServico> vendasServicos) {
         this.vendasServicos = vendasServicos;
-    }
-
-    @Transient
-    @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Funcionario) {
-            Funcionario i = (Funcionario) obj;
-            return i.getId().equals(this.getId());
-        }
-        return false;
     }
     
 }

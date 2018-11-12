@@ -1,6 +1,5 @@
 package model;
 
-import java.beans.Transient;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -60,21 +59,6 @@ public class FichaAnimal extends BasicModel{
 
     public void setVacinas(List<Vacina> vacinas) {
         this.vacinas = vacinas;
-    }
-
-    @Override
-    public String toString() {
-        return animal.getNome();
-    }
-    
-    @Transient
-    @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof FichaAnimal) {
-            FichaAnimal i = (FichaAnimal) obj;
-            return i.getId().equals(this.getId());
-        }
-        return false;
     }
     
 }
