@@ -2,6 +2,7 @@ package control;
 
 import java.util.List;
 
+import dao.AgendamentoConsultaDAO;
 import dao.BasicDAO;
 import model.AgendamentoConsulta;
 
@@ -39,5 +40,9 @@ public class AgendamentoConsultaController {
 	    
 	    public AgendamentoConsulta buscarPoriD(Long id) {
 	    	return (AgendamentoConsulta) new BasicDAO<AgendamentoConsulta>(new AgendamentoConsulta()).buscarPorId(id);
+	    }
+	    
+	    public Long consultarRegs() {
+	    	return AgendamentoConsultaDAO.getInstance().consultaTotalRegs();
 	    }
 }
