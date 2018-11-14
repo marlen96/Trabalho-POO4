@@ -39,13 +39,13 @@ public abstract class BasicDAOTest {
 		assertNotNull(c);
 	}
 	
-/*	@Test
+	@Test
 	public void removerIdTest(){
 		BasicModel objectTeste = (BasicModel) new BasicDAO<Object>(getObjectTest()).
 				buscarPorId((Long)new BasicDAO<Object>(getObjectTest()).
-						consultaUltimoID());
+						consultaPrimeiroID());
 		
 		assertEquals(true, new BasicDAO<Object>(objectTeste).remover());
-	}*/
+	}
 	
 }

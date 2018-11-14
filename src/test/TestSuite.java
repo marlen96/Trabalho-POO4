@@ -4,6 +4,23 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
+import test.control.AgendamentoConsultaControllerTest;
+import test.control.AnamneseControllerTest;
+import test.control.AnimalControllerTest;
+import test.control.ClienteControllerTest;
+import test.control.ContasAPagarControllerTest;
+import test.control.FichaAnimalControllerTest;
+import test.control.FormaDePagamentoControllerTest;
+import test.control.FornecedorControllerTest;
+import test.control.FuncionarioControllerTest;
+import test.control.ProdutoServicoControllerTest;
+import test.control.ProdutoServicoVendaServicoControllerTest;
+import test.control.TipoControllerTest;
+import test.control.TipoDeContaControllerTest;
+import test.control.TipoDeVacinaControllerTest;
+import test.control.UsuarioControllerTest;
+import test.control.VacinaControllerTest;
+import test.control.VendaServicoControllerTest;
 import test.dao.AgendamentoConsultaDAOTest;
 import test.dao.AnamneseDAOTest;
 import test.dao.AnimalDAOTest;
@@ -21,10 +38,11 @@ import test.dao.TipoDeVacinaDAOTest;
 import test.dao.UsuarioDAOTest;
 import test.dao.VacinaDAOTest;
 import test.dao.VendaServicoDAOTest;
+import test.util.CalculoCPFTest;
 
 @RunWith(Suite.class)
 @SuiteClasses({ 		
-	
+		// DAO TESTES!
 		AgendamentoConsultaDAOTest.class, 
 		AnamneseDAOTest.class, 
 		AnimalDAOTest.class, 
@@ -41,7 +59,29 @@ import test.dao.VendaServicoDAOTest;
 		TipoDeVacinaDAOTest.class, 
 		UsuarioDAOTest.class,
 		VacinaDAOTest.class, 
-		VendaServicoDAOTest.class })
+		VendaServicoDAOTest.class,
+		//Control TESTES!
+		AgendamentoConsultaControllerTest.class,
+		AnamneseControllerTest.class, 
+		AnimalControllerTest.class,
+		ClienteControllerTest.class, 
+		ContasAPagarControllerTest.class, 
+		FichaAnimalControllerTest.class,
+		FormaDePagamentoControllerTest.class, 
+		FornecedorControllerTest.class, 
+		FuncionarioControllerTest.class,
+		ProdutoServicoControllerTest.class, 
+		ProdutoServicoVendaServicoControllerTest.class, 
+		TipoControllerTest.class,
+		TipoDeContaControllerTest.class, 
+		TipoDeVacinaControllerTest.class,
+		UsuarioControllerTest.class,
+		VacinaControllerTest.class,
+		VendaServicoControllerTest.class,
+		
+		//Util Testes!
+		CalculoCPFTest.class
+})
 public class TestSuite {
 
 }
