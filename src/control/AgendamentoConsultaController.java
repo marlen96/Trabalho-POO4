@@ -45,4 +45,9 @@ public class AgendamentoConsultaController {
 	    public Long consultarRegs() {
 	    	return AgendamentoConsultaDAO.getInstance().consultaTotalRegs();
 	    }
+	    
+	    public List<AgendamentoConsulta> consultar(String consulta){
+	    	List<AgendamentoConsulta> teste = AgendamentoConsultaDAO.getInstance().consultar(consulta); 
+	    	return teste;
+	    }
 }

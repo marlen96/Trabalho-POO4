@@ -1,5 +1,7 @@
 package dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
@@ -24,8 +26,20 @@ public class FuncionarioDAO extends BasicDAO<Object> {
 		EntityManager em = PersistenceUtil.getEntityManager();
 
 		Query query = em.createQuery("select count(f.id) from Funcionario as f");
-		
+										
 		return (Long) query.getSingleResult();
 	}
 
+	@SuppressWarnings("unchecked")
+	public List<FuncionarioDAO> consultar(String pesquisa) {
+		EntityManager em = PersistenceUtil.getEntityManager();
+		Query query = em.createQuery("from Funcionario as inner join a.usuarios "
+									+ "where (upper(a.nome) like :pesquisa) "
+									+ "or (upper(a.email) like :pesquisa)"
+									+ "or (upper(a.login) like :pesquisa)"
+									+ "or (upper(a.telefone) like :pesquisa)");
+		query.setParameter("pesquisa", '%' + pesquisa.toUpperCase() + '%');
+
+		return query.getResultList();
+	}
 }

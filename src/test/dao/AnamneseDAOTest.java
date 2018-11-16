@@ -1,8 +1,10 @@
 package test.dao;
 
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -29,6 +31,12 @@ public class AnamneseDAOTest extends BasicDAOTest {
 	public void consultaTotalRegsTest() {
 		Long a = AnamneseDAO.getInstance().consultaTotalRegs();
 		assertNotNull(a);
+	}
+	
+	@Test
+	public void pesquisarTest() {
+		List<Anamnese> a= AnamneseDAO.getInstance().consultar("testediag");
+		assertEquals(true, a != null);
 	}
 	
 	@Override

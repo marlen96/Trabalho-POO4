@@ -46,4 +46,8 @@ public class FornecedorController {
 	    	return FornecedorDAO.getInstance().consultaTotalRegs();
 	    }
 	
+	    public List<Fornecedor> consultar(String consulta){
+	    	List<Fornecedor> teste = FornecedorDAO.getInstance().consultar(consulta); 
+	    	return teste;
+	    }
 }

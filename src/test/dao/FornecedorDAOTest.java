@@ -2,6 +2,7 @@ package test.dao;
 
 
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.Arrays;
@@ -45,6 +46,12 @@ public class FornecedorDAOTest extends BasicDAOTest {
 		return fornecedor;
 	}
 
+	@Test
+	public void pesquisarTest() {
+		List<Fornecedor> a= FornecedorDAO.getInstance().consultar("nomefantasiateste");
+		assertEquals(true, a != null);
+	}
+	
 	@Test
 	public void consultaTotalRegsTest() {
 		Long a = FornecedorDAO.getInstance().consultaTotalRegs();

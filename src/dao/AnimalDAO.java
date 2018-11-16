@@ -1,5 +1,7 @@
 package dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
@@ -28,4 +30,16 @@ public class AnimalDAO extends BasicDAO<Object> {
 		return (Long) query.getSingleResult();
 	}
 
+	@SuppressWarnings("unchecked")
+	public List<Animal> consultar(String pesquisa) {
+		EntityManager em = PersistenceUtil.getEntityManager();
+		Query query = em.createQuery("select a from Animal as a " 
+									+ "where (upper(a.nome) like :pesquisa) "
+									+ "or (upper(a.raca) like :pesquisa) "
+									+ "or (upper(a.especie) like :pesquisa)");
+		query.setParameter("pesquisa", '%' + pesquisa.toUpperCase() + '%');
+
+		return query.getResultList();
+	}
+	
 }

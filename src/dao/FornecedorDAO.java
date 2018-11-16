@@ -1,5 +1,7 @@
 package dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
@@ -25,6 +27,18 @@ public class FornecedorDAO extends BasicDAO<Object>{
 		Query query = em.createQuery("select count(f.id) from Fornecedor as f");
 		
 		return (Long) query.getSingleResult();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Fornecedor> consultar(String pesquisa) {
+		EntityManager em = PersistenceUtil.getEntityManager();
+		Query query = em.createQuery("select a from Fornecedor as a " 
+									+ "where (upper(a.nomeFantasia) like :pesquisa) "
+									+ "or (upper(a.cnpj) like :pesquisa) " 
+									+ "or (upper(a.razaoSocial) like :pesquisa)");
+		query.setParameter("pesquisa", '%' + pesquisa.toUpperCase() + '%');
+
+		return query.getResultList();
 	}
 	
 }

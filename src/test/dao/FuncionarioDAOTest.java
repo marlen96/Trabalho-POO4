@@ -1,5 +1,6 @@
 package test.dao;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.Arrays;
@@ -8,8 +9,10 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
+import dao.AgendamentoConsultaDAO;
 import dao.BasicDAO;
 import dao.FuncionarioDAO;
+import model.AgendamentoConsulta;
 import model.EstadoCivilEnum;
 import model.Funcionario;
 import model.Usuario;
@@ -45,6 +48,12 @@ public class FuncionarioDAOTest extends BasicDAOTest {
 	public void consultaTotalRegsTest() {
 		Long a = FuncionarioDAO.getInstance().consultaTotalRegs();
 		assertNotNull(a);
+	}
+	
+	@Test
+	public void pesquisarTest() {
+		List<AgendamentoConsulta> a= AgendamentoConsultaDAO.getInstance().consultar("testedesc");
+		assertEquals(true, a != null);
 	}
 	
 	@Override

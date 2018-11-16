@@ -1,5 +1,7 @@
 package dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
@@ -26,4 +28,15 @@ public class ContasAPagarDAO extends BasicDAO<Object>{
 		
 		return (Long) query.getSingleResult();
 	}
+	
+/*	@SuppressWarnings("unchecked")
+	public List<ContasAPagar> consultar(String pesquisa) {
+		EntityManager em = PersistenceUtil.getEntityManager();
+		Query query = em.createQuery("select a from ContasAPagar as a " 
+									+ "where (upper(a.fornecedor) like :pesquisa) "
+									+ "or (upper(a.data) like :pesquisa)");
+		query.setParameter("pesquisa", '%' + pesquisa.toUpperCase() + '%');
+
+		return query.getResultList();
+	}*/
 }

@@ -33,11 +33,9 @@ public class AgendamentoConsultaDAO extends BasicDAO<Object>{
 	@SuppressWarnings("unchecked")
 	public List<AgendamentoConsulta> consultar(String pesquisa) {
 		EntityManager em = PersistenceUtil.getEntityManager();
-		Query query = em.createQuery("select a from AgendamentoConsulta as a" 
-									+ "where a.id like :pesquisa "
-									+ "or (upper(a.descricao) like :pesquisa)"
-									+ "or (upper(a.status) like :pesquisa)"
-									+ "or (upper(a.id_cliente) like :pesquisa");
+		Query query = em.createQuery("select a from AgendamentoConsulta as a " 
+									+ "where (upper(a.descricao) like :pesquisa) "
+									+ "or (upper(a.status) like :pesquisa)");
 		query.setParameter("pesquisa", '%' + pesquisa.toUpperCase() + '%');
 
 		return query.getResultList();

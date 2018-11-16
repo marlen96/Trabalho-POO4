@@ -1,6 +1,7 @@
 package test.dao;
 
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.Arrays;
@@ -41,6 +42,12 @@ public class AnimalDAOTest extends BasicDAOTest{
 	public void consultaTotalRegsTest() {
 		Long a = AnimalDAO.getInstance().consultaTotalRegs();
 		assertNotNull(a);
+	}
+	
+	@Test
+	public void pesquisarTest() {
+		List<Animal> a= AnimalDAO.getInstance().consultar("rubens");
+		assertEquals(true, a != null);
 	}
 	
 	@Override

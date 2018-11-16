@@ -45,4 +45,9 @@ public class AnimalController {
 	    public Long consultarRegs() {
 	    	return AnimalDAO.getInstance().consultaTotalRegs();
 	    }
+	    
+	    public List<Animal> consultar(String consulta){
+	    	List<Animal> teste = AnimalDAO.getInstance().consultar(consulta); 
+	    	return teste;
+	    }
 }

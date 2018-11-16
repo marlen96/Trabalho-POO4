@@ -45,4 +45,11 @@ public class AnamneseController {
 	    public Long consultarRegs() {
 	    	return AnamneseDAO.getInstance().consultaTotalRegs();
 	    }
+	    
+	    public List<Anamnese> consultar(String consulta){
+	    	List<Anamnese> teste = AnamneseDAO.getInstance().consultar(consulta); 
+	    	return teste;
+	    }
+	    
+	    
 }

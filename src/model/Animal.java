@@ -30,7 +30,7 @@ public class Animal extends BasicModel{
     private List<FichaAnimal> fichasAnimais;
 
 
-    @Column(name = "descricao")
+    @Column(name = "nome")
     public String getNome() {
         return nome;
     }
