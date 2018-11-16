@@ -1,5 +1,6 @@
 package control;
 
+import java.util.Calendar;
 import java.util.List;
 
 import dao.BasicDAO;
@@ -44,5 +45,19 @@ public class ContasAPagarController {
 	
 	    public Long consultarRegs() {
 	    	return ContasAPagarDAO.getInstance().consultaTotalRegs();
+	    }
+	    
+	    public Calendar convDataBanco(String dataSistema) {
+	    	Calendar c = Calendar.getInstance();
+	    	String[] saida = dataSistema.split("/");
+	        int dia = Integer.parseInt(saida[0]);
+	        int mes = Integer.parseInt(saida[1]);
+	        int ano = Integer.parseInt(saida[2]);
+	        try {
+	        	c.set(dia, mes, ano);
+	        }catch (Exception e) {
+				System.out.println("Exception" + e);
+			}
+	        return c;
 	    }
 }
