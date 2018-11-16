@@ -1,20 +1,15 @@
 package test.dao;
 
-
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.math.BigDecimal;
 import java.util.Calendar;
-import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import dao.AgendamentoConsultaDAO;
 import dao.BasicDAO;
 import dao.ContasAPagarDAO;
-import model.AgendamentoConsulta;
 import model.ContasAPagar;
 import model.Fornecedor;
 import model.TipoDeConta;
@@ -44,13 +39,5 @@ public class ContasAPagarDAOTest extends BasicDAOTest {
 	public Object getObjectTest() {
 		return contasAPagar;
 	}
-/*	
-	@Test
-	public void pesquisarTest() {
-		List<ContasAPagar> a= ContasAPagarDAO.getInstance().consultar("2012121");
-		assertEquals(true, a != null);
-	}*/
-	
-	
 	
 }
