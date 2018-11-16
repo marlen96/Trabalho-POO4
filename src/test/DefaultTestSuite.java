@@ -38,6 +38,7 @@ import test.dao.TipoDeVacinaDAOTest;
 import test.dao.UsuarioDAOTest;
 import test.dao.VacinaDAOTest;
 import test.dao.VendaServicoDAOTest;
+import test.model.EstadoCivilEnumTest;
 import test.util.CalculoCPFTest;
 
 @RunWith(Suite.class)
@@ -78,10 +79,11 @@ import test.util.CalculoCPFTest;
 		UsuarioControllerTest.class,
 		VacinaControllerTest.class,
 		VendaServicoControllerTest.class,
-		
+		//Model Testes!
+		EstadoCivilEnumTest.class,
 		//Util Testes!
 		CalculoCPFTest.class
 })
-public class TestSuite {
+public class DefaultTestSuite {
 
 }

@@ -1,5 +1,6 @@
 package test.dao;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.Arrays;
@@ -38,6 +39,13 @@ public class AgendamentoConsultaDAOTest extends BasicDAOTest{
 		assertNotNull(a);
 	}
 
+	@Test
+	public void pesquisarTest() {
+		List<AgendamentoConsulta> a= AgendamentoConsultaDAO.getInstance().consultar("testedesc");
+		assertEquals(true, a != null);
+	}
+	
+	
 	@Override
 	public Object getObjectTest() {
 		return agendamentoConsulta;
