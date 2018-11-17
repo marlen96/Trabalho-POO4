@@ -1,6 +1,5 @@
 package model;
 
-
 import java.util.Calendar;
 import java.util.List;
 
@@ -104,6 +103,5 @@ public class Animal extends BasicModel{
     public void setFichasAnimais(List<FichaAnimal> fichasAnimais) {
         this.fichasAnimais = fichasAnimais;
     }
-
-
+    
 }

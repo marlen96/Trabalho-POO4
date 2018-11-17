@@ -5,12 +5,12 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import control.AnimalController;
 import dao.AnimalDAO;
 import dao.BasicDAO;
 import model.Animal;
@@ -23,9 +23,11 @@ public class AnimalDAOTest extends BasicDAOTest{
 	
 	@Before
 	public void setUp() {
+		Calendar c = Calendar.getInstance();
+		c.set(2012, 12, 1);
 		animal.setNome("rubens");
 		animal.setPesoOuPorte("medio");
-		animal.setDataNascimento(AnimalController.getInstance().convDataBanco("09/09/1996"));
+		animal.setDataNascimento(c);
 		animal.setEspecie("teste");
 		animal.setRaca("teste2");
 		animal.setSexo("macho");

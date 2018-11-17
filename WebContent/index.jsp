@@ -1,3 +1,4 @@
+<%@page import="control.AnimalController"%>
 <%@page import="dao.BasicDAO"%>
 <%@page import="java.util.Calendar"%>
 <%@page import="model.Animal"%>
@@ -13,7 +14,7 @@
 <body>
 <% 		
 
-			AnimalDAO.getInstance().buscarTodas();
+			AnimalController.getInstance().buscarTodos();
 			%>
 </body>
 </html>

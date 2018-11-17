@@ -104,38 +104,8 @@ public class Controller extends HttpServlet {
 			VendaServicoController.getInstance().deletar(VendaServicoController.getInstance().buscarPoriD(id));
 		}
 		
-		RequestDispatcher rd = req.getRequestDispatcher("/cadastrarFuncionarioSucesso.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher("/excluirSucesso.jsp");
         rd.forward(req, resp);
 	}
-	
-	
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String acao = req.getParameter("acao");
-		
-		//Quando nenhuma acao for passada redireciona para a pagina de erro
-		if (acao == null || acao.equals("")){
-			RequestDispatcher rd = req.getRequestDispatcher("/erro.jsp");
-	        rd.forward(req, resp);	
-		}
-		
-		System.out.print(acao);
-		
-		
-/*		// Verifica qual acao foi passada e cria os objetos necessarios 
-		if (acao.equals("cadastrandoCidade") ){
-			Long id = Long.parseLong(req.getParameter("ncomboUF")); // Pega o value do componente Select 
-			String descricao = req.getParameter("ndescricao");
-			
-			Cidade cid = new Cidade();
-			cid.setDescricao(descricao);
-			cid.setUf(UFDAO.getInstance().consultarID(id));
-			
-			CidadeDAO.getInstance().persistir(cid);
-		}
-		
-		RequestDispatcher rd = req.getRequestDispatcher("/cadastrarCidadeSucesso.jsp");
-        rd.forward(req, resp);*/
-    } 
 
 }
