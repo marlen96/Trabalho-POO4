@@ -4,7 +4,7 @@ package test.dao;
 import static org.junit.Assert.assertNotNull;
 
 import java.math.BigDecimal;
-import java.util.Calendar;
+import java.util.Date;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,9 +25,8 @@ public class VacinaDAOTest extends BasicDAOTest{
 		vacina.setFornecedor("testefornecedor");
 		vacina.setLote("testelote456412");
 		vacina.setMarca("toppex");
-		Calendar c = Calendar.getInstance();
-		c.set(2012, 12, 1);
-		vacina.setValidade(c);
+		Date date = new Date("09/09/2000");
+		vacina.setValidade(date);
 		vacina.setFichaAnimal((FichaAnimal) new BasicDAO<FichaAnimal>(new FichaAnimal()).buscarPorId(new BasicDAO<FichaAnimal>(new FichaAnimal()).consultaUltimoID()));
 		vacina.setTipoDeVacina((TipoDeVacina) new BasicDAO<TipoDeVacina>(new TipoDeVacina()).buscarPorId(new BasicDAO<TipoDeVacina>(new TipoDeVacina()).consultaUltimoID()));
 	}

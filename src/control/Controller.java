@@ -79,12 +79,12 @@ public class Controller extends HttpServlet {
 			TipoController.getInstance().deletar(TipoController.getInstance().buscarPoriD(id));
 		}
 		
-		if (acao.contains("deletarTipoDeConta") ){
+		if (acao.contains("deletarDeConta") ){
 			Long id = Long.parseLong(req.getParameter("id")); 
 			TipoDeContaController.getInstance().deletar(TipoDeContaController.getInstance().buscarPoriD(id));
 		}
 		
-		if (acao.contains("deletarTipoDeVacina") ){
+		if (acao.contains("deletarDeVacina") ){
 			Long id = Long.parseLong(req.getParameter("id")); 
 			TipoDeVacinaController.getInstance().deletar(TipoDeVacinaController.getInstance().buscarPoriD(id));
 		}

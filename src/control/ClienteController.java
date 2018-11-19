@@ -2,11 +2,9 @@ package control;
 
 import java.util.List;
 
-import dao.AnimalDAO;
 import dao.BasicDAO;
 import dao.ClienteDAO;
 
-import model.Animal;
 import model.Cliente;
 
 public class ClienteController {
@@ -49,8 +47,8 @@ public class ClienteController {
 	    	return ClienteDAO.getInstance().consultaTotalRegs();
 	    }
 	
-	    public List<Animal> consultar(String consulta){
-	    	List<Animal> teste = AnimalDAO.getInstance().consultar(consulta); 
+	    public List<Cliente> consultar(String consulta){
+	    	List<Cliente> teste = ClienteDAO.getInstance().consultar(consulta); 
 	    	return teste;
 	    }
 }

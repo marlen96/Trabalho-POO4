@@ -4,7 +4,7 @@ import static org.junit.Assert.assertNotNull;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
-import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Before;
@@ -29,9 +29,8 @@ public class ProdutoServicoDAOTest extends BasicDAOTest {
 		produtoServico.setNome("topterm philipsbalita");
 		produtoServico.setPrecoDeCompra(BigDecimal.TEN);
 		produtoServico.setPrecoDeVenda(BigDecimal.TEN);
-		Calendar c = Calendar.getInstance();
-		c.set(2012, 12, 1);
-		produtoServico.setValidade(c);
+		Date date = new Date("09/09/2000");
+		produtoServico.setValidade(date);
 		Fornecedor a = (Fornecedor) new BasicDAO<Fornecedor>(new Fornecedor()).buscarPorId(new BasicDAO<Fornecedor>(new Fornecedor()).consultaUltimoID());
 		List<Fornecedor> lista = Arrays.asList(a);
 		produtoServico.setFornecedor(lista);
@@ -42,8 +41,6 @@ public class ProdutoServicoDAOTest extends BasicDAOTest {
 		List<ProdutoServicoVendaServico> listc = Arrays.asList(p);
 		produtoServico.setProdutosServicosVendasServicos(listc);
 		produtoServico.setTipo((Tipo) new BasicDAO<Tipo>(new Tipo()).buscarPorId(new BasicDAO<Tipo>(new Tipo()).consultaUltimoID()));
-		
-		
 	}
 	
 	@Test
@@ -57,6 +54,5 @@ public class ProdutoServicoDAOTest extends BasicDAOTest {
 		return produtoServico;
 	}
 
-	
 	
 }

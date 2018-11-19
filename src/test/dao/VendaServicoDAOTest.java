@@ -5,6 +5,7 @@ import static org.junit.Assert.assertNotNull;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Before;
@@ -24,9 +25,8 @@ public class VendaServicoDAOTest extends BasicDAOTest{
 	
 	@Before
 	public void test() {
-		Calendar c = Calendar.getInstance();
-		c.set(2012, 12, 1);
-		vendaServico.setDataServico(c);
+		Date date = new Date("09/09/2000");
+		vendaServico.setDataServico(date);
 		vendaServico.setDescricao("testedescrição");
 		vendaServico.setValorTotal(BigDecimal.TEN);
 		vendaServico.setCliente((Cliente) new BasicDAO<Cliente>(new Cliente()).buscarPorId(new BasicDAO<Cliente>(new Cliente()).consultaUltimoID()));

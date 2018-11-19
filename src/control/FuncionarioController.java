@@ -45,4 +45,9 @@ public class FuncionarioController {
 	    public Long consultarRegs() {
 	    	return FuncionarioDAO.getInstance().consultaTotalRegs();
 	    }
+	    
+	    public List<Funcionario> consultar(String consulta){
+	    	List<Funcionario> a = FuncionarioDAO.getInstance().consultar(consulta);
+	    	return a;
+	    }
 }

@@ -1,7 +1,7 @@
 package model;
 
 import java.math.BigDecimal;
-import java.util.Calendar;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,7 +18,7 @@ public class Vacina extends BasicModel {
     private String marca;
     private String lote;
     private String fornecedor;
-    private Calendar validade;
+    private Date validade;
     private BigDecimal custo;
     private FichaAnimal fichaAnimal;
     private TipoDeVacina tipoDeVacina;
@@ -50,11 +50,11 @@ public class Vacina extends BasicModel {
     
     @Temporal(TemporalType.DATE)
     @Column(name = "validade")
-    public Calendar getValidade() {
+    public Date getValidade() {
         return validade;
     }
 
-    public void setValidade(Calendar validade) {
+    public void setValidade(Date validade) {
         this.validade = validade;
     }
 

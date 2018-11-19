@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.Arrays;
-import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Before;
@@ -23,9 +23,8 @@ public class AgendamentoConsultaDAOTest extends BasicDAOTest{
 	@Before
 	public void setUp() {
 		agendamentoConsulta.setDescricao("testedesc");
-		Calendar c = Calendar.getInstance();
-		c.set(2012, 12, 1);
-		agendamentoConsulta.setDataDeAgendamento(c);
+		Date date = new Date("09/09/2000");
+		agendamentoConsulta.setDataDeAgendamento(date);
 		agendamentoConsulta.setStatus("testestatus");
 		agendamentoConsulta.setCliente((Cliente) new BasicDAO<Cliente>(new Cliente()).buscarPorId(new BasicDAO<Cliente>(new Cliente()).consultaUltimoID()));
 		ProdutoServico a = (ProdutoServico) new BasicDAO<ProdutoServico>(new ProdutoServico()).buscarPorId(new BasicDAO<ProdutoServico>(new ProdutoServico()).consultaUltimoID());

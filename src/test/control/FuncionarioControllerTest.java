@@ -51,6 +51,12 @@ public class FuncionarioControllerTest {
 	}
 	
 	@Test
+	public void consultarTest() {
+		List<Funcionario> a = FuncionarioController.getInstance().consultar("TesteNome");
+		assertEquals(true, a != null);
+	}
+	
+	@Test
 	public void buscarPrimeiroID() {
 		Long a = FuncionarioController.getInstance().buscarPrimeiroID();
 		assertEquals(true, a != 0);

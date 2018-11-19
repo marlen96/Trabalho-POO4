@@ -1,6 +1,6 @@
 package model;
 
-import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -22,7 +22,7 @@ public class Animal extends BasicModel{
     private String nome;
     private String raca;
     private String pesoOuPorte;
-    private Calendar dataNascimento;
+    private Date dataNascimento;
     private String especie;
     private String sexo;
     private Cliente cliente;
@@ -58,11 +58,11 @@ public class Animal extends BasicModel{
     
     @Temporal(TemporalType.DATE)
     @Column(name = "data_nascimento")
-    public Calendar getDataNascimento() {
+    public Date getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Calendar dataNascimento) {
+    public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 

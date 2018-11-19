@@ -1,20 +1,34 @@
-<%@page import="control.AnimalController"%>
-<%@page import="dao.BasicDAO"%>
-<%@page import="java.util.Calendar"%>
-<%@page import="model.Animal"%>
-<%@page import="dao.AnimalDAO"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<jsp:include page="layout.jsp" />
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
-<% 		
+ 
+   <section id="intro">
 
-			AnimalController.getInstance().buscarTodos();
-			%>
+    <div class="intro-content">
+      <h2>Syscompet <span>Seus melhores amigos</span><br>Felizes!</h2>
+    </div>
+
+    <div id="intro-carousel" class="owl-carousel" >
+      <div class="item" style="background-image: url('resources/img/intro-carousel/1.jpg');"></div>
+      <div class="item" style="background-image: url('resources/img/intro-carousel/2.jpg');"></div>
+      <div class="item" style="background-image: url('resources/img/intro-carousel/3.jpg');"></div>
+      <div class="item" style="background-image: url('resources/img/intro-carousel/4.jpg');"></div>
+      <div class="item" style="background-image: url('resources/img/intro-carousel/5.jpg');"></div>
+    </div>
+
+  </section><!-- #intro -->
+
+  
+ 
+ 
 </body>
 </html>

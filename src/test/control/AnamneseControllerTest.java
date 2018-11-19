@@ -64,6 +64,13 @@ public class AnamneseControllerTest {
 	}
 	
 	@Test
+	public void consultaTest() {
+		List<Anamnese> a = AnamneseController.getInstance().consultar("testeanamnese");
+		assertEquals(true, a != null);
+	}
+	
+	
+	@Test
 	public void deletarTest() {
 		try {
 			AnamneseController.getInstance().deletar(AnamneseController.getInstance().buscarPoriD(AnamneseController.getInstance().buscarUltimoID()));

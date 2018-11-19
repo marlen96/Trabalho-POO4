@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.math.BigDecimal;
-import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Before;
@@ -23,9 +23,8 @@ public class VacinaControllerTest {
 		vacina.setFornecedor("testefornecedor");
 		vacina.setLote("testelote456412");
 		vacina.setMarca("toppex");
-		Calendar c = Calendar.getInstance();
-		c.set(2012, 12, 1);
-		vacina.setValidade(c);
+		Date date = new Date("09/09/2000");
+		vacina.setValidade(date);
 	}
 	
 	@Test
@@ -42,6 +41,12 @@ public class VacinaControllerTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	@Test
+	public void retornoDataTest() {
+		String a = VacinaController.getInstance().getdataCadastroFormatado(vacina);
+		assertEquals("09/09/2000", a);
 	}
 	
 	@Test

@@ -4,12 +4,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.math.BigDecimal;
-import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import control.AgendamentoConsultaController;
 import control.VendaServicoController;
 import model.VendaServico;
 
@@ -19,9 +20,8 @@ public class VendaServicoControllerTest {
 	
 	@Before
 	public void setUp() {
-		Calendar c = Calendar.getInstance();
-		c.set(2012, 12, 1);
-		vendaServico.setDataServico(c);
+		Date date = new Date("09/09/2000");
+		vendaServico.setDataServico(date);
 		vendaServico.setDescricao("testedescrição");
 		vendaServico.setValorTotal(BigDecimal.TEN);
 	}
@@ -40,6 +40,12 @@ public class VendaServicoControllerTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	@Test
+	public void retornoDataTest() {
+		String a = VendaServicoController.getInstance().getdataCadastroFormatado(vendaServico);
+		assertEquals("09/09/2000", a);
 	}
 	
 	@Test

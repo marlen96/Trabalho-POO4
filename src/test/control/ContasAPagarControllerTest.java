@@ -4,12 +4,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.math.BigDecimal;
-import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import control.AgendamentoConsultaController;
 import control.ContasAPagarController;
 import model.ContasAPagar;
 
@@ -19,9 +20,8 @@ public class ContasAPagarControllerTest {
 	
 	@Before
 	public void setUp() {
-		Calendar c = Calendar.getInstance();
-		c.set(2012, 12, 1);
-		contasAPagar.setData(c);
+		Date date = new Date("09/09/2000");
+		contasAPagar.setData(date);
 		contasAPagar.setValor(BigDecimal.valueOf(10.00));
 	}
 	
@@ -39,6 +39,12 @@ public class ContasAPagarControllerTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	@Test
+	public void retornoDataTest() {
+		String a = ContasAPagarController.getInstance().getdataCadastroFormatado(contasAPagar);
+		assertEquals("09/09/2000", a);
 	}
 	
 	@Test

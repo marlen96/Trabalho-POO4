@@ -3,7 +3,7 @@ package test.dao;
 import static org.junit.Assert.assertNotNull;
 
 import java.math.BigDecimal;
-import java.util.Calendar;
+import java.util.Date;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -20,9 +20,8 @@ public class ContasAPagarDAOTest extends BasicDAOTest {
 	
 	@Before
 	public void setUp() {
-		Calendar c = Calendar.getInstance();
-		c.set(2012, 12, 1);
-		contasAPagar.setData(c);
+		Date date = new Date("09/09/2000");
+		contasAPagar.setData(date);
 		contasAPagar.setValor(BigDecimal.valueOf(10.00));
 		contasAPagar.setFornecedor((Fornecedor) new BasicDAO<Fornecedor>(new Fornecedor()).buscarPorId(new BasicDAO<Fornecedor>(new Fornecedor()).consultaUltimoID()));
 		contasAPagar.setTipoDeConta((TipoDeConta) new BasicDAO<TipoDeConta>(new TipoDeConta()).buscarPorId(new BasicDAO<TipoDeConta>(new TipoDeConta()).consultaUltimoID()));

@@ -31,12 +31,11 @@ public class FuncionarioDAO extends BasicDAO<Object> {
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<FuncionarioDAO> consultar(String pesquisa) {
+	public List<Funcionario> consultar(String pesquisa) {
 		EntityManager em = PersistenceUtil.getEntityManager();
-		Query query = em.createQuery("from Funcionario as inner join a.usuarios "
+		Query query = em.createQuery("from Funcionario as a "
 									+ "where (upper(a.nome) like :pesquisa) "
-									+ "or (upper(a.email) like :pesquisa)"
-									+ "or (upper(a.login) like :pesquisa)"
+									+ "or (upper(a.email) like :pesquisa) "
 									+ "or (upper(a.telefone) like :pesquisa)");
 		query.setParameter("pesquisa", '%' + pesquisa.toUpperCase() + '%');
 

@@ -1,7 +1,7 @@
 package model;
 
 import java.math.BigDecimal;
-import java.util.Calendar;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,18 +16,18 @@ import javax.persistence.TemporalType;
 @Table(name = "contas_a_pagar")
 public class ContasAPagar extends BasicModel {
     
-    private Calendar data;
+    private Date data;
     private BigDecimal valor;
     private Fornecedor fornecedor;
     private TipoDeConta tipoDeConta;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "data")
-    public Calendar getData() {
+    public Date getData() {
         return data;
     }
 
-    public void setData(Calendar data) {
+    public void setData(Date data) {
         this.data = data;
     }
     

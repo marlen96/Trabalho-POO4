@@ -1,6 +1,6 @@
 package control;
 
-import java.util.Calendar;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import dao.BasicDAO;
@@ -46,19 +46,11 @@ public class VacinaController {
 	    public Long consultarRegs() {
 	    	return VacinaDAO.getInstance().consultaTotalRegs();
 	    }
-	
-	    public Calendar convDataBanco(String dataSistema) {
-	    	Calendar c = Calendar.getInstance();
-	    	String[] saida = dataSistema.split("/");
-	        int dia = Integer.parseInt(saida[0]);
-	        int mes = Integer.parseInt(saida[1]);
-	        int ano = Integer.parseInt(saida[2]);
-	        try {
-	        	c.set(dia, mes, ano);
-	        }catch (Exception e) {
-				System.out.println("Exception" + e);
-			}
-	        return c;
-	    }
+	    
+		public String getdataCadastroFormatado(Vacina a)
+		{
+			SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+			return formato.format(a.getValidade());
+		}
 	
 }

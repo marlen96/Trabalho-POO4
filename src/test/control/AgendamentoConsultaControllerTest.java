@@ -2,7 +2,7 @@ package test.control;
 
 import static org.junit.Assert.*;
 
-import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Before;
@@ -19,9 +19,8 @@ public class AgendamentoConsultaControllerTest {
 	@Before
 	public void setUp() {
 		agendamentoConsulta.setDescricao("TestedeController");
-		Calendar c = Calendar.getInstance();
-		c.set(2012, 12, 1);
-		agendamentoConsulta.setDataDeAgendamento(c);
+		Date date = new Date("09/09/2000");
+		agendamentoConsulta.setDataDeAgendamento(date);
 		agendamentoConsulta.setStatus("TesteDeController");
 	}
 	
@@ -39,6 +38,18 @@ public class AgendamentoConsultaControllerTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	@Test
+	public void retornoDataTest() {
+		String a = AgendamentoConsultaController.getInstance().getdataCadastroFormatado(agendamentoConsulta);
+		assertEquals("09/09/2000", a);
+	}
+	
+	@Test
+	public void consultaTest() {
+		List<AgendamentoConsulta> a = AgendamentoConsultaController.getInstance().consultar("TestedeController");
+		assertEquals(true, a != null);
 	}
 	
 	@Test
@@ -74,4 +85,6 @@ public class AgendamentoConsultaControllerTest {
 			e.printStackTrace();
 		}
 	}
+	
+	
 }

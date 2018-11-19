@@ -68,6 +68,12 @@ public class FornecedorControllerTest {
 	}
 	
 	@Test
+	public void consultarTest() {
+		List<Fornecedor> a = FornecedorController.getInstance().consultar("nomefantasiateste");
+		assertEquals(true, a != null);
+	}
+	
+	@Test
 	public void deletarTest() {
 		try {
 		FornecedorController.getInstance().deletar(FornecedorController.getInstance().buscarPoriD(FornecedorController.getInstance().buscarUltimoID()));

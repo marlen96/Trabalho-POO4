@@ -1,6 +1,6 @@
 package model;
 
-import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -18,7 +18,7 @@ import javax.persistence.TemporalType;
 @Table(name = "agendamento_consulta")
 public class AgendamentoConsulta extends BasicModel {
     
-    private Calendar dataDeAgendamento;
+    private Date dataDeAgendamento;
     private String descricao;
     private String status;
     private Cliente cliente;
@@ -36,11 +36,11 @@ public class AgendamentoConsulta extends BasicModel {
 
 	@Temporal(TemporalType.DATE)
     @Column(name = "data_de_agendamento")
-    public Calendar getDataDeAgendamento() {
+    public Date getDataDeAgendamento() {
         return dataDeAgendamento;
     }
     
-    public void setDataDeAgendamento(Calendar dataDeAgendamento) {
+    public void setDataDeAgendamento(Date dataDeAgendamento) {
         this.dataDeAgendamento = dataDeAgendamento;
     }
     

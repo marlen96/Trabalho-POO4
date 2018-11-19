@@ -3,7 +3,7 @@ package test.control;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Before;
@@ -19,11 +19,11 @@ public class AnimalControllerTest {
 	@Before
 	public void setUp() {
 		animal = new Animal();
-		Calendar c = Calendar.getInstance();
-		c.set(2012, 12, 1);
+		
 		animal.setNome("rubens");
 		animal.setPesoOuPorte("medio");
-		animal.setDataNascimento(c);
+		Date date = new Date("09/09/2000");
+		animal.setDataNascimento(date);
 		animal.setEspecie("teste");
 		animal.setRaca("teste2");
 		animal.setSexo("macho");
@@ -43,6 +43,12 @@ public class AnimalControllerTest {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	@Test
+	public void retornoDataTest() {
+		String a = AnimalController.getInstance().getdataCadastroFormatado(animal);
+		assertEquals("09/09/2000", a);
 	}
 	
 	@Test
@@ -66,6 +72,12 @@ public class AnimalControllerTest {
 	@Test
 	public void consultarRegs() {
 		Long a = AnimalController.getInstance().consultarRegs();
+		assertEquals(true, a != null);
+	}
+	
+	@Test
+	public void consultarTest() {
+		List<Animal> a = AnimalController.getInstance().consultar("rubens");
 		assertEquals(true, a != null);
 	}
 	

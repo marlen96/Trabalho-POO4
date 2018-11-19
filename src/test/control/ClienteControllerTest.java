@@ -70,6 +70,12 @@ public class ClienteControllerTest {
 	}
 	
 	@Test
+	public void consultaTest() {
+		List<Cliente> a = ClienteController.getInstance().consultar("TesteNome");
+		assertEquals(true, a != null);
+	}
+	
+	@Test
 	public void deletarTest() {
 		try {
 			ClienteController.getInstance().deletar(ClienteController.getInstance().buscarPoriD(ClienteController.getInstance().buscarUltimoID()));

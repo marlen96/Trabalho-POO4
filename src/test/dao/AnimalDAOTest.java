@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.Arrays;
-import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Before;
@@ -23,11 +23,10 @@ public class AnimalDAOTest extends BasicDAOTest{
 	
 	@Before
 	public void setUp() {
-		Calendar c = Calendar.getInstance();
-		c.set(2012, 12, 1);
 		animal.setNome("rubens");
 		animal.setPesoOuPorte("medio");
-		animal.setDataNascimento(c);
+		Date date = new Date("09/09/2000");
+		animal.setDataNascimento(date);
 		animal.setEspecie("teste");
 		animal.setRaca("teste2");
 		animal.setSexo("macho");
