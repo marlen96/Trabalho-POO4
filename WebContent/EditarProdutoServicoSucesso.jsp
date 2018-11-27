@@ -1,3 +1,4 @@
+<%@page import="java.util.Date"%>
 <%@page import="java.text.DecimalFormat"%>
 <%@page import="java.math.BigDecimal"%>
 <%@page import="dao.ProdutoServicoDAO"%>
@@ -20,12 +21,15 @@
 	    String marca =  request.getParameter("nmarca");
 	    String lote = request.getParameter("nlote");
 	    String tipo = request.getParameter("ncomboTipo");   
+	    String data = request.getParameter("ndatan");
 	    String id = request.getParameter("nid");
 		if (nome != null) {
 			Double precovenda = Double.parseDouble(request.getParameter("nprecovenda"));
 		    Double precocompra = Double.parseDouble(request.getParameter("nprecocompra"));
 			ProdutoServico produtoservico = new ProdutoServico();
 			produtoservico.setId(Long.parseLong(id));
+			Date date = new Date(data);
+			produtoservico.setValidade(date);
 			produtoservico.setNome(nome);
 			produtoservico.setMarca(marca);
 			produtoservico.setPrecoDeVenda(BigDecimal.valueOf(precovenda));

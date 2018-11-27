@@ -55,7 +55,14 @@
 			</div>
 		</div>
 		
-			
+		<div class="form-group">
+			<label for="datan" class="col-sm-3 control-label">Data</label>
+
+			<div class="col-sm-8">
+				<input type="text" class="form-control" id="datan" name="ndatan"
+					required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" placeholder="DD/MM/AAAA"/>
+			</div>
+		</div>	
 		
 
 		<div class="form-group">

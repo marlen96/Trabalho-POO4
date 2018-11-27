@@ -29,7 +29,7 @@
 		<div class="form-group">
 			<label for="valor" class="col-sm-3 control-label">Valor</label>
 
-			<div class="col-sm-15">
+			<div class="col-sm-8">
 				<input type="number" readonly  class="form-control" id="valor" name="nvalor"
 					placeholder="" required 
 					value="<%=objConta.getValor()%>"/>
@@ -49,7 +49,7 @@
 	      <div class="form-group">
 			<label for="valor" class="col-sm-3 control-label">Tipo de Conta</label>
 
-			<div class="col-sm-15">
+			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="valor" name="nvalor"
 					placeholder="" required 
 					value="<%=objConta.getTipoDeConta().getDescricao()%>"/>
@@ -57,7 +57,15 @@
 		</div>
 		
 			
-		
+		<div class="form-group">
+			<label for="datan" class="col-sm-3 control-label">Data do serviço</label>
+
+			<div class="col-sm-8">
+				<input type="text" readonly class="form-control" id="datan" name="ndatan"
+					placeholder="" required 
+					value="<%=ContasAPagarController.getInstance().getdataCadastroFormatado(objConta)%>"/>
+			</div>
+		</div>
 
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">

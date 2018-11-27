@@ -1,4 +1,6 @@
 <%@page import="control.VendaServicoController"%>
+<%@page import="control.ClienteController"%>
+<%@page import="control.FuncionarioController"%>
 <jsp:include page="layout.jsp" />
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <jsp:useBean id="objVendaServico" class="model.VendaServico" />
@@ -16,7 +18,7 @@
 
 
 <div class="container" style="padding-top: 20px;">
-	<h1>Detalhe de Venda Serviço</h1>
+	<h1>Alterar Venda Serviço</h1>
 	
 	<br />
 
@@ -59,6 +61,7 @@
 			</div>
 		</div>
 		
+		
 			<div class="form-group">
 			<label for="funcionario" class="col-sm-3 control-label">Funcionario</label>
 			<div class="col-sm-4">
@@ -71,11 +74,21 @@
 			</div>
 		</div>
 
+			<div class="form-group">
+			<label for="datan" class="col-sm-3 control-label">Data de agendamento</label>
+
+			<div class="col-sm-8">
+				<input type="text" class="form-control" id="datan" name="ndatan"
+					placeholder="" required 
+					value="<%=VendaServicoController.getInstance().getdataCadastroFormatado(objVendaServico)%>"/>
+			</div>
+		</div>
+		
 			
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
 				<button type="submit" class="btn btn-lg btn-primary">Alterar</button>
-				<a href="cadastrarVendaServico.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<a href="cadastrarVendaServicoSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
 			</div>
 		</div>
 	</form>

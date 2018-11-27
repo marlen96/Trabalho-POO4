@@ -63,7 +63,7 @@
 			<label for="precocompra" class="col-sm-3 control-label">Preço de Compra</label>
 
 			<div class="col-sm-8">
-				<input type="text" readonly class="form-control" id="precocompra" name="nprecocompra"
+				<input type="text" class="form-control" id="precocompra" name="nprecocompra"
 					placeholder="" required 
 						value="<%=objProdutoServico.getPrecoDeCompra()%>" />
 			</div>
@@ -92,6 +92,15 @@
 			</div>
 		</div>
 
+	<div class="form-group">
+			<label for="datan" class="col-sm-3 control-label">Data de validade</label>
+
+			<div class="col-sm-8">
+				<input type="text" class="form-control" id="datan" name="ndatan"
+					placeholder="" required 
+					value="<%=ProdutoServicoController.getInstance().getdataCadastroFormatado(objProdutoServico)%>"/>
+			</div>
+		</div>
 			
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">

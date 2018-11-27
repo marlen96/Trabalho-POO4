@@ -1,3 +1,4 @@
+<%@page import="java.util.Date"%>
 <%@page import="com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import"%>
 <%@page import="dao.AnimalDAO"%>
 <%@page import="java.util.List"%>
@@ -23,6 +24,8 @@
 		String descricao = request.getParameter("ndescricao");
 	
 	    String cliente = request.getParameter("ncomboCliente");
+	    
+	    String data = request.getParameter("ndatan");
 
 	    String funcionario = request.getParameter("ncomboFuncionario");
 	    
@@ -33,6 +36,8 @@
 			
 			VendaServico vendaservico = new VendaServico();
 			vendaservico.setId(Long.parseLong(id));
+			Date date = new Date(data);
+			vendaservico.setDataServico(date);
 			vendaservico.setDescricao(descricao);
 			vendaservico.setValorTotal(BigDecimal.valueOf(vtotal));
 			vendaservico.setFuncionario(FuncionarioController.getInstance().buscarPoriD(Long.parseLong(funcionario)));

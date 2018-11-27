@@ -63,6 +63,15 @@
 			</div>
 		</div>
 		
+			<div class="form-group">
+			<label for="datan" class="col-sm-3 control-label">Data de vencimento</label>
+
+			<div class="col-sm-8">
+				<input type="text" class="form-control" id="datan" name="ndatan"
+					placeholder="" required 
+					value="<%=ContasAPagarController.getInstance().getdataCadastroFormatado(objConta)%>"/>
+			</div>
+		</div>
 		
 
 		<div class="form-group">

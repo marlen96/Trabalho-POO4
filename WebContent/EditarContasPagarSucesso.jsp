@@ -1,3 +1,4 @@
+<%@page import="java.util.Date"%>
 <%@page import="control.TipoDeContaController"%>
 <%@page import="control.FornecedorController"%>
 <%@page import="com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import"%>
@@ -23,13 +24,17 @@
 
 	    String tipo = request.getParameter("ncomboTipo");
 
+	    String data = request.getParameter("ndatan");
+	    
 	    String id = request.getParameter("nid");
 		if (fornecedor != null) {
 		Double valor = Double.parseDouble(request.getParameter("nvalor"));	
 			
 		ContasAPagar conta = new ContasAPagar();
 		   conta.setId(Long.parseLong(id));
-		  conta.setValor(BigDecimal.valueOf(valor));
+		   Date date = new Date(data);
+		   conta.setData(date);
+		   conta.setValor(BigDecimal.valueOf(valor));
 		   conta.setFornecedor(FornecedorController.getInstance().buscarPoriD(Long.parseLong(fornecedor)));
 	       conta.setTipoDeConta(TipoDeContaController.getInstance().buscarPoriD(Long.parseLong(tipo)));
 	       ContasAPagarController.getInstance().persistir(conta);

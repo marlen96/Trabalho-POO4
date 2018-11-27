@@ -66,6 +66,15 @@
 			</div>
 		</div>
 
+		<div class="form-group">
+			<label for="datan" class="col-sm-3 control-label">Data do serviço</label>
+
+			<div class="col-sm-8">
+				<input type="text" readonly class="form-control" id="datan" name="ndatan"
+					placeholder="" required 
+					value="<%=VendaServicoController.getInstance().getdataCadastroFormatado(objVendaServico)%>"/>
+			</div>
+		</div>
 			
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
