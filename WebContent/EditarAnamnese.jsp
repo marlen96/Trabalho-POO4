@@ -22,15 +22,15 @@
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="EditarAnamneseSucesso.jsp">
+		role="form" action="./controller?acao=editarAnamnese">
 		
 		<input type="hidden" name="nid" value="<%=objAnamnese.getId()%>">
 		
 		<div class="form-group">
 			<label for="diagnostico" class="col-sm-3 control-label">Diagnostico</label>
-			<div class="col-sm-2">
+			<div class="col-sm-10">
 				<input type="text" class="form-control" id="diagnostico" name="ndiagnostico"
-					placeholder="" required 
+					placeholder="Diagnostico" required 
 					value="<%=objAnamnese.getDiagnostico()%>"/>
 			</div>
 		</div>
@@ -40,16 +40,16 @@
 			<label for="anamnese" class="col-sm-3 control-label">Anamnese</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="anamnese"
-					name="nanamnese" placeholder="" required 
+					name="nanamnese" placeholder="Anamnese" required 
 					value="<%=objAnamnese.getAnamnese()%>" />
 			</div>
 		</div>
 		
 			<div class="form-group">
 			<label for="medicamento" class="col-sm-3 control-label">Medicamentos</label>
-			<div class="col-sm-3">
+			<div class="col-sm-10">
 				<input type="text" class="form-control" id="rg"
-					name="nmedicamento" placeholder="Digite o medicamento aqui" required 
+					name="nmedicamento" placeholder="Medicamentos" required 
 					value="<%=objAnamnese.getMedicamentos()%>" />
 			</div>
 		</div>
@@ -58,9 +58,9 @@
 		<div class="form-group">
 			<label for="procedimentosrealizados" class="col-sm-3 control-label">Procedimentos Realizados</label>
 
-			<div class="col-sm-3">
+			<div class="col-sm-10">
 				<input type="text" class="form-control" id="procedimentosrealizados" name="nprocedimentosrealizados"
-					placeholder="" required 
+					placeholder="Procedimentos" required 
 					value="<%=objAnamnese.getProcedimentosRealizados()%>"/>
 			</div>
 		</div>
@@ -82,8 +82,9 @@
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
 				<button type="submit" class="btn btn-lg btn-primary">Alterar</button>
-				<a href="cadastrarAnamneseSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<a href="cadastrarAnamneseSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

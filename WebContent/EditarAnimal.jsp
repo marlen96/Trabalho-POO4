@@ -23,7 +23,7 @@
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="EditarAnimalSucesso.jsp">
+		role="form" action="./controller?acao=editarAnimal">
 		
 		<input type="hidden" name="nid" value="<%=objAnimal.getId()%>">
 		
@@ -31,7 +31,7 @@
 			<label for="nome" class="col-sm-3 control-label">Nome</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="nome" name="nnome"
-					placeholder="" required 
+					placeholder="Nome do Pet" required 
 					value="<%=objAnimal.getNome()%>"/>
 			</div>
 		</div>
@@ -41,7 +41,7 @@
 			<label for="raca" class="col-sm-3 control-label">Raça</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="raca"
-					name="nraca" placeholder="" required 
+					name="nraca" placeholder="Raça" required 
 					value="<%=objAnimal.getRaca()%>" />
 			</div>
 		</div>
@@ -50,7 +50,7 @@
 			<label for="peso" class="col-sm-3 control-label">Peso ou porte</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="peso"
-					name="npeso" placeholder="" required 
+					name="npeso" placeholder="Peso ou Porte" required 
 					value="<%=objAnimal.getPesoOuPorte()%>" />
 			</div>
 		</div>
@@ -71,7 +71,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="especie" name="nespecie"
-					placeholder="" required 
+					placeholder="Espécie" required 
 					value="<%=objAnimal.getEspecie()%>"/>
 			</div>
 		</div>
@@ -105,8 +105,9 @@
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
 				<button type="submit" class="btn btn-lg btn-primary">Alterar</button>
-				<a href="cadastrarAnimalSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<a href="cadastrarAnimalSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

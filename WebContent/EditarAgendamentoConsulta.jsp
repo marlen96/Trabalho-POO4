@@ -23,7 +23,7 @@
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="EditarAgendamentoConsultaSucesso.jsp">
+		role="form" action="./controller?acao=editarAgendamento">
 		
 		<input type="hidden" name="nid" value="<%=objAgendamento.getId()%>">
 		
@@ -31,7 +31,7 @@
             <label for="descricao" class="col-sm-3 control-label">Descrição</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="descricao" name="ndescricao"
-                    placeholder="" required 
+                    placeholder="Descrição" required 
                     value="<%=objAgendamento.getDescricao()%>"/>
             </div>
         </div>
@@ -41,7 +41,7 @@
             <label for="status" class="col-sm-3 control-label">Status</label>
             <div class="col-sm-8">
                 <input type="text" class="form-control" id="status"
-                    name="nstatus" placeholder="" required 
+                    name="nstatus" placeholder="Status" required 
                     value="<%=objAgendamento.getStatus()%>" />
             </div>
         </div>
@@ -51,7 +51,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="datan" name="ndatan"
-					placeholder="" required 
+					placeholder="Data de Agendamento" required 
 					value="<%=AgendamentoConsultaController.getInstance().getdataCadastroFormatado(objAgendamento)%>"/>
 			</div>
 		</div>
@@ -75,8 +75,9 @@
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
 				<button type="submit" class="btn btn-lg btn-primary">Alterar</button>
-				<a href="cadastrarAgendamentoConsultaSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<a href="cadastrarAgendamentoConsultaSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

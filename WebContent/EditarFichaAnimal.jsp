@@ -44,7 +44,7 @@
 			<label for="pesoantes" class="col-sm-3 control-label">Peso ou Porte Antes do Procedimento</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="pesoantes"
-					name="npesoantes" placeholder="" required 
+					name="npesoantes" placeholder="Peso ou Porte Antes do Procedimento" required 
 					value="<%=objFichaAnimal.getPesoOuPorteAntesDoProcedimento()%>" />
 			</div>
 		</div>
@@ -55,8 +55,9 @@
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
 				<button type="submit" class="btn btn-lg btn-primary">Alterar</button>
-				<a href="cadastrarFichaAnimal.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<a href="cadastrarFichaAnimalSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

@@ -58,9 +58,9 @@
 		<c:forEach var="i" items="${UsuarioController.getInstance().buscarTodos()}">
 			<tr>
 				<td>${i.login}</td>
-				<td><a href="EditarUsuario.jsp?id=${i.id}" class="btn btn-lg btn-warning">Alterar</a>
-				<td><a href="./controller?acao=deletarUsuario&id=${i.id}" class="btn btn-lg btn-info">Deletar</a>
-				<td><a href="detalheUsuario.jsp?id=${i.id}" class="btn btn-lg btn-info">Detalhes</a>
+				<td><a href="EditarUsuario.jsp?id=${i.id}" class="btn btn-lg btn-primary">Alterar</a>
+				<td><a href="./controller?acao=deletarUsuario&id=${i.id}" class="btn btn-lg btn-danger">Deletar</a>
+				<td><a href="detalheUsuario.jsp?id=${i.id}" class="btn btn-lg btn-dark">Detalhes</a>
 				
 			</tr>
 		</c:forEach>
@@ -69,8 +69,9 @@
 
 	<div class="form-group">
 		<div class="col-sm-offset-3 col-sm-10">
-		    <a href="cadastrarUsuario.jsp" class="btn btn-lg btn-warning">Criar Novo</a>
-			<a href="layout.jsp" class="btn btn-lg btn-warning">Voltar</a>
+		    <a href="cadastrarUsuario.jsp" class="btn btn-lg btn-success">Criar Novo</a>
+			<a href="index.jsp" class="btn btn-lg btn-warning">Voltar</a>
 		</div>
 	</div>
 	</div>
+<jsp:include page="button.jsp" />

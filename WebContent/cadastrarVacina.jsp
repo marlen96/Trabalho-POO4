@@ -19,14 +19,14 @@
 	<form class="form-horizontal" method="post" data-toggle="validator"
 		role="form" action="cadastrarVacinaSucesso.jsp">
 		
-		<input type="hidden" name="nid" value="<%=objVacina.getId()%>">
+		<input type="hidden" name="nnovo" value="">
 		
 		<div class="form-group">
 			<label for="marca" class="col-sm-3 control-label">Marca</label>
 
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="marca" name="nmarca"
-					placeholder="" required 
+					placeholder="Marca" required 
 					value=""/>
 			</div>
 		</div>
@@ -36,7 +36,7 @@
 			<label for="lote" class="col-sm-3 control-label">Lote</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="lote"
-					name="nlote" placeholder="" required 
+					name="nlote" placeholder="Lote" required 
 					value="" />
 			</div>
 		</div>
@@ -45,7 +45,7 @@
 			<label for="fornecedor" class="col-sm-3 control-label">Fornecedor</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="fornecedor"
-					name="nfornecedor" placeholder="" required 
+					name="nfornecedor" placeholder="Fornecedor" required 
 					value="" />
 			</div>
 		</div>
@@ -54,7 +54,7 @@
 			<label for="custo" class="col-sm-3 control-label">Custo</label>
 			<div class="col-sm-8">
 				<input type="number" class="form-control" id="custo"
-					name="ncusto" placeholder="" required 
+					name="ncusto" placeholder="Custo" required 
 					value="" />
 			</div>
 		</div>
@@ -99,9 +99,10 @@
 
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
-				<button type="submit" class="btn btn-lg btn-primary">Cadastrar</button>
-				<a href="cadastrarVacinaSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<button type="submit" class="btn btn-lg btn-success">Cadastrar</button>
+				<a href="cadastrarVacinaSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

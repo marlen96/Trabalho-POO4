@@ -1,5 +1,6 @@
 <!doctype html>
 <jsp:include page="layout.jsp" />
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -28,7 +29,8 @@
   </section><!-- #intro -->
 
   
- 
- 
+
+<jsp:include page="button.jsp" />
 </body>
 </html>
+

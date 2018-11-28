@@ -26,7 +26,7 @@
 		
 		<div class="form-group">
 			<label for="apelido" class="col-sm-3 control-label">Apelido</label>
-			<div class="col-sm-2">
+			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="apelido" name="napelido"
 					placeholder="" required 
 					value="<%=objForn.getNomeFantasia()%>"/>
@@ -45,7 +45,7 @@
 		
 			<div class="form-group">
 			<label for="rg" class="col-sm-3 control-label">Razão Social</label>
-			<div class="col-sm-3">
+			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="razaosocial"
 					name="nrazaosocial" placeholder="" required 
 					value="<%=objForn.getRazaoSocial()%>" />
@@ -56,7 +56,7 @@
 		<div class="form-group">
 			<label for="telefone" class="col-sm-3 control-label">Telefone</label>
 
-			<div class="col-sm-3">
+			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="telefone" name="ntelefone"
 					placeholder="Digite o telefone aqui" required 
 					value="<%=objForn.getTelefone()%>"/>
@@ -68,7 +68,7 @@
 		<div class="form-group">
 			<label for="sigla" class="col-sm-3 control-label">Rua</label>
 
-			<div class="col-sm-2">
+			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="rua" name="nrua"
 					placeholder="Digite a rua aqui" required 
 					value="<%=objForn.getRua()%>"/>
@@ -79,7 +79,7 @@
 			<div class="form-group">
 			<label for="numero" class="col-sm-3 control-label">Número</label>
 
-			<div class="col-sm-3">
+			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="numero" name="nnumero"
 					placeholder="Digite o número aqui" required 
 					value="<%=objForn.getNumero()%>"/>
@@ -89,7 +89,7 @@
 			<div class="form-group">
 			<label for="bairro" class="col-sm-3 control-label">Bairro</label>
 
-			<div class="col-sm-2">
+			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="bairro" name="nbairro"
 					placeholder="Digite o bairro aqui" required 
 					value="<%=objForn.getBairro()%>"/>
@@ -100,7 +100,7 @@
 			<div class="form-group">
 			<label for="cidade" class="col-sm-3 control-label">Cidade</label>
 
-			<div class="col-sm-3">
+			<div class="col-sm-8">
 				<input type="text"  readonly class="form-control" id="cidade" name="ncidade"
 					placeholder="Digite a cidade aqui" required 
 					value="<%=objForn.getCidade()%>"/>
@@ -110,7 +110,7 @@
 			<div class="form-group">
 			<label for="cep" class="col-sm-3 control-label">Cep</label>
 
-			<div class="col-sm-2">
+			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="cep" name="ncep"
 					placeholder="" required 
 					value="<%=objForn.getCep()%>"/>
@@ -122,8 +122,9 @@
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
 				
-				<a href="cadastrarFornecedorSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<a href="cadastrarFornecedorSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

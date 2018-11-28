@@ -90,9 +90,9 @@
                 <td>${i.funcao}</td>
 				<td>${i.telefone}</td>
 				<td>${i.email}</td>
-				<td><a href="EditarFuncionario.jsp?id=${i.id}" class="btn btn-lg btn-warning">Alterar</a>
-				<td><a href="./controller?acao=deletarFuncionario&id=${i.id}" class="btn btn-lg btn-info">Deletar</a>
-				<td><a href="detalheFuncionario.jsp?id=${i.id}" class="btn btn-lg btn-info">Detalhes</a>
+				<td><a href="EditarFuncionario.jsp?id=${i.id}" class="btn btn-lg btn-primary">Alterar</a>
+				<td><a href="./controller?acao=deletarFuncionario&id=${i.id}" class="btn btn-lg btn-danger">Deletar</a>
+				<td><a href="detalheFuncionario.jsp?id=${i.id}" class="btn btn-lg btn-dark">Detalhes</a>
 				
 			</tr>
 		</c:forEach>
@@ -101,8 +101,9 @@
 
 	<div class="form-group">
 		<div class="col-sm-offset-3 col-sm-10">
-		    <a href="cadastrarFuncionario.jsp" class="btn btn-lg btn-warning">Criar Novo</a>
-			<a href="layout.jsp" class="btn btn-lg btn-warning">Voltar</a>
+		    <a href="cadastrarFuncionario.jsp" class="btn btn-lg btn-success">Criar Novo</a>
+			<a href="index.jsp" class="btn btn-lg btn-warning">Voltar</a>
 		</div>
 	</div>
 </div>
+<jsp:include page="button.jsp" />

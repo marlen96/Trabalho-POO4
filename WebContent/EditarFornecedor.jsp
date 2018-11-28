@@ -26,9 +26,9 @@
 		
 		<div class="form-group">
 			<label for="apelido" class="col-sm-3 control-label">Apelido</label>
-			<div class="col-sm-2">
+			<div class="col-sm-10">
 				<input type="text" class="form-control" id="apelido" name="napelido"
-					placeholder="" required 
+					placeholder="Apelido" required 
 					value="<%=objForn.getNomeFantasia()%>"/>
 			</div>
 		</div>
@@ -38,16 +38,16 @@
 			<label for="cpf" class="col-sm-3 control-label">Cnpj</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="cnpj"
-					name="ncnpj" placeholder="" required 
+					name="ncnpj" placeholder="Cnpj" required 
 					value="<%=objForn.getCnpj()%>" />
 			</div>
 		</div>
 		
 			<div class="form-group">
 			<label for="rg" class="col-sm-3 control-label">Razão Social</label>
-			<div class="col-sm-3">
+			<div class="col-sm-8">
 				<input type="text" class="form-control" id="razaosocial"
-					name="nrazaosocial" placeholder="" required 
+					name="nrazaosocial" placeholder="Razão Social" required 
 					value="<%=objForn.getRazaoSocial()%>" />
 			</div>
 		</div>
@@ -56,9 +56,9 @@
 		<div class="form-group">
 			<label for="telefone" class="col-sm-3 control-label">Telefone</label>
 
-			<div class="col-sm-3">
+			<div class="col-sm-10">
 				<input type="text" class="form-control" id="telefone" name="ntelefone"
-					placeholder="Digite o telefone aqui" required 
+					placeholder="Telefone" required 
 					value="<%=objForn.getTelefone()%>"/>
 			</div>
 		</div>
@@ -68,9 +68,9 @@
 		<div class="form-group">
 			<label for="sigla" class="col-sm-3 control-label">Rua</label>
 
-			<div class="col-sm-2">
+			<div class="col-sm-10">
 				<input type="text" class="form-control" id="rua" name="nrua"
-					placeholder="Digite a rua aqui" required 
+					placeholder="Rua" required 
 					value="<%=objForn.getRua()%>"/>
 			</div>
 		</div>
@@ -79,9 +79,9 @@
 			<div class="form-group">
 			<label for="numero" class="col-sm-3 control-label">Número</label>
 
-			<div class="col-sm-3">
+			<div class="col-sm-10">
 				<input type="text" class="form-control" id="numero" name="nnumero"
-					placeholder="Digite o número aqui" required 
+					placeholder="Número" required 
 					value="<%=objForn.getNumero()%>"/>
 			</div>
 		</div>
@@ -89,9 +89,9 @@
 			<div class="form-group">
 			<label for="bairro" class="col-sm-3 control-label">Bairro</label>
 
-			<div class="col-sm-2">
+			<div class="col-sm-10">
 				<input type="text" class="form-control" id="bairro" name="nbairro"
-					placeholder="Digite o bairro aqui" required 
+					placeholder="Bairro" required 
 					value="<%=objForn.getBairro()%>"/>
 			</div>
 		</div>
@@ -100,9 +100,9 @@
 			<div class="form-group">
 			<label for="cidade" class="col-sm-3 control-label">Cidade</label>
 
-			<div class="col-sm-3">
+			<div class="col-sm-10">
 				<input type="text"  class="form-control" id="cidade" name="ncidade"
-					placeholder="Digite a cidade aqui" required 
+					placeholder="Cidade" required 
 					value="<%=objForn.getCidade()%>"/>
 			</div>
 		</div>
@@ -110,9 +110,9 @@
 			<div class="form-group">
 			<label for="cep" class="col-sm-3 control-label">Cep</label>
 
-			<div class="col-sm-2">
+			<div class="col-sm-10">
 				<input type="text" class="form-control" id="cep" name="ncep"
-					placeholder="" required 
+					placeholder="Cep" required 
 					value="<%=objForn.getCep()%>"/>
 			</div>
 			</div>
@@ -122,8 +122,9 @@
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
 				<button type="submit" class="btn btn-lg btn-primary">Alterar</button>
-				<a href="cadastrarFornecedorSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<a href="cadastrarFornecedorSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

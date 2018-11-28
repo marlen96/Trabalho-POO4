@@ -1,12 +1,19 @@
 package control;
 
 import java.io.IOException;
+import java.util.Date;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+
+import model.AgendamentoConsulta;
+import model.Anamnese;
+import model.Animal;
 
 
 @WebServlet("/controller")
@@ -107,5 +114,152 @@ public class Controller extends HttpServlet {
 		RequestDispatcher rd = req.getRequestDispatcher("/excluirSucesso.jsp");
         rd.forward(req, resp);
 	}
+	
+		@Override
+		protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		String acao = req.getParameter("acao");
+		
+		//Quando nenhuma acao for passada redireciona para a pagina de erro
+		if (acao == null || acao.equals("")){
+			RequestDispatcher rd = req.getRequestDispatcher("/erro.jsp");
+	        rd.forward(req, resp);	
+		}
+		
+		System.out.print(acao);
+		
+		
+		if (acao.equals("cadastrarAgendamento")) {
+			String descricao = req.getParameter("ndescricao");
+		    String status =  req.getParameter("nstatus");
+		    String data = req.getParameter("ndatan");
+		    String cliente = req.getParameter("ncomboCliente"); 
+				
+		    AgendamentoConsulta agendamento = new AgendamentoConsulta();
+		    Date date = new Date(data);
+			agendamento.setDataDeAgendamento(date);
+			agendamento.setDescricao(descricao);
+			agendamento.setStatus(status);
+			agendamento.setCliente(ClienteController.getInstance().buscarPoriD(Long.parseLong(cliente)));
+			AgendamentoConsultaController.getInstance().persistir(agendamento);
 
+			RequestDispatcher rd = req.getRequestDispatcher("/cadastrarAgendamentoConsultaSucesso.jsp");
+	        rd.forward(req, resp);
+		}
+		
+		if (acao.equals("editarAgendamento")) {
+			String descricao = req.getParameter("ndescricao");
+		    String status =  req.getParameter("nstatus");
+		    String data = req.getParameter("ndatan");
+		    String cliente = req.getParameter("ncomboCliente");
+		    String id = req.getParameter("nid");
+				
+			AgendamentoConsulta agendamento = new AgendamentoConsulta();
+			agendamento.setId(Long.parseLong(id));
+			Date date = new Date(data);
+			agendamento.setDataDeAgendamento(date);
+			agendamento.setDescricao(descricao);
+			agendamento.setStatus(status);
+			agendamento.setCliente(ClienteController.getInstance().buscarPoriD(Long.parseLong(cliente)));
+			AgendamentoConsultaController.getInstance().persistir(agendamento);
+			
+			RequestDispatcher rd = req.getRequestDispatcher("/cadastrarAgendamentoConsultaSucesso.jsp");
+	        rd.forward(req, resp);
+		}
+		
+		if (acao.equals("cadastrarAnamnese")) {
+			
+			String diagnostico = req.getParameter("ndiagnostico");
+			String anamnese =  req.getParameter("nanamnese");
+			String medicamentos =  req.getParameter("nmedicamentos");
+			String procedimentosRealizados =  req.getParameter("nprocedimentosrealizados");
+			String fichaAnimal = req.getParameter("ncomboFicha");
+			
+			Anamnese anamneses = new Anamnese();
+			anamneses.setDiagnostico(diagnostico);
+			anamneses.setAnamnese(anamnese);
+			anamneses.setMedicamentos(medicamentos);
+			anamneses.setProcedimentosRealizados(procedimentosRealizados);
+			anamneses.setFichaAnimal(FichaAnimalController.getInstance().buscarPoriD(Long.parseLong(fichaAnimal)));
+
+			AnamneseController.getInstance().persistir(anamneses);
+			
+			RequestDispatcher rd = req.getRequestDispatcher("/cadastrarAnamneseSucesso.jsp");
+	        rd.forward(req, resp);
+		}
+		
+			if (acao.equals("editarAnamnese")) {
+			String diagnostico = req.getParameter("ndiagnostico");
+			String anamnese =  req.getParameter("nanamnese");
+			String medicamentos =  req.getParameter("nmedicamento");
+			String procedimentosRealizados =  req.getParameter("nprocedimentosrealizados");
+			String fichaAnimal = req.getParameter("ncomboFicha");
+			String id = req.getParameter("nid");
+			
+			Anamnese anamneses = new Anamnese();
+			anamneses.setId(Long.parseLong(id));
+			anamneses.setDiagnostico(diagnostico);
+			anamneses.setAnamnese(anamnese);
+			anamneses.setMedicamentos(medicamentos);
+			anamneses.setProcedimentosRealizados(procedimentosRealizados);
+			anamneses.setFichaAnimal(FichaAnimalController.getInstance().buscarPoriD(Long.parseLong(fichaAnimal)));
+
+			AnamneseController.getInstance().persistir(anamneses);
+			
+			RequestDispatcher rd = req.getRequestDispatcher("/cadastrarAnamneseSucesso.jsp");
+	        rd.forward(req, resp);
+		}
+			
+			if (acao.equals("cadastrarAnimal")) {
+				
+				String nome = req.getParameter("nnome");
+			    String raca =  req.getParameter("nraca");
+			    String peso =  req.getParameter("npeso");
+			    String especie =  req.getParameter("nespecie");
+			    String data = req.getParameter("ndatan");
+			    String sexo =  req.getParameter("nsexo");
+			    String cliente = req.getParameter("ncomboCliente");
+					
+				Animal animal = new Animal();
+				Date date = new Date(data);
+				animal.setDataNascimento(date);
+				animal.setNome(nome);
+				animal.setRaca(raca);
+				animal.setPesoOuPorte(peso);
+				animal.setEspecie(especie);
+				animal.setSexo(sexo);
+				animal.setCliente(ClienteController.getInstance().buscarPoriD(Long.parseLong(cliente)));
+				AnimalController.getInstance().persistir(animal);
+
+				RequestDispatcher rd = req.getRequestDispatcher("/cadastrarAnimalSucesso.jsp");
+		        rd.forward(req, resp);
+			}
+			
+			if (acao.equals("editarAnimal")) {
+				String nome = req.getParameter("nnome");
+			    String raca =  req.getParameter("nraca");
+			    String peso =  req.getParameter("npeso");
+			    String especie =  req.getParameter("nespecie");
+			    String data = req.getParameter("ndatan");
+			    String sexo =  req.getParameter("nsexo");
+			    String cliente = req.getParameter("ncomboCliente");
+			    String id = req.getParameter("nid");
+
+					Animal animal = new Animal();
+					Date date = new Date(data);
+		            animal.setDataNascimento(date);
+					animal.setId(Long.parseLong(id));
+					animal.setNome(nome);
+					animal.setRaca(raca);
+					animal.setPesoOuPorte(peso);
+					animal.setEspecie(especie);
+					animal.setSexo(sexo);
+				    animal.setCliente(ClienteController.getInstance().buscarPoriD(Long.parseLong(cliente)));
+					AnimalController.getInstance().persistir(animal);
+					
+
+					RequestDispatcher rd = req.getRequestDispatcher("/cadastrarAnimalSucesso.jsp");
+			        rd.forward(req, resp);
+			}
+	}
 }

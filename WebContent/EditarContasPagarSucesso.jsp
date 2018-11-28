@@ -73,9 +73,9 @@
 				<td>${i.fornecedor.nomeFantasia}</td>
 				<td>${i.tipoDeConta.descricao}</td>
 				<td>${i.valor}</td>
-				<td><a href="EditarContasPagar.jsp?id=${i.id}" class="btn btn-lg btn-warning">Alterar</a>
-				<td><a href="./controller?acao=deletarContasAPagar&id=${i.id}" class="btn btn-lg btn-info">Deletar</a>
-				<td><a href="detalheContasPagar.jsp?id=${i.id}" class="btn btn-lg btn-info">Detalhes</a>
+				<td><a href="EditarContasPagar.jsp?id=${i.id}" class="btn btn-lg btn-primary">Alterar</a>
+				<td><a href="./controller?acao=deletarContasAPagar&id=${i.id}" class="btn btn-lg btn-danger">Deletar</a>
+				<td><a href="detalheContasPagar.jsp?id=${i.id}" class="btn btn-lg btn-dark">Detalhes</a>
 				
 			</tr>
 		</c:forEach>
@@ -84,8 +84,9 @@
 
 	<div class="form-group">
 		<div class="col-sm-offset-3 col-sm-10">
-		    <a href="cadastrarContasPagar.jsp" class="btn btn-lg btn-warning">Criar novo</a>
-			<a href="layout.jsp" class="btn btn-lg btn-warning">Voltar</a>
+		    <a href="cadastrarContasPagar.jsp" class="btn btn-lg btn-success">Criar novo</a>
+			<a href="index.jsp" class="btn btn-lg btn-warning">Voltar</a>
 		</div>
 	</div>
 </div>
+<jsp:include page="button.jsp" />

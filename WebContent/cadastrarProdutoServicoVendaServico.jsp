@@ -21,7 +21,7 @@
 	<form class="form-horizontal" method="post" data-toggle="validator"
 		role="form" action="cadastrarProdutoServicoVendaServicoSucesso.jsp">
 		
-		<input type="hidden" name="nid" value="<%=objProdutoServicoVenda.getId()%>">
+		<input type="hidden" name="nnovo" value="">
 		
 		<div class="form-group">
 			<label for="quantidade" class="col-sm-3 control-label">Quantidade</label>
@@ -80,3 +80,4 @@
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

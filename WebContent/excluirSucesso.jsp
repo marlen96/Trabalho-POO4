@@ -7,3 +7,4 @@
 	</h1>
 </body>
 </html>
+<jsp:include page="button.jsp" />

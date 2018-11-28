@@ -21,14 +21,14 @@
 	<form class="form-horizontal" method="post" data-toggle="validator"
 		role="form" action="cadastrarVendaServicoSucesso.jsp">
 		
-		<input type="hidden" name="nid" value="<%=objVendaServ.getId()%>">
+		<input type="hidden" name="nnovo" value="">
 		
 		<div class="form-group">
 			<label for="descricao" class="col-sm-3 control-label">Descrição</label>
 
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="descricao" name="ndescricao"
-					placeholder="" required 
+					placeholder="Descrição" required 
 					value=""/>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 			<label for="vtotal" class="col-sm-3 control-label">Valor Total R$:</label>
 			<div class="col-sm-8">
 				<input type="number" class="form-control" id="vtotal"
-					name="nvtotal" placeholder="" required 
+					name="nvtotal" placeholder="Valor Total" required 
 					value="" />
 			</div>
 		</div>
@@ -81,10 +81,11 @@
 
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
-				<button type="submit" class="btn btn-lg btn-primary">Cadastrar</button>
+				<button type="submit" class="btn btn-lg btn-success">Cadastrar</button>
 				<a href="cadastrarVendaServicoSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 				
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

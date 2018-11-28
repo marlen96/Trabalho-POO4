@@ -77,8 +77,9 @@
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
 				
-				<a href="cadastrarAnamneseSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<a href="cadastrarAnamneseSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 
 </div>
+<jsp:include page="button.jsp" />

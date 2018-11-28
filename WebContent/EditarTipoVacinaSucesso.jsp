@@ -54,9 +54,9 @@
 		<c:forEach var="i" items="${TipoDeVacinaController.getInstance().buscarTodos()}">
 			<tr>
 				<td>${i.descricao}</td>
-				<td><a href="EditarTipoVacina.jsp?id=${i.id}" class="btn btn-lg btn-warning">Alterar</a>
-				<td><a href="./controller?acao=deletarTipoDeVacina&id=${i.id}" class="btn btn-lg btn-info">Deletar</a>
-				<td><a href="detalheTipoVacina.jsp?id=${i.id}" class="btn btn-lg btn-info">Detalhes</a>
+				<td><a href="EditarTipoVacina.jsp?id=${i.id}" class="btn btn-lg btn-primary">Alterar</a>
+				<td><a href="./controller?acao=deletarTipoDeVacina&id=${i.id}" class="btn btn-lg btn-danger">Deletar</a>
+				<td><a href="detalheTipoVacina.jsp?id=${i.id}" class="btn btn-lg btn-dark">Detalhes</a>
 				
 			</tr>
 		</c:forEach>
@@ -65,8 +65,9 @@
 
 	<div class="form-group">
 		<div class="col-sm-offset-3 col-sm-10">
-			 <a href="cadastrarTipoVacina.jsp" class="btn btn-lg btn-warning">Criar Novo</a>
-			<a href="layout.jsp" class="btn btn-lg btn-warning">Voltar</a>
+			 <a href="cadastrarTipoVacina.jsp" class="btn btn-lg btn-success">Criar Novo</a>
+			<a href="index.jsp" class="btn btn-lg btn-warning">Voltar</a>
 		</div>
 	</div>
 </div>
+<jsp:include page="button.jsp" />

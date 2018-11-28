@@ -17,14 +17,14 @@
 	<form class="form-horizontal" method="post" data-toggle="validator"
 		role="form" action="cadastrarFuncionarioSucesso.jsp">
 		
-		<input type="hidden" name="nid" value="<%=objFun.getId()%>">
+		<input type="hidden" name="nnovo" value="">
 		
 		<div class="form-group">
 			<label for="nome" class="col-sm-3 control-label">Nome</label>
 
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="nome" name="nnome"
-					placeholder="" required 
+					placeholder="Nome" required 
 					value=""/>
 			</div>
 		</div>
@@ -34,7 +34,7 @@
 			<label for="cpf" class="col-sm-3 control-label">CPF</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="cpf"
-					name="ncpf" placeholder="" required 
+					name="ncpf" placeholder="CPF" required 
 					value="" />
 			</div>
 		</div>
@@ -43,7 +43,7 @@
 			<label for="rg" class="col-sm-3 control-label">RG</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="rg"
-					name="nrg" placeholder="" required 
+					name="nrg" placeholder="RG" required 
 					value="" />
 			</div>
 		</div>
@@ -54,7 +54,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="telefone" name="ntelefone"
-					placeholder="" required 
+					placeholder="Telefone" required 
 					value=""/>
 			</div>
 		</div>
@@ -64,7 +64,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="email" name="nemail"
-					placeholder="" required 
+					placeholder="E-mail" required 
 					value=""/>
 			</div>
 		</div>
@@ -74,7 +74,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="rua" name="nrua"
-					placeholder="" required 
+					placeholder="Rua" required 
 					value=""/>
 			</div>
 		</div>
@@ -85,7 +85,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="numero" name="nnumero"
-					placeholder="" required 
+					placeholder="Número" required 
 					value=""/>
 			</div>
 		</div>
@@ -95,7 +95,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="bairro" name="nbairro"
-					placeholder="" required 
+					placeholder="Bairro" required 
 					value=""/>
 			</div>
 		</div>
@@ -106,7 +106,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="cidade" name="ncidade"
-					placeholder="" required 
+					placeholder="Cidade" required 
 					value=""/>
 			</div>
 		</div>
@@ -116,7 +116,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="cep" name="ncep"
-					placeholder="" required 
+					placeholder="Cep" required 
 					value=""/>
 			</div>
 			</div>
@@ -127,7 +127,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="titulo" name="ntitulo"
-					placeholder="" required 
+					placeholder="Título de Eleitor" required 
 					value=""/>
 			</div>
 		</div>
@@ -138,7 +138,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="pis" name="npis"
-					placeholder="" required 
+					placeholder="Pis" required 
 					value=""/>
 			</div>
 		</div>
@@ -148,7 +148,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="funcao" name="nfuncao"
-					placeholder="" required 
+					placeholder="Função" required 
 					value=""/>
 			</div>
 		</div>
@@ -184,9 +184,10 @@
 
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
-				<button type="submit" class="btn btn-lg btn-primary">Cadastrar</button>
-				<a href="cadastrarFuncionarioSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<button type="submit" class="btn btn-lg btn-success">Cadastrar</button>
+				<a href="cadastrarFuncionarioSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

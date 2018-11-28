@@ -63,9 +63,9 @@
 			<tr>
 				<td>${i.animal.nome}</td>
 				<td>${i.pesoOuPorteAntesDoProcedimento}</td>
-				<td><a href="EditarFichaAnimal.jsp?id=${i.id}" class="btn btn-lg btn-warning">Alterar</a>
-				<td><a href="./controller?acao=deletarFichaAnimal&id=${i.id}" class="btn btn-lg btn-info">Deletar</a>
-				<td><a href="detalheFichaAnimal.jsp?id=${i.id}" class="btn btn-lg btn-info">Detalhes</a>
+				<td><a href="EditarFichaAnimal.jsp?id=${i.id}" class="btn btn-lg btn-primary">Alterar</a>
+				<td><a href="./controller?acao=deletarFichaAnimal&id=${i.id}" class="btn btn-lg btn-danger">Deletar</a>
+				<td><a href="detalheFichaAnimal.jsp?id=${i.id}" class="btn btn-lg btn-dark">Detalhes</a>
 				
 			</tr>
 		</c:forEach>
@@ -74,8 +74,9 @@
 
 	<div class="form-group">
 		<div class="col-sm-offset-3 col-sm-10">
-			<a href="cadastrarFichaAnimal.jsp" class="btn btn-lg btn-warning">Criar novo</a>
-			<a href="layout.jsp" class="btn btn-lg btn-warning">Voltar</a>
+			<a href="cadastrarFichaAnimal.jsp" class="btn btn-lg btn-success">Criar novo</a>
+			<a href="index.jsp" class="btn btn-lg btn-warning">Voltar</a>
 		</div>
 	</div>
 </div>
+<jsp:include page="button.jsp" />

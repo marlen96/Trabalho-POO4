@@ -32,7 +32,7 @@
 			<label for="marca" class="col-sm-3 control-label">Marca</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="marca" name="nmarca"
-					placeholder="" required 
+					placeholder="Marca" required 
 					value="<%=objVacina.getMarca()%>"/>
 			</div>
 		</div>
@@ -42,7 +42,7 @@
 			<label for="lote" class="col-sm-3 control-label">Lote</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="lote"
-					name="nlote" placeholder="" required 
+					name="nlote" placeholder="Lote" required 
 					value="<%=objVacina.getLote()%>" />
 			</div>
 		</div>
@@ -51,7 +51,7 @@
 			<label for="fornecedor" class="col-sm-3 control-label">Fornecedor</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="fornecedor"
-					name="nfornecedor" placeholder="" required 
+					name="nfornecedor" placeholder="Fornecedor" required 
 					value="<%=objVacina.getFornecedor()%>" />
 			</div>
 		</div>
@@ -61,7 +61,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="custo" name="ncusto"
-					placeholder="" required 
+					placeholder="Custo" required 
 					value="<%=objVacina.getCusto()%>"/>
 			</div>
 		</div>
@@ -109,8 +109,9 @@
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
 				<button type="submit" class="btn btn-lg btn-primary">Alterar</button>
-				<a href="cadastrarVacinaSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<a href="cadastrarVacinaSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

@@ -82,3 +82,4 @@
 		</div>
 	</div>
 </div>
+<jsp:include page="button.jsp" />

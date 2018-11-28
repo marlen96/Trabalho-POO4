@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+'<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -79,7 +79,7 @@
               <li class="menu-has-children"><a href="#">Tipos</a>
             <ul>
               <li><a href="cadastrarTipoVacinaSucesso.jsp">Tipos de Vacina</a></li>
-              <li><a href="ccadastrarFormaPagamentoSucesso.jsp">Forma de Pagamento</a></li>
+              <li><a href="cadastrarFormaPagamentoSucesso.jsp">Forma de Pagamento</a></li>
               <li><a href="cadastrarTipoContaSucesso.jsp">Tipo de Conta</a></li>
              <li><a href="cadastrarTipoSucesso.jsp">Tipo de Produto</a></li>
             </ul>

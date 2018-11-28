@@ -17,14 +17,14 @@
 	<form class="form-horizontal" method="post" data-toggle="validator"
 		role="form" action="cadastrarProdutoServicoSucesso.jsp">
 		
-		<input type="hidden" name="nid" value="<%=objProdutoServico.getId()%>">
+		<input type="hidden" name="nnovo" value="">
 		
 		<div class="form-group">
 			<label for="nomeprod" class="col-sm-3 control-label">Nome</label>
 
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="nomeprod" name="nnomeprod"
-					placeholder="" required 
+					placeholder="Nome do Serviço" required 
 					value=""/>
 			</div>
 		</div>
@@ -34,7 +34,7 @@
 			<label for="marca" class="col-sm-3 control-label">Marca</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="marca"
-					name="nmarca" placeholder="" required 
+					name="nmarca" placeholder="Marca" required 
 					value="" />
 			</div>
 		</div>
@@ -43,7 +43,7 @@
 			<label for="precovenda" class="col-sm-3 control-label">Preço de venda</label>
 			<div class="col-sm-8">
 				<input type="number" class="form-control" id="precovenda"
-					name="nprecovenda" placeholder="" required 
+					name="nprecovenda" placeholder="Preço de Venda" required 
 					value="" />
 			</div>
 		</div>
@@ -54,7 +54,7 @@
 
 			<div class="col-sm-8">
 				<input type="number" class="form-control" id="precocompra" name="nprecocompra"
-					placeholder="" required 
+					placeholder="Preço de Compra" required 
 					value=""/>
 			</div>
 		</div>
@@ -64,13 +64,13 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="lote" name="nlote"
-					placeholder="" required 
+					placeholder="Lote" required 
 					value=""/>
 			</div>
 		</div>
 		
 		<div class="form-group">
-			<label for="tipo" class="col-sm-3 control-label">Tipo</label>
+			<label for="tipo" class="col-sm-3 control-label">Tipo de Produto</label>
 			<div class="col-sm-4">
 				<select name="ncomboTipo" id="comboTipo" class="form-control"
 					class="form-control" required>
@@ -92,9 +92,10 @@
 
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
-				<button type="submit" class="btn btn-lg btn-primary">Cadastrar</button>
-				<a href="cadastrarProdutoServicoSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<button type="submit" class="btn btn-lg btn-success">Cadastrar</button>
+				<a href="cadastrarProdutoServicoSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

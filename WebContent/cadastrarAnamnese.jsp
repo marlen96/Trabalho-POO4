@@ -14,16 +14,16 @@
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="cadastrarAnamneseSucesso.jsp">
+		role="form" action="./controller?acao=cadastrarAnamnese">
 		
-		<input type="hidden" name="nid" value="<%=objAnamnese.getId()%>">
+		<input type="hidden" name="nnovo" value="">
 		
 		<div class="form-group">
 			<label for="diagnostico" class="col-sm-3 control-label">Diagnostico</label>
 
 			<div class="col-sm-15">
 				<input type="text" class="form-control" id="diagnostico" name="ndiagnostico"
-					placeholder="" required 
+					placeholder="Diagnostico" required 
 					value=""/>
 			</div>
 		</div>
@@ -33,7 +33,7 @@
 			<label for="anamnese" class="col-sm-3 control-label">Anamnese</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="anamnese"
-					name="nanamnese" placeholder="" required 
+					name="nanamnese" placeholder="Anamnese" required 
 					value="" />
 			</div>
 		</div>
@@ -43,7 +43,7 @@
 			<label for="cpf" class="col-sm-3 control-label">Medicamentos</label>
 			<div class="col-sm-15">
 				<input type="text" class="form-control" id="medicamentos"
-					name="nmedicamentos" placeholder="" required 
+					name="nmedicamentos" placeholder="Medicamentos" required 
 					value="" />
 			</div>
 		</div>
@@ -55,7 +55,7 @@
 
 			<div class="col-sm-15">
 				<input type="text" class="form-control" id="procedimentosrealizados" name="nprocedimentosrealizados"
-					placeholder="" required 
+					placeholder="Procedimentos" required 
 					value=""/>
 			</div>
 		</div>
@@ -78,9 +78,10 @@
 
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
-				<button type="submit" class="btn btn-lg btn-primary">Cadastrar</button>
-				<a href="cadastrarAnamneseSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<button type="submit" class="btn btn-lg btn-success">Cadastrar</button>
+				<a href="cadastrarAnamneseSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

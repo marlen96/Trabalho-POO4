@@ -19,14 +19,14 @@
 	<form class="form-horizontal" method="post" data-toggle="validator"
 		role="form" action="cadastrarFichaAnimalSucesso.jsp">
 		
-		<input type="hidden" name="nid" value="<%=objFicha.getId()%>">
+		<input type="hidden" name="nnovo" value="">
 		
 		<div class="form-group">
 			<label for="pesoantes" class="col-sm-3 control-label">Peso ou Porte antes do procedimento</label>
 
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="pesoantes" name="npesoantes"
-					placeholder="" required 
+					placeholder="Peso ou Porte antes do procedimento" required 
 					value=""/>
 			</div>
 		</div>
@@ -51,9 +51,10 @@
 
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
-				<button type="submit" class="btn btn-lg btn-primary">Cadastrar</button>
-				<a href="cadastrarFichaAnimalSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<button type="submit" class="btn btn-lg btn-success">Cadastrar</button>
+				<a href="cadastrarFichaAnimalSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

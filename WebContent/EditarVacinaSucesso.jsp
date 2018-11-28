@@ -85,9 +85,9 @@
 				<td>${i.lote}</td>
 				<td>${i.fornecedor}</td>
 				<td>${i.custo}</td>
-				<td><a href="EditarVacina.jsp?id=${i.id}" class="btn btn-lg btn-warning">Alterar</a>
-				<td><a href="./controller?acao=deletarVacina&id=${i.id}" class="btn btn-lg btn-info">Deletar</a>
-				<td><a href="detalheVacina.jsp?id=${i.id}" class="btn btn-lg btn-info">Detalhes</a>
+				<td><a href="EditarVacina.jsp?id=${i.id}" class="btn btn-lg btn-primary">Alterar</a>
+				<td><a href="./controller?acao=deletarVacina&id=${i.id}" class="btn btn-lg btn-danger">Deletar</a>
+				<td><a href="detalheVacina.jsp?id=${i.id}" class="btn btn-lg btn-dark">Detalhes</a>
 				
 			</tr>
 		</c:forEach>
@@ -96,8 +96,9 @@
 
 	<div class="form-group">
 		<div class="col-sm-offset-3 col-sm-10">
-		    <a href="cadastrarVacina.jsp" class="btn btn-lg btn-warning">Cadastrar</a>
-			<a href="." class="btn btn-lg btn-warning">Voltar</a>
+		    <a href="cadastrarVacina.jsp" class="btn btn-lg btn-success">Cadastrar</a>
+			<a href="index.jsp" class="btn btn-lg btn-warning">Voltar</a>
 		</div>
 	</div>
 </div>
+<jsp:include page="button.jsp" />

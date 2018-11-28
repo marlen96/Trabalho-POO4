@@ -33,7 +33,7 @@
 
 			<div class="col-sm-15">
 				<input type="number" class="form-control" id="valor" name="nvalor"
-					placeholder="" required 
+					placeholder="Valor" required 
 					value="<%=objConta.getValor()%>"/>
 			</div>
 		</div>
@@ -77,8 +77,9 @@
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
 			    	<button type="submit" class="btn btn-lg btn-primary">Alterar</button>
-				<a href="cadastrarContasPagarSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<a href="cadastrarContasPagarSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

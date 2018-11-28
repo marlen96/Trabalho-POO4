@@ -17,22 +17,7 @@
 
 <div class="container" style="padding-top: 20px;">
 	<%
-		String descricao = request.getParameter("ndescricao");
-	    String status =  request.getParameter("nstatus");
-	    String data = request.getParameter("ndatan");
-	    String cliente = request.getParameter("ncomboCliente");
-
-	    
-	    String id = request.getParameter("nid");
-		if (descricao != null) {
-			
-			AgendamentoConsulta agendamento = new AgendamentoConsulta();
-			Date date = new Date(data);
-			agendamento.setDataDeAgendamento(date);
-			agendamento.setDescricao(descricao);
-			agendamento.setStatus(status);
-		    agendamento.setCliente(ClienteController.getInstance().buscarPoriD(Long.parseLong(cliente)));
-			AgendamentoConsultaController.getInstance().persistir(agendamento);
+		if (request.getParameter("nnovo") != null) {
 
 	%>
 	
@@ -45,9 +30,17 @@
 	</h1>
 
 	<%
-		}
+		} else if (request.getParameter("nid") != null) {
 	%>
 
+	<h1>
+		<span class="label label-success"> Agendamento alterado com
+			sucesso....</span>
+	</h1>
+	<%
+		}
+	%>
+	
 	<h1>
 		<span class="label label-default"> Listagem de agendamentos</span>
 	</h1>
@@ -69,9 +62,9 @@
 			    <td>${i.cliente.nome}</td>
 				<td>${i.descricao}</td>
 				<td>${i.status}</td>
-				<td><a href="EditarAgendamentoConsulta.jsp?id=${i.id}" class="btn btn-lg btn-warning">Alterar</a>
-				<td><a href="./controller?acao=deletarAgendamentoConsulta&id=${i.id}" class="btn btn-lg btn-info">Deletar</a>
-				<td><a href="detalheAgendamentoConsulta.jsp?id=${i.id}" class="btn btn-lg btn-info">Detalhes</a>
+				<td><a href="EditarAgendamentoConsulta.jsp?id=${i.id}" class="btn btn-lg btn-primary">Alterar</a>
+				<td><a href="./controller?acao=deletarAgendamentoConsulta&id=${i.id}" class="btn btn-lg btn-danger">Deletar</a>
+				<td><a href="detalheAgendamentoConsulta.jsp?id=${i.id}" class="btn btn-lg btn-dark">Detalhes</a>
 				
 			</tr>
 		</c:forEach>
@@ -80,8 +73,9 @@
 
 	<div class="form-group">
 		<div class="col-sm-offset-3 col-sm-10">
-			<a href="cadastrarAgendamentoConsulta.jsp" class="btn btn-lg btn-warning">Criar novo</a>
-			<a href="layout.jsp" class="btn btn-lg btn-warning">Voltar</a>
+			<a href="cadastrarAgendamentoConsulta.jsp" class="btn btn-lg btn-success">Criar novo</a>
+			<a href="index.jsp" class="btn btn-lg btn-warning">Voltar</a>
 		</div>
 	</div>
 </div>
+<jsp:include page="button.jsp" />

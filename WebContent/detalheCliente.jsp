@@ -15,7 +15,7 @@
 
 
 <div class="container" style="padding-top: 20px;">
-	<h1>Detalhe de Funcionario</h1>
+	<h1>Detalhe de Cliente</h1>
 	
 	<br />
 
@@ -26,7 +26,7 @@
 		
 		<div class="form-group">
 			<label for="nome" class="col-sm-3 control-label">Nome</label>
-			<div class="col-sm-2">
+			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="nome" name="nnome"
 					placeholder="Digite a marca aqui" required 
 					value="<%=objCliente.getNome()%>"/>
@@ -45,7 +45,7 @@
 		
 			<div class="form-group">
 			<label for="rg" class="col-sm-3 control-label">RG</label>
-			<div class="col-sm-3">
+			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="rg"
 					name="nrg" placeholder="Digite o custo aqui" required 
 					value="<%=objCliente.getRg()%>" />
@@ -130,8 +130,9 @@
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
 				
-				<a href="cadastrarClienteSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<a href="cadastrarClienteSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

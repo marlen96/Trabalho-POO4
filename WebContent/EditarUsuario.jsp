@@ -32,7 +32,7 @@
 
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="login" name="nlogin"
-					placeholder="" required 
+					placeholder="Login" required 
 					value="<%=objUsuario.getLogin()%>"/>
 			</div>
 		</div>
@@ -43,7 +43,7 @@
 			<label for="senha" class="col-sm-3 control-label">Senha</label>
 			<div class="col-sm-10">
 				<input type="password" class="form-control" id="senha" name="nsenha"
-					placeholder="" required 
+					placeholder="Senha" required 
 					value="<%=objUsuario.getSenha()%>"/>
 			</div>
 		</div>
@@ -51,9 +51,10 @@
 
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
-				<button type="submit" class="btn btn-lg btn-primary">Cadastrar</button>
-				<a href="cadastrarUsuarioSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<button type="submit" class="btn btn-lg btn-primary">Alterar</button>
+				<a href="cadastrarUsuarioSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

@@ -26,7 +26,7 @@
 		
 		<div class="form-group">
 			<label for="login" class="col-sm-3 control-label">Login</label>
-			<div class="col-sm-2">
+			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="login" name="nlogin"
 					placeholder="" required 
 					value="<%=objUsuario.getLogin()%>"/>
@@ -36,7 +36,7 @@
 		
 			<div class="form-group">
 			<label for="senha" class="col-sm-3 control-label">Senha</label>
-			<div class="col-sm-8">
+			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="senha"
 					name="nsenha" placeholder="" required 
 					value="<%=objUsuario.getSenha()%>" />
@@ -48,8 +48,9 @@
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
 				
-				<a href="cadastrarUsuarioSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<a href="cadastrarUsuarioSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

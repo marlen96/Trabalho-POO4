@@ -14,44 +14,30 @@
 <jsp:include page="layout.jsp" />
 
 <div class="container" style="padding-top: 20px;">
+
 	<%
-	    String diagnostico = request.getParameter("ndiagnostico");
-	    String anamnese =  request.getParameter("nanamnese");
-	    String medicamentos =  request.getParameter("nmedicamentos");
-	    String procedimentosRealizados =  request.getParameter("nprocedimentosrealizados");
-        String fichaAnimal = request.getParameter("ncomboFicha");
-
-
-	    
-	    String id = request.getParameter("nid");
-		if (diagnostico != null) {
-			
-			
-			
-			Anamnese anamneses = new Anamnese();
-			anamneses.setDiagnostico(diagnostico);
-			anamneses.setAnamnese(anamnese);
-			anamneses.setMedicamentos(medicamentos);
-			anamneses.setProcedimentosRealizados(procedimentosRealizados);
-			anamneses.setFichaAnimal(FichaAnimalController.getInstance().buscarPoriD(Long.parseLong(fichaAnimal)));
-
-			AnamneseController.getInstance().persistir(anamneses);
-	
+		if (request.getParameter("nnovo") != null) {
 
 	%>
 	
-	
-	
-	
 	<h1>
-		<span class="label label-success"> Anamnese cadastrado com
+		<span class="label label-success"> Anamnese cadastrada com
 			sucesso....</span>
 	</h1>
 
 	<%
-		} 
+		} else if (request.getParameter("nid") != null) {
 	%>
 
+	<h1>
+		<span class="label label-success"> Anamnese alterada com
+			sucesso....</span>
+	</h1>
+	<%
+		}
+	%>
+	
+	
 	<h1>
 		<span class="label label-default"> Listagem de anamnese</span>
 	</h1>
@@ -76,9 +62,9 @@
 				<td>${i.anamnese}</td>
 				<td>${i.medicamentos}</td>
 				<td>${i.procedimentosRealizados}</td>
-				<td><a href="EditarAnamnese.jsp?id=${i.id}" class="btn btn-lg btn-warning">Alterar</a>
-				<td><a href="./controller?acao=deletarAnamnese&id=${i.id}" class="btn btn-lg btn-info">Deletar</a>
-				<td><a href="detalheAnamnese.jsp?id=${i.id}" class="btn btn-lg btn-info">Detalhes</a>
+				<td><a href="EditarAnamnese.jsp?id=${i.id}" class="btn btn-lg btn-primary">Alterar</a>
+				<td><a href="./controller?acao=deletarAnamnese&id=${i.id}" class="btn btn-lg btn-danger">Deletar</a>
+				<td><a href="detalheAnamnese.jsp?id=${i.id}" class="btn btn-lg btn-dark">Detalhes</a>
 				
 			</tr>
 		</c:forEach>
@@ -87,8 +73,9 @@
 
 	<div class="form-group">
 		<div class="col-sm-offset-3 col-sm-10">
-		    <a href="cadastrarAnamnese.jsp" class="btn btn-lg btn-warning">Criar novo</a>
-			<a href="layout.jsp" class="btn btn-lg btn-warning">Voltar</a>
+		    <a href="cadastrarAnamnese.jsp" class="btn btn-lg btn-success">Criar novo</a>
+			<a href="index.jsp" class="btn btn-lg btn-warning">Voltar</a>
 		</div>
 	</div>
 </div>
+<jsp:include page="button.jsp" />

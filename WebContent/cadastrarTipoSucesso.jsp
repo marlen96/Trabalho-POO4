@@ -28,7 +28,7 @@
 	
 	
 	<h1>
-		<span class="label label-success"> Tipo cadastrado com
+		<span class="label label-success"> Tipo de produto cadastrado com
 			sucesso....</span>
 	</h1>
 
@@ -37,7 +37,7 @@
 	%>
 
 	<h1>
-		<span class="label label-default"> Listagem de tipos </span>
+		<span class="label label-default"> Listagem de tipos de produtos </span>
 	</h1>
 
 
@@ -53,9 +53,9 @@
 		<c:forEach var="i" items="${TipoController.getInstance().buscarTodos()}">
 			<tr>
 				<td>${i.descricao}</td>
-				<td><a href="EditarTipo.jsp?id=${i.id}" class="btn btn-lg btn-warning">Alterar</a>
-				<td><a href="./controller?acao=deletarTipo&id=${i.id}" class="btn btn-lg btn-info">Deletar</a>
-				<td><a href="detalheTipo.jsp?id=${i.id}" class="btn btn-lg btn-info">Detalhes</a>
+				<td><a href="EditarTipo.jsp?id=${i.id}" class="btn btn-lg btn-primary">Alterar</a>
+				<td><a href="./controller?acao=deletarTipo&id=${i.id}" class="btn btn-lg btn-danger">Deletar</a>
+				<td><a href="detalheTipo.jsp?id=${i.id}" class="btn btn-lg btn-dark">Detalhes</a>
 				
 			</tr>
 		</c:forEach>
@@ -64,8 +64,9 @@
 
 	<div class="form-group">
 		<div class="col-sm-offset-3 col-sm-10">
-		    <a href="cadastrarTipo.jsp" class="btn btn-lg btn-warning">Criar Novo</a>
-			<a href="layout.jsp" class="btn btn-lg btn-warning">Voltar</a>
+		    <a href="cadastrarTipo.jsp" class="btn btn-lg btn-success">Criar Novo</a>
+			<a href="index.jsp" class="btn btn-lg btn-warning">Voltar</a>
 		</div>
 	</div>
 </div>
+<jsp:include page="button.jsp" />

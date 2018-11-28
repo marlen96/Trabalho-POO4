@@ -28,7 +28,7 @@
 
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="nome" name="nnome"
-					placeholder="Digite o nome aqui" required 
+					placeholder="Nome" required 
 					value="<%=objCliente.getNome()%>"/>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 			<label for="cpf" class="col-sm-3 control-label">CPF</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="cpf"
-					name="ncpf" placeholder="Digite o CPF aqui" required 
+					name="ncpf" placeholder="CPF" required 
 					value="<%=objCliente.getCpf()%>" />
 			</div>
 		</div>
@@ -47,7 +47,7 @@
 			<label for="rg" class="col-sm-3 control-label">RG</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="rg"
-					name="nrg" placeholder="Digite o custo aqui" required 
+					name="nrg" placeholder="Custo" required 
 					value="<%=objCliente.getRg()%>" />
 			</div>
 		</div>
@@ -58,7 +58,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="telefone" name="ntelefone"
-					placeholder="Digite o telefone aqui" required 
+					placeholder="Telefone" required 
 					value="<%=objCliente.getTelefone()%>"/>
 			</div>
 		</div>
@@ -68,7 +68,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="email" name="nemail"
-					placeholder="Digite o e-mail aqui" required 
+					placeholder="E-mail" required 
 					value="<%=objCliente.getEmail()%>"/>
 			</div>
 		</div>
@@ -78,7 +78,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="rua" name="nrua"
-					placeholder="Digite a rua aqui" required 
+					placeholder="Rua" required 
 					value="<%=objCliente.getRua()%>"/>
 			</div>
 		</div>
@@ -89,7 +89,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="numero" name="nnumero"
-					placeholder="Digite o número aqui" required 
+					placeholder="Número" required 
 					value="<%=objCliente.getNumero()%>"/>
 			</div>
 		</div>
@@ -99,7 +99,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="bairro" name="nbairro"
-					placeholder="Digite o bairro aqui" required 
+					placeholder="Bairro" required 
 					value="<%=objCliente.getBairro()%>"/>
 			</div>
 		</div>
@@ -110,7 +110,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="cidade" name="ncidade"
-					placeholder="Digite a cidade aqui" required 
+					placeholder="Cidade" required 
 					value="<%=objCliente.getCidade()%>"/>
 			</div>
 		</div>
@@ -120,7 +120,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" class="form-control" id="cep" name="ncep"
-					placeholder="Digite o cep aqui" required 
+					placeholder="Cep" required 
 					value="<%=objCliente.getCep()%>"/>
 			</div>
 			</div>
@@ -131,8 +131,9 @@
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
 				<button type="submit" class="btn btn-lg btn-primary">Alterar</button>
-				<a href="cadastrarClienteSucesso.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<a href="cadastrarClienteSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />

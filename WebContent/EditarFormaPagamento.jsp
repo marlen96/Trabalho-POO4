@@ -28,7 +28,7 @@
 			<label for="descricao" class="col-sm-3 control-label">Descrição da forma de pagamento</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="descricao" name="ndescricao"
-					placeholder="" required 
+					placeholder="Descrição da Forma de Pagamento" required 
 					value="<%=objFormaPagamento.getDescricao()%>"/>
 			</div>
 		</div>
@@ -40,8 +40,9 @@
 		<div class="form-group">
 			<div class="col-sm-offset-3 col-sm-10">
 				<button type="submit" class="btn btn-lg btn-primary">Alterar</button>
-				<a href="cadastrarFormaPagamento.jsp" class="btn btn-lg btn-primary">Voltar</a>
+				<a href="cadastrarFormaPagamentoSucesso.jsp" class="btn btn-lg btn-warning">Voltar</a>
 			</div>
 		</div>
 	</form>
 </div>
+<jsp:include page="button.jsp" />
