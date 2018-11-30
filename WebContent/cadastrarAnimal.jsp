@@ -24,7 +24,7 @@
 		<div class="form-group">
 			<label for="nome" class="col-sm-3 control-label">Nome</label>
 
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="nome" name="nnome"
 					placeholder="Nome do Pet" required 
 					value=""/>
@@ -34,7 +34,7 @@
 		
 			<div class="form-group">
 			<label for="raca" class="col-sm-3 control-label">Raça</label>
-			<div class="col-sm-8">
+			<div class="col-sm-4">
 				<input type="text" class="form-control" id="raca"
 					name="nraca" placeholder="Raça" required 
 					value="" />
@@ -54,7 +54,7 @@
 		<div class="form-group">
 			<label for="telefone" class="col-sm-3 control-label">Espécie</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-4">
 				<input type="text" class="form-control" id="especie" name="nespecie"
 					placeholder="Espécie" required 
 					value=""/>
@@ -64,7 +64,7 @@
 		<div class="form-group">
 			<label for="datan" class="col-sm-3 control-label">Data de nascimento</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="datan" name="ndatan"
 					required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" placeholder="DD/MM/AAAA"/>
 			</div>
@@ -74,7 +74,7 @@
 		    <div class="form-group ">
              
              <label for="sexo" class="col-md-1 control-label">Sexo</label>
-             <div class="col-md-5">
+             <div class="col-md-2">
              <select  class="form-control"  id="sexo" name="nsexo" data-placeholder="Selecione o sexo">
          <option value="Macho">Macho</option>
          <option value="Fêmea">Fêmea</option>
@@ -84,7 +84,7 @@
 		
 			<div class="form-group">
 			<label for="cliente" class="col-sm-3 control-label">Cliente</label>
-			<div class="col-sm-4">
+			<div class="col-sm-6">
 				<select name="ncomboCliente" id="comboCliente" class="form-control"
 					class="form-control" required>
 					<c:forEach var="i" items="${ClienteController.getInstance().buscarTodos()}">

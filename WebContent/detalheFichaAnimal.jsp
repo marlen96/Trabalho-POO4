@@ -15,7 +15,7 @@
 
 
 <div class="container" style="padding-top: 20px;">
-	<h1>Detalhe de animal</h1>
+	<h1>Detalhe de Ficha Animal</h1>
 	
 	<br />
 
@@ -28,7 +28,7 @@
 			<label for="nome" class="col-sm-3 control-label">Nome do Animal</label>
 			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="nome" name="nnome"
-					placeholder="" required 
+					placeholder=""
 					value="<%=objFichaAnimal.getAnimal().getNome()%>"/>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 			<label for="raca" class="col-sm-3 control-label">Peso ou Porte Antes do Procedimento</label>
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="raca"
-					name="nraca" placeholder="" required 
+					name="nraca" placeholder=""
 					value="<%=objFichaAnimal.getPesoOuPorteAntesDoProcedimento()%>" />
 			</div>
 		</div>

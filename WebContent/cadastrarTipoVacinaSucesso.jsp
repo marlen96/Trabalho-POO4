@@ -10,31 +10,29 @@
 
 <jsp:include page="layout.jsp" />
 
-<div class="container" style="padding-top: 20px;">
-	<%
-		String descricao = request.getParameter("ndescricao");
-	    String id = request.getParameter("nid");
-		if (descricao != null) {
-			
-			
-			TipoDeVacina tipodevacina = new TipoDeVacina();
-			tipodevacina.setDescricao(descricao);
-		 
-			TipoDeVacinaController.getInstance().persistir(tipodevacina);
+<%
+		if (request.getParameter("nnovo") != null) {
 
 	%>
 	
-	
-	
-	
 	<h1>
-		<span class="label label-success"> Tipo da vacina cadastrada com
+		<span class="label label-success"> Tipo de vacina cadastrada com
 			sucesso....</span>
 	</h1>
 
 	<%
+		} else if (request.getParameter("nid") != null) {
+	%>
+
+	<h1>
+		<span class="label label-success"> Tipo de vacina alterada com
+			sucesso....</span>
+	</h1>
+	<%
 		}
 	%>
+
+
 
 	<h1>
 		<span class="label label-default"> Listagem de tipos de vacinas</span>
@@ -68,5 +66,5 @@
 			<a href="index.jsp" class="btn btn-lg btn-warning">Voltar</a>
 		</div>
 	</div>
-</div>
+
 <jsp:include page="button.jsp" />

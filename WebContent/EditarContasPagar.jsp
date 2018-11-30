@@ -22,7 +22,7 @@
 	<br />
 
 <form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="EditarContasPagarSucesso.jsp">
+		role="form" action="./controller?acao=editarContasAPagar">
 
 
 		
@@ -31,7 +31,7 @@
 		<div class="form-group">
 			<label for="valor" class="col-sm-3 control-label">Valor</label>
 
-			<div class="col-sm-15">
+			<div class="col-sm-3">
 				<input type="number" class="form-control" id="valor" name="nvalor"
 					placeholder="Valor" required 
 					value="<%=objConta.getValor()%>"/>
@@ -66,7 +66,7 @@
 			<div class="form-group">
 			<label for="datan" class="col-sm-3 control-label">Data de vencimento</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="datan" name="ndatan"
 					placeholder="" required 
 					value="<%=ContasAPagarController.getInstance().getdataCadastroFormatado(objConta)%>"/>

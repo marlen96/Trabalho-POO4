@@ -31,7 +31,7 @@
 
 			<div class="col-sm-8">
 				<input type="number" readonly  class="form-control" id="valor" name="nvalor"
-					placeholder="" required 
+					placeholder=""
 					value="<%=objConta.getValor()%>"/>
 			</div>
 		</div>
@@ -40,7 +40,7 @@
 			<label for="fornecedor" class="col-sm-3 control-label">Fornecedor</label>
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="fornecedor"
-					name="nfornecedor" placeholder="" required 
+					name="nfornecedor" placeholder=""
 					value="<%=objConta.getFornecedor().getNomeFantasia()%>" />
 			</div>
 		</div>
@@ -51,7 +51,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="valor" name="nvalor"
-					placeholder="" required 
+					placeholder=""
 					value="<%=objConta.getTipoDeConta().getDescricao()%>"/>
 			</div>
 		</div>
@@ -62,7 +62,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="datan" name="ndatan"
-					placeholder="" required 
+					placeholder=""
 					value="<%=ContasAPagarController.getInstance().getdataCadastroFormatado(objConta)%>"/>
 			</div>
 		</div>

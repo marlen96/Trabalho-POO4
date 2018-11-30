@@ -28,7 +28,7 @@
 			<label for="login" class="col-sm-3 control-label">Login</label>
 			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="login" name="nlogin"
-					placeholder="" required 
+					placeholder="" 
 					value="<%=objUsuario.getLogin()%>"/>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 			<label for="senha" class="col-sm-3 control-label">Senha</label>
 			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="senha"
-					name="nsenha" placeholder="" required 
+					name="nsenha" placeholder="" 
 					value="<%=objUsuario.getSenha()%>" />
 			</div>
 		</div>

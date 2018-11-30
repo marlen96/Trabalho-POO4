@@ -1,4 +1,4 @@
-'<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -46,7 +46,7 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href=".">Inicio</a></li>
+          <li class="menu-active"><a href="index.jsp">Inicio</a></li>
           
             <li class="menu-has-children"><a href="#">Funcionários</a>
             <ul>

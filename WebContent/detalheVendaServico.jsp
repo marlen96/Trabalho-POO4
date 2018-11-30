@@ -28,7 +28,7 @@
 			<label for="descricao" class="col-sm-3 control-label">Descrição</label>
 			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="descricao" name="ndescricao"
-					placeholder="" required 
+					placeholder=""
 					value="<%=objVendaServico.getDescricao()%>"/>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 			<label for="vtotal" class="col-sm-3 control-label">Valor Total R$</label>
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="vtotal"
-					name="nvtotal" placeholder="" required 
+					name="nvtotal" placeholder=""
 					value="<%=objVendaServico.getValorTotal()%>" />
 			</div>
 		</div>
@@ -50,7 +50,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="sexo" name="nsexo"
-					placeholder="" required 
+					placeholder="" 
 					value="<%=objVendaServico.getCliente().getNome()%>"/>
 			</div>
 		</div>
@@ -61,7 +61,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="sexo" name="nsexo"
-					placeholder="" required 
+					placeholder=""
 					value="<%=objVendaServico.getFuncionario().getNome()%>"/>
 			</div>
 		</div>
@@ -71,7 +71,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="datan" name="ndatan"
-					placeholder="" required 
+					placeholder=""
 					value="<%=VendaServicoController.getInstance().getdataCadastroFormatado(objVendaServico)%>"/>
 			</div>
 		</div>

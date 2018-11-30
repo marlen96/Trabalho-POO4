@@ -15,18 +15,18 @@
 
 
 <div class="container" style="padding-top: 20px;">
-	<h1>Edição de Tipo de Conta</h1>
+	<h1>Alteração de Tipo de Conta</h1>
 	
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="EditarTipoContaSucesso.jsp">
+		role="form" action="./controller?acao=editarTConta">
 		
 		<input type="hidden" name="nid" value="<%=objTipoConta.getId()%>">
 		
 		<div class="form-group">
 			<label for="descricaoconta" class="col-sm-3 control-label">Descrição da conta</label>
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="descricaoconta" name="ndescricaoconta"
 					placeholder="Descrição da conta" required 
 					value="<%=objTipoConta.getDescricao()%>"/>

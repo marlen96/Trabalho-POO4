@@ -12,21 +12,21 @@
 
 
 <div class="container" style="padding-top: 20px;">
-	<h1>Cadastro de Animal</h1>
+	<h1>Cadastro de Ficha Animal</h1>
 	
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="cadastrarFichaAnimalSucesso.jsp">
+		role="form" action="./controller?acao=cadastrarFichaAnimal">
 		
 		<input type="hidden" name="nnovo" value="">
 		
 		<div class="form-group">
 			<label for="pesoantes" class="col-sm-3 control-label">Peso ou Porte antes do procedimento</label>
 
-			<div class="col-sm-10">
+			<div class="col-sm-3">
 				<input type="text" class="form-control" id="pesoantes" name="npesoantes"
-					placeholder="Peso ou Porte antes do procedimento" required 
+					placeholder="Peso ou Porte" required 
 					value=""/>
 			</div>
 		</div>
@@ -36,7 +36,7 @@
 		
 			<div class="form-group">
 			<label for="animal" class="col-sm-3 control-label">Animal</label>
-			<div class="col-sm-4">
+			<div class="col-sm-6">
 				<select name="ncomboAnimal" id="comboAnimal" class="form-control"
 					class="form-control" required>
 					<c:forEach var="i" items="${AnimalController.getInstance().buscarTodos()}">

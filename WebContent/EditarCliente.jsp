@@ -14,19 +14,19 @@
 
 
 <div class="container" style="padding-top: 20px;">
-	<h1>Edição de Cliente</h1>
+	<h1>Alteração de Cliente</h1>
 	
 	<br />
 
-	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="EditarClienteSucesso.jsp">
+		<form class="form-horizontal" method="post" data-toggle="validator"
+		role="form" action="./controller?acao=editarCliente">
 		
 		<input type="hidden" name="nid" value="<%=objCliente.getId()%>">
 		
 		<div class="form-group">
 			<label for="nome" class="col-sm-3 control-label">Nome</label>
 
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="nome" name="nnome"
 					placeholder="Nome" required 
 					value="<%=objCliente.getNome()%>"/>
@@ -36,7 +36,7 @@
 		
 			<div class="form-group">
 			<label for="cpf" class="col-sm-3 control-label">CPF</label>
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="cpf"
 					name="ncpf" placeholder="CPF" required 
 					value="<%=objCliente.getCpf()%>" />
@@ -45,7 +45,7 @@
 		
 			<div class="form-group">
 			<label for="rg" class="col-sm-3 control-label">RG</label>
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="rg"
 					name="nrg" placeholder="Custo" required 
 					value="<%=objCliente.getRg()%>" />
@@ -56,7 +56,7 @@
 		<div class="form-group">
 			<label for="telefone" class="col-sm-3 control-label">Telefone</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-3">
 				<input type="text" class="form-control" id="telefone" name="ntelefone"
 					placeholder="Telefone" required 
 					value="<%=objCliente.getTelefone()%>"/>
@@ -66,7 +66,7 @@
 		<div class="form-group">
 			<label for="email" class="col-sm-3 control-label">E-mail</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="email" name="nemail"
 					placeholder="E-mail" required 
 					value="<%=objCliente.getEmail()%>"/>
@@ -76,7 +76,7 @@
 		<div class="form-group">
 			<label for="rua" class="col-sm-3 control-label">Rua</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="rua" name="nrua"
 					placeholder="Rua" required 
 					value="<%=objCliente.getRua()%>"/>
@@ -87,7 +87,7 @@
 			<div class="form-group">
 			<label for="numero" class="col-sm-3 control-label">Número</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="numero" name="nnumero"
 					placeholder="Número" required 
 					value="<%=objCliente.getNumero()%>"/>
@@ -97,7 +97,7 @@
 			<div class="form-group">
 			<label for="bairro" class="col-sm-3 control-label">Bairro</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="bairro" name="nbairro"
 					placeholder="Bairro" required 
 					value="<%=objCliente.getBairro()%>"/>
@@ -108,7 +108,7 @@
 			<div class="form-group">
 			<label for="cidade" class="col-sm-3 control-label">Cidade</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="cidade" name="ncidade"
 					placeholder="Cidade" required 
 					value="<%=objCliente.getCidade()%>"/>
@@ -118,7 +118,7 @@
 			<div class="form-group">
 			<label for="cep" class="col-sm-3 control-label">Cep</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="cep" name="ncep"
 					placeholder="Cep" required 
 					value="<%=objCliente.getCep()%>"/>

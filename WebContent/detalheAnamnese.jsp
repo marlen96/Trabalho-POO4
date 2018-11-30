@@ -27,7 +27,7 @@
 			<label for="diagnostico" class="col-sm-3 control-label">Diagnostico</label>
 			<div class="col-sm-2">
 				<input type="text" readonly class="form-control" id="diagnostico" name="ndiagnostico"
-					placeholder="" required 
+					placeholder="" 
 					value="<%=objAnamnese.getDiagnostico()%>"/>
 			</div>
 		</div>
@@ -37,7 +37,7 @@
 			<label for="anamnese" class="col-sm-3 control-label">Anamnese</label>
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="anamnese"
-					name="nanamnese" placeholder="" required 
+					name="nanamnese" placeholder="" 
 					value="<%=objAnamnese.getAnamnese()%>" />
 			</div>
 		</div>
@@ -46,7 +46,7 @@
 			<label for="medicamento" class="col-sm-3 control-label">Medicamentos</label>
 			<div class="col-sm-3">
 				<input type="text" readonly class="form-control" id="medicamento"
-					name="nmedicamento" placeholder="" required 
+					name="nmedicamento" placeholder=""
 					value="<%=objAnamnese.getMedicamentos()%>" />
 			</div>
 		</div>
@@ -57,7 +57,7 @@
 
 			<div class="col-sm-3">
 				<input type="text" readonly class="form-control" id="procedimentosrealizados" name="nprocedimentosrealizados"
-					placeholder="" required 
+					placeholder="" 
 					value="<%=objAnamnese.getProcedimentosRealizados()%>"/>
 			</div>
 		</div>
@@ -67,7 +67,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="nomeanimal" name="nnomeanimal"
-					placeholder="" required 
+					placeholder="" 
 					value="<%=objAnamnese.getFichaAnimal().getAnimal().getNome()%>"/>
 			</div>
 		</div>

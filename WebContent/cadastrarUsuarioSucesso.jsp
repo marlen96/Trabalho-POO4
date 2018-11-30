@@ -12,18 +12,7 @@
 
 <div class="container" style="padding-top: 20px;">
 	<%
-		String login = request.getParameter("nlogin");
-	    String senha = request.getParameter("nsenha");
-	    String id = request.getParameter("nid");
-		if (login != null) {
-		
-			
-			
-			Usuario usuario = new Usuario();
-			usuario.setLogin(login);
-			usuario.setSenha(senha);
-		 
-			UsuarioController.getInstance().persistir(usuario);
+		if (request.getParameter("nnovo") != null) {
 
 	%>
 	
@@ -36,9 +25,16 @@
 	</h1>
 
 	<%
-		}
+		} else if (request.getParameter("nid") != null) {
 	%>
 
+	<h1>
+		<span class="label label-success"> Usuário alterado com
+			sucesso....</span>
+	</h1>
+	<%
+		}
+	%>
 	
     <h1>
 		<span class="label label-default"> Listagem de usuários </span>

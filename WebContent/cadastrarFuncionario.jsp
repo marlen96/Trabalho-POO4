@@ -15,14 +15,14 @@
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="cadastrarFuncionarioSucesso.jsp">
+		role="form" action="./controller?acao=cadastrarFuncionario">
 		
 		<input type="hidden" name="nnovo" value="">
 		
 		<div class="form-group">
 			<label for="nome" class="col-sm-3 control-label">Nome</label>
 
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="nome" name="nnome"
 					placeholder="Nome" required 
 					value=""/>
@@ -32,7 +32,7 @@
 		
 			<div class="form-group">
 			<label for="cpf" class="col-sm-3 control-label">CPF</label>
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="cpf"
 					name="ncpf" placeholder="CPF" required 
 					value="" />
@@ -41,7 +41,7 @@
 		
 			<div class="form-group">
 			<label for="rg" class="col-sm-3 control-label">RG</label>
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="rg"
 					name="nrg" placeholder="RG" required 
 					value="" />
@@ -52,7 +52,7 @@
 		<div class="form-group">
 			<label for="telefone" class="col-sm-3 control-label">Telefone</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-3">
 				<input type="text" class="form-control" id="telefone" name="ntelefone"
 					placeholder="Telefone" required 
 					value=""/>
@@ -62,7 +62,7 @@
 		<div class="form-group">
 			<label for="email" class="col-sm-3 control-label">E-mail</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="email" name="nemail"
 					placeholder="E-mail" required 
 					value=""/>
@@ -72,7 +72,7 @@
 		<div class="form-group">
 			<label for="rua" class="col-sm-3 control-label">Rua</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="rua" name="nrua"
 					placeholder="Rua" required 
 					value=""/>
@@ -83,7 +83,7 @@
 			<div class="form-group">
 			<label for="numero" class="col-sm-3 control-label">Número</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="numero" name="nnumero"
 					placeholder="Número" required 
 					value=""/>
@@ -93,7 +93,7 @@
 			<div class="form-group">
 			<label for="bairro" class="col-sm-3 control-label">Bairro</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="bairro" name="nbairro"
 					placeholder="Bairro" required 
 					value=""/>
@@ -104,7 +104,7 @@
 			<div class="form-group">
 			<label for="cidade" class="col-sm-3 control-label">Cidade</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="cidade" name="ncidade"
 					placeholder="Cidade" required 
 					value=""/>
@@ -114,7 +114,7 @@
 			<div class="form-group">
 			<label for="cep" class="col-sm-3 control-label">Cep</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="cep" name="ncep"
 					placeholder="Cep" required 
 					value=""/>
@@ -125,7 +125,7 @@
 			<div class="form-group">
 			<label for="titulo" class="col-sm-3 control-label">Título de eleitor</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="titulo" name="ntitulo"
 					placeholder="Título de Eleitor" required 
 					value=""/>
@@ -136,7 +136,7 @@
 		<div class="form-group">
 			<label for="pis" class="col-sm-3 control-label">Pis</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="pis" name="npis"
 					placeholder="Pis" required 
 					value=""/>
@@ -146,7 +146,7 @@
 		<div class="form-group">
 			<label for="funcao" class="col-sm-3 control-label">Função</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-5">
 				<input type="text" class="form-control" id="funcao" name="nfuncao"
 					placeholder="Função" required 
 					value=""/>
@@ -157,7 +157,7 @@
 	    <div class="form-group ">
              
              <label for="estadocivil" class="col-md-1 control-label">Estado Civil</label>
-             <div class="col-md-5">
+             <div class="col-md-4">
          <select  class="form-control"  id="estadocivil" name="nestadocivil" data-placeholder="Selecione o estado civil">
          <option value="0">Solteiro</option>
          <option value="1">Casado</option>

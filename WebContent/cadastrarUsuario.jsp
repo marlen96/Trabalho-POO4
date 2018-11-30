@@ -15,14 +15,14 @@
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="cadastrarUsuarioSucesso.jsp">
+		role="form" action="./controller?acao=cadastrarUsuario">
 		
 		<input type="hidden" name="nnovo" value="">
 		
 		<div class="form-group">
 			<label for="login" class="col-sm-3 control-label">Login</label>
 
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="login" name="nlogin"
 					placeholder="Login" required 
 					value=""/>
@@ -33,7 +33,7 @@
 		
 		<div class="form-group">
 			<label for="senha" class="col-sm-3 control-label">Senha</label>
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="password" class="form-control" id="senha" name="nsenha"
 					placeholder="Senha" required 
 					value=""/>

@@ -15,7 +15,7 @@
 
 
 <div class="container" style="padding-top: 20px;">
-	<h1>Detalhe de animal</h1>
+	<h1>Detalhe de Tipo de Conta</h1>
 	
 	<br />
 
@@ -28,7 +28,7 @@
 			<label for="descricaoconta" class="col-sm-3 control-label">Descrição da conta</label>
 			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="descricaoconta" name="ndescricaoconta"
-					placeholder="" required 
+					placeholder="" 
 					value="<%=objTipoConta.getDescricao()%>"/>
 			</div>
 		</div>

@@ -60,7 +60,7 @@ public class BasicDAO <T>  {
 	@SuppressWarnings("unchecked")
 	public List<Object> buscarTodas() {
 		EntityManager em = PersistenceUtil.getEntityManager();
-		Query query = em.createQuery("from " + objeto.getClass().getName() +  " as c ");
+		Query query = em.createQuery("select c from " + objeto.getClass().getSimpleName() +  " as c ");
 		return query.getResultList();
 	}
 

@@ -19,25 +19,8 @@
 <jsp:include page="layout.jsp" />
 
 <div class="container" style="padding-top: 20px;">
-	<%
-		String fornecedor = request.getParameter("ncomboForn");
-
-	    String tipo = request.getParameter("ncomboTipo");
-
-	    String data = request.getParameter("ndatan");
-	    
-	    String id = request.getParameter("nid");
-	    
-		if (fornecedor != null) {
-			 Double valor = Double.parseDouble(request.getParameter("nvalor"));	
-			
-		   ContasAPagar conta = new ContasAPagar();
-		   Date date = new Date(data);
-		   conta.setData(date);
-		   conta.setValor(BigDecimal.valueOf(valor));
-		   conta.setFornecedor(FornecedorController.getInstance().buscarPoriD(Long.parseLong(fornecedor)));
-	       conta.setTipoDeConta(TipoDeContaController.getInstance().buscarPoriD(Long.parseLong(tipo)));
-	       ContasAPagarController.getInstance().persistir(conta);
+		<%
+		if (request.getParameter("nnovo") != null) {
 
 	%>
 	
@@ -45,13 +28,22 @@
 	
 	
 	<h1>
-		<span class="label label-success"> Conta a Pagar cadastrada com sucesso
+		<span class="label label-success"> Conta a pagar cadastrada com
 			sucesso....</span>
 	</h1>
 
 	<%
+		} else if (request.getParameter("nid") != null) {
+	%>
+
+	<h1>
+		<span class="label label-success">  Conta a pagar alterada com
+			sucesso....</span>
+	</h1>
+	<%
 		}
 	%>
+	
 
 	<h1>
 		<span class="label label-default"> Listagem de Contas a Pagar</span>

@@ -11,35 +11,9 @@
 <jsp:include page="layout.jsp" />
 
 <div class="container" style="padding-top: 20px;">
+	
 	<%
-		String nome = request.getParameter("nnome");
-	    String cpf =  request.getParameter("ncpf");
-	    String rg =  request.getParameter("nrg");
-	    String telefone =  request.getParameter("ntelefone");
-	    String email =  request.getParameter("nemail");
-	    String rua =  request.getParameter("nrua");
-	    String numero =  request.getParameter("nnumero");
-	    String bairro =  request.getParameter("nbairro");
-	    String cidade =  request.getParameter("ncidade");
-	    String cep =  request.getParameter("ncep");
-	    
-	    String id = request.getParameter("nid");
-		if (nome != null) {
-			Cliente cliente = new Cliente();
-		    
-			cliente.setNome(nome);
-			cliente.setCpf(cpf);
-			cliente.setRg(rg);
-			cliente.setTelefone(telefone);
-			cliente.setEmail(email);
-			cliente.setRua(rua);
-			cliente.setNumero(numero);
-			cliente.setBairro(bairro);
-			cliente.setCidade(cidade);
-			cliente.setCep(cep);
-
-		
-			ClienteController.getInstance().persistir(cliente);
+		if (request.getParameter("nnovo") != null) {
 
 	%>
 	
@@ -52,8 +26,17 @@
 	</h1>
 
 	<%
+		} else if (request.getParameter("nid") != null) {
+	%>
+
+	<h1>
+		<span class="label label-success"> Cliente alterado com
+			sucesso....</span>
+	</h1>
+	<%
 		}
 	%>
+	
 
 	<h1>
 		<span class="label label-default"> Listagem de clientes</span>

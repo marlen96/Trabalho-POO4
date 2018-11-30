@@ -28,7 +28,7 @@
 			<label for="apelido" class="col-sm-3 control-label">Apelido</label>
 			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="apelido" name="napelido"
-					placeholder="" required 
+					placeholder=""
 					value="<%=objForn.getNomeFantasia()%>"/>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 			<label for="cpf" class="col-sm-3 control-label">Cnpj</label>
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="cnpj"
-					name="ncnpj" placeholder="" required 
+					name="ncnpj" placeholder=""
 					value="<%=objForn.getCnpj()%>" />
 			</div>
 		</div>
@@ -47,7 +47,7 @@
 			<label for="rg" class="col-sm-3 control-label">Razão Social</label>
 			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="razaosocial"
-					name="nrazaosocial" placeholder="" required 
+					name="nrazaosocial" placeholder=""
 					value="<%=objForn.getRazaoSocial()%>" />
 			</div>
 		</div>
@@ -58,7 +58,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="telefone" name="ntelefone"
-					placeholder="Digite o telefone aqui" required 
+					placeholder="Digite o telefone aqui" 
 					value="<%=objForn.getTelefone()%>"/>
 			</div>
 		</div>
@@ -70,7 +70,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="rua" name="nrua"
-					placeholder="Digite a rua aqui" required 
+					placeholder="Digite a rua aqui" 
 					value="<%=objForn.getRua()%>"/>
 			</div>
 		</div>
@@ -81,7 +81,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="numero" name="nnumero"
-					placeholder="Digite o número aqui" required 
+					placeholder="Digite o número aqui" 
 					value="<%=objForn.getNumero()%>"/>
 			</div>
 		</div>
@@ -91,7 +91,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="bairro" name="nbairro"
-					placeholder="Digite o bairro aqui" required 
+					placeholder="Digite o bairro aqui" 
 					value="<%=objForn.getBairro()%>"/>
 			</div>
 		</div>
@@ -102,7 +102,7 @@
 
 			<div class="col-sm-8">
 				<input type="text"  readonly class="form-control" id="cidade" name="ncidade"
-					placeholder="Digite a cidade aqui" required 
+					placeholder="Digite a cidade aqui" 
 					value="<%=objForn.getCidade()%>"/>
 			</div>
 		</div>
@@ -112,7 +112,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="cep" name="ncep"
-					placeholder="" required 
+					placeholder=""
 					value="<%=objForn.getCep()%>"/>
 			</div>
 			</div>

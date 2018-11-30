@@ -28,7 +28,7 @@
 			<label for="nome" class="col-sm-3 control-label">Nome</label>
 			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="nome" name="nnome"
-					placeholder="" required 
+					placeholder="" 
 					value="<%=objAnimal.getNome()%>"/>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 			<label for="raca" class="col-sm-3 control-label">Raça</label>
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="raca"
-					name="nraca" placeholder="" required 
+					name="nraca" placeholder=""
 					value="<%=objAnimal.getRaca()%>" />
 			</div>
 		</div>
@@ -47,7 +47,7 @@
 			<label for="peso" class="col-sm-3 control-label">Peso ou porte</label>
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="peso"
-					name="npeso" placeholder="" required 
+					name="npeso" placeholder=""
 					value="<%=objAnimal.getPesoOuPorte()%>" />
 			</div>
 		</div>
@@ -57,7 +57,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="datan" name="ndatan"
-					placeholder="" required 
+					placeholder=""
 					value="<%=AnimalController.getInstance().getdataCadastroFormatado(objAnimal)%>"/>
 			</div>
 		</div>
@@ -68,7 +68,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="especie" name="nespecie"
-					placeholder="" required 
+					placeholder=""
 					value="<%=objAnimal.getEspecie()%>"/>
 			</div>
 		</div>
@@ -78,7 +78,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="sexo" name="nsexo"
-					placeholder="" required 
+					placeholder=""
 					value="<%=objAnimal.getSexo()%>"/>
 			</div>
 		</div>
@@ -89,7 +89,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="sexo" name="nsexo"
-					placeholder="" required 
+					placeholder=""
 					value="<%=objAnimal.getCliente().getNome()%>"/>
 			</div>
 		</div>

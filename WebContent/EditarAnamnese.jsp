@@ -28,7 +28,7 @@
 		
 		<div class="form-group">
 			<label for="diagnostico" class="col-sm-3 control-label">Diagnostico</label>
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="diagnostico" name="ndiagnostico"
 					placeholder="Diagnostico" required 
 					value="<%=objAnamnese.getDiagnostico()%>"/>
@@ -38,7 +38,7 @@
 		
 			<div class="form-group">
 			<label for="anamnese" class="col-sm-3 control-label">Anamnese</label>
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="anamnese"
 					name="nanamnese" placeholder="Anamnese" required 
 					value="<%=objAnamnese.getAnamnese()%>" />
@@ -47,7 +47,7 @@
 		
 			<div class="form-group">
 			<label for="medicamento" class="col-sm-3 control-label">Medicamentos</label>
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="rg"
 					name="nmedicamento" placeholder="Medicamentos" required 
 					value="<%=objAnamnese.getMedicamentos()%>" />
@@ -58,7 +58,7 @@
 		<div class="form-group">
 			<label for="procedimentosrealizados" class="col-sm-3 control-label">Procedimentos Realizados</label>
 
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="procedimentosrealizados" name="nprocedimentosrealizados"
 					placeholder="Procedimentos" required 
 					value="<%=objAnamnese.getProcedimentosRealizados()%>"/>
@@ -68,7 +68,7 @@
 		
 		 <div class="form-group">
 			<label for="Ficha" class="col-sm-3 control-label">Ficha Animal</label>
-			<div class="col-sm-5">
+			<div class="col-sm-6">
 				<select name="ncomboFicha" id="comboFicha" class="form-control"
 					class="form-control" required>
 					<c:forEach var="i" items="${FichaAnimalController.getInstance().buscarTodos()}">

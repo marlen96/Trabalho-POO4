@@ -11,16 +11,8 @@
 <jsp:include page="layout.jsp" />
 
 <div class="container" style="padding-top: 20px;">
-	<%
-		String descricao = request.getParameter("ndescricao");
-	    String id = request.getParameter("nid");
-		if (descricao != null) {
-			
-			
-			Tipo tipo = new Tipo();
-			tipo.setDescricao(descricao);
-		 
-			TipoController.getInstance().persistir(tipo);
+<%
+		if (request.getParameter("nnovo") != null) {
 
 	%>
 	
@@ -28,13 +20,22 @@
 	
 	
 	<h1>
-		<span class="label label-success"> Tipo de produto cadastrado com
+		<span class="label label-success"> Tipo cadastrado com
 			sucesso....</span>
 	</h1>
 
 	<%
+		} else if (request.getParameter("nid") != null) {
+	%>
+
+	<h1>
+		<span class="label label-success"> Tipo alterado com
+			sucesso....</span>
+	</h1>
+	<%
 		}
 	%>
+
 
 	<h1>
 		<span class="label label-default"> Listagem de tipos de produtos </span>

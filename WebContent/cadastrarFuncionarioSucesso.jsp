@@ -14,43 +14,8 @@
 <jsp:include page="layout.jsp" />
 
 <div class="container" style="padding-top: 20px;">
-	<%
-		String nome = request.getParameter("nnome");
-	    String cpf =  request.getParameter("ncpf");
-	    String rg =  request.getParameter("nrg");
-	    String telefone =  request.getParameter("ntelefone");
-	    String email =  request.getParameter("nemail");
-	    String rua =  request.getParameter("nrua");
-	    String numero =  request.getParameter("nnumero");
-	    String bairro =  request.getParameter("nbairro");
-	    String cidade =  request.getParameter("ncidade");
-	    String cep =  request.getParameter("ncep");
-	    String titulo =  request.getParameter("ntitulo");
-	    String pis = request.getParameter("npis");
-	    String funcao = request.getParameter("nfuncao");
-	    String estadocivil = request.getParameter("nestadocivil");
-	    String usuario = request.getParameter("ncomboUsuario");
-	    String id = request.getParameter("nid");
-	    
-		if (nome != null) {
-			Funcionario funcionario = new Funcionario();
-		    
-			funcionario.setNome(nome);
-			funcionario.setCpf(cpf);
-			funcionario.setRg(rg);
-			funcionario.setTelefone(telefone);
-			funcionario.setEmail(email);
-			funcionario.setRua(rua);
-			funcionario.setNumero(numero);
-			funcionario.setBairro(bairro);
-			funcionario.setCidade(cidade);
-			funcionario.setCep(cep);
-			funcionario.setTituloDeEleitor(titulo);
-			funcionario.setPis(pis);
-			funcionario.setFuncao(funcao);
-		    funcionario.setEstadoCivil(EstadoCivilEnum.fromInt(Integer.parseInt(estadocivil)));
-		    funcionario.setUsuarios(UsuarioController.getInstance().buscarPoriD(Long.parseLong(usuario)));
-			FuncionarioController.getInstance().persistir(funcionario);
+<%
+		if (request.getParameter("nnovo") != null) {
 
 	%>
 	
@@ -62,6 +27,14 @@
 			sucesso....</span>
 	</h1>
 
+	<%
+		} else if (request.getParameter("nid") != null) {
+	%>
+
+	<h1>
+		<span class="label label-success"> Funcionario alterado com
+			sucesso....</span>
+	</h1>
 	<%
 		}
 	%>

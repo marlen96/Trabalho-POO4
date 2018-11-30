@@ -15,14 +15,14 @@
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="cadastrarContasPagarSucesso.jsp">
+		role="form" action="./controller?acao=cadastrarContasAPagar">
 		
 		<input type="hidden" name="nnovo" value="">
 		
 		<div class="form-group">
-			<label for="valor" class="col-sm-3 control-label">Valor</label>
+			<label for="valor" class="col-sm-3 control-label">Valor R$</label>
 
-			<div class="col-sm-15">
+			<div class="col-sm-3">
 				<input type="number" class="form-control" id="valor" name="nvalor"
 					placeholder="Valor" required 
 					value=""/>
@@ -58,7 +58,7 @@
 		<div class="form-group">
 			<label for="datan" class="col-sm-3 control-label">Data</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="datan" name="ndatan"
 					required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" placeholder="DD/MM/AAAA"/>
 			</div>

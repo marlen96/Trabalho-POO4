@@ -18,18 +18,18 @@
 
 
 <div class="container" style="padding-top: 20px;">
-	<h1>Alterar Venda Serviço</h1>
+	<h1>Alteração Venda Serviço</h1>
 	
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="EditarVendaServicoSucesso.jsp">
+		role="form" action="./controller?acao=editarVendaServico">
 		
 		<input type="hidden" name="nid" value="<%=objVendaServico.getId()%>">
 		
 		<div class="form-group">
 			<label for="descricao" class="col-sm-3 control-label">Descrição</label>
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="descricao" name="ndescricao"
 					placeholder="Descrição" required 
 					value="<%=objVendaServico.getDescricao()%>"/>
@@ -39,7 +39,7 @@
 		
 			<div class="form-group">
 			<label for="vtotal" class="col-sm-3 control-label">Valor Total R$</label>
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="vtotal"
 					name="nvtotal" placeholder="Valor Total" required 
 					value="<%=objVendaServico.getValorTotal()%>" />
@@ -51,7 +51,7 @@
 		
 			<div class="form-group">
 			<label for="cliente" class="col-sm-3 control-label">Cliente</label>
-			<div class="col-sm-4">
+			<div class="col-sm-6">
 				<select name="ncomboCliente" id="comboCliente" class="form-control"
 					class="form-control" required>
 					<c:forEach var="i" items="${ClienteController.getInstance().buscarTodos()}">
@@ -64,7 +64,7 @@
 		
 			<div class="form-group">
 			<label for="funcionario" class="col-sm-3 control-label">Funcionario</label>
-			<div class="col-sm-4">
+			<div class="col-sm-6">
 				<select name="ncomboFuncionario" id="comboFuncionario" class="form-control"
 					class="form-control" required>
 					<c:forEach var="i" items="${FuncionarioController.getInstance().buscarTodos()}">
@@ -77,7 +77,7 @@
 			<div class="form-group">
 			<label for="datan" class="col-sm-3 control-label">Data de agendamento</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="datan" name="ndatan"
 					placeholder="" required 
 					value="<%=VendaServicoController.getInstance().getdataCadastroFormatado(objVendaServico)%>"/>

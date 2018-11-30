@@ -14,21 +14,8 @@
 
 <jsp:include page="layout.jsp" />
 
-<div class="container" style="padding-top: 20px;">
 	<%
-		String pesoantes = request.getParameter("npesoantes");
-
-	    String animal = request.getParameter("ncomboAnimal");
-
-	    String id = request.getParameter("nid");
-		if (pesoantes != null) {
-			
-			
-			
-			FichaAnimal fichanimal = new FichaAnimal();
-			fichanimal.setPesoOuPorteAntesDoProcedimento(pesoantes);
-		   fichanimal.setAnimal(AnimalController.getInstance().buscarPoriD(Long.parseLong(animal)));
-			FichaAnimalController.getInstance().persistir(fichanimal);
+		if (request.getParameter("nnovo") != null) {
 
 	%>
 	
@@ -36,13 +23,24 @@
 	
 	
 	<h1>
-		<span class="label label-success"> Ficha Animal cadastrada com sucesso
+		<span class="label label-success"> Ficha Animal cadastrado com
 			sucesso....</span>
 	</h1>
 
 	<%
+		} else if (request.getParameter("nid") != null) {
+	%>
+
+	<h1>
+		<span class="label label-success"> Ficha Animal alterado com
+			sucesso....</span>
+	</h1>
+	<%
 		}
 	%>
+	
+	
+	
 
 	<h1>
 		<span class="label label-default"> Listagem de Fichas</span>
@@ -77,5 +75,5 @@
 			<a href="index.jsp" class="btn btn-lg btn-warning">Voltar</a>
 		</div>
 	</div>
-</div>
+
 <jsp:include page="button.jsp" />

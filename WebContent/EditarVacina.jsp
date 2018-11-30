@@ -19,12 +19,12 @@
 
 
 <div class="container" style="padding-top: 20px;">
-	<h1>Detalhe de animal</h1>
+	<h1>Alteração de Vacina</h1>
 	
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="EditarVacinaSucesso.jsp">
+		role="form" action="./controller?acao=editarVacina">
 		
 		<input type="hidden" name="nid" value="<%=objVacina.getId()%>">
 		

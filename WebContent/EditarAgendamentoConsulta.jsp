@@ -29,9 +29,9 @@
 		
 		<div class="form-group">
             <label for="descricao" class="col-sm-3 control-label">Descrição</label>
-            <div class="col-sm-10">
+            <div class="col-sm-6">
                 <input type="text" class="form-control" id="descricao" name="ndescricao"
-                    placeholder="Descrição" required 
+                    placeholder="" 
                     value="<%=objAgendamento.getDescricao()%>"/>
             </div>
         </div>
@@ -39,9 +39,9 @@
 
             <div class="form-group">
             <label for="status" class="col-sm-3 control-label">Status</label>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <input type="text" class="form-control" id="status"
-                    name="nstatus" placeholder="Status" required 
+                    name="nstatus" placeholder="" 
                     value="<%=objAgendamento.getStatus()%>" />
             </div>
         </div>
@@ -49,9 +49,9 @@
 			<div class="form-group">
 			<label for="datan" class="col-sm-3 control-label">Data de agendamento</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="datan" name="ndatan"
-					placeholder="Data de Agendamento" required 
+					placeholder="" 
 					value="<%=AgendamentoConsultaController.getInstance().getdataCadastroFormatado(objAgendamento)%>"/>
 			</div>
 		</div>
@@ -59,9 +59,9 @@
 		
 		<div class="form-group">
 			<label for="cliente" class="col-sm-3 control-label">Cliente</label>
-			<div class="col-sm-4">
+			<div class="col-sm-6">
 				<select name="ncomboCliente" id="comboCliente" class="form-control"
-					class="form-control" required>
+					class="form-control" >
 					<c:forEach var="i" items="${ClienteController.getInstance().buscarTodos()}">
 						<option value="${i.id}">${i.nome}</option>
 					</c:forEach>

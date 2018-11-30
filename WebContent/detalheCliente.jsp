@@ -28,7 +28,7 @@
 			<label for="nome" class="col-sm-3 control-label">Nome</label>
 			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="nome" name="nnome"
-					placeholder="Digite a marca aqui" required 
+					placeholder="Digite a marca aqui"
 					value="<%=objCliente.getNome()%>"/>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 			<label for="cpf" class="col-sm-3 control-label">CPF</label>
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="cpf"
-					name="ncpf" placeholder="Digite o CPF aqui" required 
+					name="ncpf" placeholder="Digite o CPF aqui"
 					value="<%=objCliente.getCpf()%>" />
 			</div>
 		</div>
@@ -47,7 +47,7 @@
 			<label for="rg" class="col-sm-3 control-label">RG</label>
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="rg"
-					name="nrg" placeholder="Digite o custo aqui" required 
+					name="nrg" placeholder="Digite o custo aqui"
 					value="<%=objCliente.getRg()%>" />
 			</div>
 		</div>
@@ -58,7 +58,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="telefone" name="ntelefone"
-					placeholder="Digite o telefone aqui" required 
+					placeholder="Digite o telefone aqui"
 					value="<%=objCliente.getTelefone()%>"/>
 			</div>
 		</div>
@@ -68,7 +68,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="email" name="nemail"
-					placeholder="Digite o e-mail aqui" required 
+					placeholder="Digite o e-mail aqui" 
 					value="<%=objCliente.getEmail()%>"/>
 			</div>
 		</div>
@@ -78,7 +78,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="rua" name="nrua"
-					placeholder="Digite a rua aqui" required 
+					placeholder="Digite a rua aqui"
 					value="<%=objCliente.getRua()%>"/>
 			</div>
 		</div>
@@ -89,7 +89,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="numero" name="nnumero"
-					placeholder="Digite o número aqui" required 
+					placeholder="Digite o número aqui"
 					value="<%=objCliente.getNumero()%>"/>
 			</div>
 		</div>
@@ -99,7 +99,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="bairro" name="nbairro"
-					placeholder="Digite o bairro aqui" required 
+					placeholder="Digite o bairro aqui" 
 					value="<%=objCliente.getBairro()%>"/>
 			</div>
 		</div>
@@ -110,7 +110,7 @@
 
 			<div class="col-sm-8">
 				<input type="text"  readonly class="form-control" id="cidade" name="ncidade"
-					placeholder="Digite a cidade aqui" required 
+					placeholder="Digite a cidade aqui"
 					value="<%=objCliente.getCidade()%>"/>
 			</div>
 		</div>
@@ -120,7 +120,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="cep" name="ncep"
-					placeholder="" required 
+					placeholder=""
 					value="<%=objCliente.getCep()%>"/>
 			</div>
 			</div>

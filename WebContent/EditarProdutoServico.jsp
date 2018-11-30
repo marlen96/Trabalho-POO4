@@ -22,13 +22,13 @@
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="EditarProdutoServicoSucesso.jsp">
+		role="form" action="./controller?acao=editarProdutoServico">
 		
 		<input type="hidden" name="nid" value="<%=objProdutoServico.getId()%>">
 		
 		<div class="form-group">
 			<label for="nomeprod" class="col-sm-3 control-label">Nome</label>
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="nomeprod" name="nnomeprod"
 					placeholder="Nome" required 
 					value="<%=objProdutoServico.getNome()%>"/>
@@ -38,7 +38,7 @@
 		
 			<div class="form-group">
 			<label for="marca" class="col-sm-3 control-label">Marca</label>
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="marca"
 					name="nmarca" placeholder="Marca" required 
 					value="<%=objProdutoServico.getMarca()%>" />
@@ -49,7 +49,7 @@
 			<div class="form-group">
 			<label for="precovenda" class="col-sm-3 control-label">Preço de Venda</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="precovenda" name="nprecovenda"
 					placeholder="Preço de Venda" required 
 					value="<%=objProdutoServico.getPrecoDeVenda()%>"/>
@@ -62,7 +62,7 @@
 		<div class="form-group">
 			<label for="precocompra" class="col-sm-3 control-label">Preço de Compra</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="precocompra" name="nprecocompra"
 					placeholder="Preço de Compra" required 
 						value="<%=objProdutoServico.getPrecoDeCompra()%>" />
@@ -72,7 +72,7 @@
 		
 				<div class="form-group">
 			<label for="lote" class="col-sm-3 control-label">Lote</label>
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="lote"
 					name="nlote" placeholder="Lote" required 
 					value="<%=objProdutoServico.getLote()%>" />
@@ -95,7 +95,7 @@
 	<div class="form-group">
 			<label for="datan" class="col-sm-3 control-label">Data de validade</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="datan" name="ndatan"
 					placeholder="" required 
 					value="<%=ProdutoServicoController.getInstance().getdataCadastroFormatado(objProdutoServico)%>"/>

@@ -19,14 +19,14 @@
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="cadastrarVendaServicoSucesso.jsp">
+		role="form" action="./controller?acao=cadastrarVendaServico">
 		
 		<input type="hidden" name="nnovo" value="">
 		
 		<div class="form-group">
 			<label for="descricao" class="col-sm-3 control-label">Descrição</label>
 
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="descricao" name="ndescricao"
 					placeholder="Descrição" required 
 					value=""/>
@@ -36,7 +36,7 @@
 		
 			<div class="form-group">
 			<label for="vtotal" class="col-sm-3 control-label">Valor Total R$:</label>
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="number" class="form-control" id="vtotal"
 					name="nvtotal" placeholder="Valor Total" required 
 					value="" />
@@ -46,7 +46,7 @@
 		
 			<div class="form-group">
 			<label for="cliente" class="col-sm-3 control-label">Cliente</label>
-			<div class="col-sm-4">
+			<div class="col-sm-6">
 				<select name="ncomboCliente" id="comboCliente" class="form-control"
 					class="form-control" required>
 					<c:forEach var="i" items="${ClienteController.getInstance().buscarTodos()}">
@@ -58,7 +58,7 @@
 		
 			<div class="form-group">
 			<label for="funcionario" class="col-sm-3 control-label">Funcionario</label>
-			<div class="col-sm-4">
+			<div class="col-sm-6">
 				<select name="ncomboFuncionario" id="comboFuncionario" class="form-control"
 					class="form-control" required>
 					<c:forEach var="i" items="${FuncionarioController.getInstance().buscarTodos()}">
@@ -72,7 +72,7 @@
 			<div class="form-group">
 			<label for="datan" class="col-sm-3 control-label">Data do Serviço</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="datan" name="ndatan"
 					required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" placeholder="DD/MM/AAAA"/>
 			</div>

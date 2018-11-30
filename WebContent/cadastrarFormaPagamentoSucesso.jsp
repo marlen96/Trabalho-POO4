@@ -10,21 +10,10 @@
 
 <jsp:include page="layout.jsp" />
 
-<div class="container" style="padding-top: 20px;">
-	<%
-		String descricao = request.getParameter("ndescricaopag");
-	    String id = request.getParameter("nid");
-		if (descricao != null) {
-			
-			
-			FormaDePagamento formapagamento = new FormaDePagamento();
-			formapagamento.setDescricao(descricao);
-		 
-			FormaDePagamentoController.getInstance().persistir(formapagamento);
+<%
+		if (request.getParameter("nnovo") != null) {
 
 	%>
-	
-	
 	
 	
 	<h1>
@@ -33,9 +22,17 @@
 	</h1>
 
 	<%
-		}
+		} else if (request.getParameter("nid") != null) {
 	%>
 
+	<h1>
+		<span class="label label-success"> Forma de Pagamento alterado com
+			sucesso....</span>
+	</h1>
+	<%
+		}
+	%>
+	
 	<h1>
 		<span class="label label-default"> Listagem de forma de pagamentos </span>
 	</h1>
@@ -68,5 +65,5 @@
 			<a href="index.jsp" class="btn btn-lg btn-warning">Voltar</a>
 		</div>
 	</div>
-</div>
+
 <jsp:include page="button.jsp" />

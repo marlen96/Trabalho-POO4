@@ -15,19 +15,19 @@
 
 
 <div class="container" style="padding-top: 20px;">
-	<h1>Detalhe de Forma de Pagamento</h1>
+	<h1>Alteração de Forma de Pagamento</h1>
 	
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="cadastrarTipoSucesso.jsp">
+		role="form" action="./controller?acao=editarFormaPagamento">
 		
 		<input type="hidden" name="nid" value="<%=objFormaPagamento.getId()%>">
 		
 		<div class="form-group">
 			<label for="descricao" class="col-sm-3 control-label">Descrição da forma de pagamento</label>
-			<div class="col-sm-10">
-				<input type="text" class="form-control" id="descricao" name="ndescricao"
+			<div class="col-sm-6">
+				<input type="text" class="form-control" id="descricao" name="ndescricaopag"
 					placeholder="Descrição da Forma de Pagamento" required 
 					value="<%=objFormaPagamento.getDescricao()%>"/>
 			</div>

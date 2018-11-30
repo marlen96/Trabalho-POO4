@@ -21,27 +21,7 @@
 
 <div class="container" style="padding-top: 20px;">
 	<%
-		String descricao = request.getParameter("ndescricao");
-	
-	    String cliente = request.getParameter("ncomboCliente");
-
-	    String data = request.getParameter("ndatan");
-	    
-	    String funcionario = request.getParameter("ncomboFuncionario");
-	    
-	    String id = request.getParameter("nid");
-	    
-		if (descricao != null) {
-			Double vtotal = Double.parseDouble(request.getParameter("nvtotal"));	
-			
-			VendaServico vendaservico = new VendaServico();
-			Date date = new Date(data);
-			vendaservico.setDataServico(date);
-			vendaservico.setDescricao(descricao);
-			vendaservico.setValorTotal(BigDecimal.valueOf(vtotal));
-			vendaservico.setFuncionario(FuncionarioController.getInstance().buscarPoriD(Long.parseLong(funcionario)));
-            vendaservico.setCliente(ClienteController.getInstance().buscarPoriD(Long.parseLong(cliente)));
-			VendaServicoController.getInstance().persistir(vendaservico);
+		if (request.getParameter("nnovo") != null) {
 
 	%>
 	
@@ -49,14 +29,21 @@
 	
 	
 	<h1>
-		<span class="label label-success"> venda serviço cadastrada com
+		<span class="label label-success"> venda de serviçoo cadastrado com
 			sucesso....</span>
 	</h1>
 
 	<%
-		}
+		} else if (request.getParameter("nid") != null) {
 	%>
 
+	<h1>
+		<span class="label label-success"> venda de serviço alterado com
+			sucesso....</span>
+	</h1>
+	<%
+		}
+	%>
 	<h1>
 		<span class="label label-default"> Listagem de vendas de serviço</span>
 	</h1>

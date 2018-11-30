@@ -17,14 +17,14 @@
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="cadastrarVacinaSucesso.jsp">
+		role="form" action="./controller?acao=cadastrarVacina">
 		
 		<input type="hidden" name="nnovo" value="">
 		
 		<div class="form-group">
 			<label for="marca" class="col-sm-3 control-label">Marca</label>
 
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="marca" name="nmarca"
 					placeholder="Marca" required 
 					value=""/>
@@ -34,7 +34,7 @@
 		
 			<div class="form-group">
 			<label for="lote" class="col-sm-3 control-label">Lote</label>
-			<div class="col-sm-8">
+			<div class="col-sm-4">
 				<input type="text" class="form-control" id="lote"
 					name="nlote" placeholder="Lote" required 
 					value="" />
@@ -43,7 +43,7 @@
 		
 			<div class="form-group">
 			<label for="fornecedor" class="col-sm-3 control-label">Fornecedor</label>
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="fornecedor"
 					name="nfornecedor" placeholder="Fornecedor" required 
 					value="" />
@@ -52,7 +52,7 @@
 		
 		<div class="form-group">
 			<label for="custo" class="col-sm-3 control-label">Custo</label>
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="number" class="form-control" id="custo"
 					name="ncusto" placeholder="Custo" required 
 					value="" />
@@ -62,7 +62,7 @@
 		<div class="form-group">
 			<label for="datan" class="col-sm-3 control-label">Data de validade</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="datan" name="ndatan"
 					required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" placeholder="DD/MM/AAAA"/>
 			</div>
@@ -70,7 +70,7 @@
 		
 		<div class="form-group">
 			<label for="Ficha" class="col-sm-3 control-label">Ficha Animal</label>
-			<div class="col-sm-5">
+			<div class="col-sm-6">
 				<select name="ncomboFicha" id="comboFicha" class="form-control"
 					class="form-control" required>
 					<c:forEach var="i" items="${FichaAnimalController.getInstance().buscarTodos()}">
@@ -83,7 +83,7 @@
 		
 		<div class="form-group">
 			<label for="tipov" class="col-sm-3 control-label">Tipo de Vacina</label>
-			<div class="col-sm-5">
+			<div class="col-sm-6">
 				<select name="ncombotipov" id="combotipov" class="form-control"
 					class="form-control" required>
 					<c:forEach var="i" items="${TipoDeVacinaController.getInstance().buscarTodos()}">

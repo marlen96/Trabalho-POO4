@@ -15,14 +15,14 @@
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="cadastrarTipoSucesso.jsp">
+		role="form" action="./controller?acao=cadastrarTipo">
 		
 		<input type="hidden" name="nnovo" value="">
 		
 		<div class="form-group">
 			<label for="descricao" class="col-sm-3 control-label">Descrição</label>
 
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="descricao" name="ndescricao"
 					placeholder="Descrição" required 
 					value=""/>

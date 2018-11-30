@@ -46,7 +46,7 @@
 
 
 	<h1>
-		<span class="label label-default" align="center"> Listagem de Animal</span>
+		<span class="label label-default"> Listagem de Pets</span>
 	</h1>
 
 

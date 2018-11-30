@@ -15,14 +15,14 @@
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="cadastrarProdutoServicoSucesso.jsp">
+		role="form" action="./controller?acao=cadastrarProdutoServico">
 		
 		<input type="hidden" name="nnovo" value="">
 		
 		<div class="form-group">
 			<label for="nomeprod" class="col-sm-3 control-label">Nome</label>
 
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="nomeprod" name="nnomeprod"
 					placeholder="Nome do Serviço" required 
 					value=""/>
@@ -32,7 +32,7 @@
 		
 			<div class="form-group">
 			<label for="marca" class="col-sm-3 control-label">Marca</label>
-			<div class="col-sm-8">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="marca"
 					name="nmarca" placeholder="Marca" required 
 					value="" />
@@ -41,7 +41,7 @@
 		
 			<div class="form-group">
 			<label for="precovenda" class="col-sm-3 control-label">Preço de venda</label>
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="number" class="form-control" id="precovenda"
 					name="nprecovenda" placeholder="Preço de Venda" required 
 					value="" />
@@ -52,7 +52,7 @@
 		<div class="form-group">
 			<label for="precocompra" class="col-sm-3 control-label">Preço de compra</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="number" class="form-control" id="precocompra" name="nprecocompra"
 					placeholder="Preço de Compra" required 
 					value=""/>
@@ -62,7 +62,7 @@
 		<div class="form-group">
 			<label for="lote" class="col-sm-3 control-label">Lote</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-4">
 				<input type="text" class="form-control" id="lote" name="nlote"
 					placeholder="Lote" required 
 					value=""/>
@@ -84,7 +84,7 @@
 			<div class="form-group">
 			<label for="datan" class="col-sm-3 control-label">Data de validade</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="datan" name="ndatan"
 					required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" placeholder="DD/MM/AAAA"/>
 			</div>

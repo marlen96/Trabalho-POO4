@@ -15,7 +15,7 @@
 
 
 <div class="container" style="padding-top: 20px;">
-	<h1>Detalhe de animal</h1>
+	<h1>Detalhe de Tipo de Vacina</h1>
 	
 	<br />
 
@@ -28,7 +28,7 @@
 			<label for="descricao" class="col-sm-3 control-label">Descrição da Vacina</label>
 			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="descricao" name="ndescricao"
-					placeholder="" required 
+					placeholder="" 
 					value="<%=objTipoVacina.getDescricao()%>"/>
 			</div>
 		</div>

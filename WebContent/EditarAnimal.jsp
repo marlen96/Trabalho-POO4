@@ -18,7 +18,7 @@
 
 
 <div class="container" style="padding-top: 20px;">
-	<h1>Editar dados do Animal</h1>
+	<h1>Alteração de Animal</h1>
 	
 	<br />
 
@@ -29,7 +29,7 @@
 		
 		<div class="form-group">
 			<label for="nome" class="col-sm-3 control-label">Nome</label>
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="nome" name="nnome"
 					placeholder="Nome do Pet" required 
 					value="<%=objAnimal.getNome()%>"/>
@@ -39,7 +39,7 @@
 		
 			<div class="form-group">
 			<label for="raca" class="col-sm-3 control-label">Raça</label>
-			<div class="col-sm-8">
+			<div class="col-sm-4">
 				<input type="text" class="form-control" id="raca"
 					name="nraca" placeholder="Raça" required 
 					value="<%=objAnimal.getRaca()%>" />
@@ -48,7 +48,7 @@
 		
 			<div class="form-group">
 			<label for="peso" class="col-sm-3 control-label">Peso ou porte</label>
-			<div class="col-sm-8">
+			<div class="col-sm-3">
 				<input type="text" class="form-control" id="peso"
 					name="npeso" placeholder="Peso ou Porte" required 
 					value="<%=objAnimal.getPesoOuPorte()%>" />
@@ -58,7 +58,7 @@
 		<div class="form-group">
 			<label for="datan" class="col-sm-3 control-label">Data nascimento</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-2">
 				<input type="text" class="form-control" id="datan" name="ndatan"
 					 required pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}"
 					value="<%=AnimalController.getInstance().getdataCadastroFormatado(objAnimal)%>"/>
@@ -69,7 +69,7 @@
 		<div class="form-group">
 			<label for="especie" class="col-sm-3 control-label">Espécie</label>
 
-			<div class="col-sm-8">
+			<div class="col-sm-4">
 				<input type="text" class="form-control" id="especie" name="nespecie"
 					placeholder="Espécie" required 
 					value="<%=objAnimal.getEspecie()%>"/>
@@ -79,7 +79,7 @@
 		   <div class="form-group ">
              
              <label for="sexo" class="col-md-1 control-label">Sexo</label>
-             <div class="col-md-5">
+             <div class="col-md-2">
              <select  class="form-control"  id="sexo" name="nsexo" data-placeholder="Selecione o sexo">
          	 <option value="Macho">Macho</option>
          	<option value="Fêmea">Fêmea</option>
@@ -90,7 +90,7 @@
 		
 		<div class="form-group">
 			<label for="cliente" class="col-sm-3 control-label">Cliente</label>
-			<div class="col-sm-4">
+			<div class="col-sm-6">
 				<select name="ncomboCliente" id="comboCliente" class="form-control"
 					class="form-control" required>
 					<c:forEach var="i" items="${ClienteController.getInstance().buscarTodos()}">

@@ -12,15 +12,7 @@
 
 <div class="container" style="padding-top: 20px;">
 	<%
-		String descricao = request.getParameter("ndescricaoconta");
-	    String id = request.getParameter("nid");
-		if (descricao != null) {
-			
-			
-			TipoDeConta tipoconta = new TipoDeConta();
-			tipoconta.setDescricao(descricao);
-		 
-			TipoDeContaController.getInstance().persistir(tipoconta);
+		if (request.getParameter("nnovo") != null) {
 
 	%>
 	
@@ -28,13 +20,23 @@
 	
 	
 	<h1>
-		<span class="label label-success"> Tipo de conta cadastrado com
+		<span class="label label-success"> Tipo de conta cadastrada com
 			sucesso....</span>
 	</h1>
 
 	<%
+		} else if (request.getParameter("nid") != null) {
+	%>
+
+	<h1>
+		<span class="label label-success"> Tipo de conta alterada com
+			sucesso....</span>
+	</h1>
+	<%
 		}
 	%>
+
+
 
 	<h1>
 		<span class="label label-default"> Listagem de tipos de conta </span>

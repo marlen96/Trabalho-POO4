@@ -17,29 +17,7 @@
 
 <div class="container" style="padding-top: 20px;">
 	<%
-		String nome = request.getParameter("nnomeprod");
-	    String marca =  request.getParameter("nmarca");
-	    String lote = request.getParameter("nlote");
-	    String tipo = request.getParameter("ncomboTipo");
-	    String data = request.getParameter("ndatan");
-	    
-	    String id = request.getParameter("nid");
-		if (nome != null) {
-			Double precovenda = Double.parseDouble(request.getParameter("nprecovenda"));
-		    Double precocompra = Double.parseDouble(request.getParameter("nprecocompra"));
-			ProdutoServico produtoservico = new ProdutoServico();
-			
-		    Date date = new Date(data);
-			produtoservico.setValidade(date);
-			produtoservico.setNome(nome);
-			produtoservico.setMarca(marca);
-			produtoservico.setPrecoDeVenda(BigDecimal.valueOf(precovenda));
-			produtoservico.setPrecoDeCompra(BigDecimal.valueOf(precocompra));
-			produtoservico.setLote(lote);
-			produtoservico.setTipo(TipoController.getInstance().buscarPoriD(Long.parseLong(tipo)));
-			
-					
-			ProdutoServicoController.getInstance().persistir(produtoservico);
+		if (request.getParameter("nnovo") != null) {
 
 	%>
 	
@@ -47,10 +25,18 @@
 	
 	
 	<h1>
-		<span class="label label-success"> Produto ou Serviço cadastrado com
+		<span class="label label-success"> Produto Serviço cadastrado com
 			sucesso....</span>
 	</h1>
 
+	<%
+		} else if (request.getParameter("nid") != null) {
+	%>
+
+	<h1>
+		<span class="label label-success"> Produto Serviço alterado com
+			sucesso....</span>
+	</h1>
 	<%
 		}
 	%>

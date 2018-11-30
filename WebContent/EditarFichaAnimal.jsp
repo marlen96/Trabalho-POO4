@@ -17,19 +17,19 @@
 
 
 <div class="container" style="padding-top: 20px;">
-	<h1>Edição de Ficha Animal</h1>
+	<h1>Alteração de Ficha Animal</h1>
 	
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="EditarFichaAnimalSucesso.jsp">
+		role="form" action="./controller?acao=editarFichaAnimal">
 		
 		<input type="hidden" name="nid" value="<%=objFichaAnimal.getId()%>">
 		
 		
 		<div class="form-group">
 			<label for="animal" class="col-sm-3 control-label">Pet</label>
-			<div class="col-sm-4">
+			<div class="col-sm-6">
 				<select name="ncomboAnimal" id="comboAnimal" class="form-control"
 					class="form-control" required>
 					<c:forEach var="i" items="${AnimalController.getInstance().buscarTodos()}">
@@ -42,7 +42,7 @@
 		
 			<div class="form-group">
 			<label for="pesoantes" class="col-sm-3 control-label">Peso ou Porte Antes do Procedimento</label>
-			<div class="col-sm-8">
+			<div class="col-sm-3">
 				<input type="text" class="form-control" id="pesoantes"
 					name="npesoantes" placeholder="Peso ou Porte Antes do Procedimento" required 
 					value="<%=objFichaAnimal.getPesoOuPorteAntesDoProcedimento()%>" />

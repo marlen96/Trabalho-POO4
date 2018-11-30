@@ -28,7 +28,7 @@
 			<label for="nomeprod" class="col-sm-3 control-label">Nome</label>
 			<div class="col-sm-10">
 				<input type="text" readonly class="form-control" id="nomeprod" name="nnomeprod"
-					placeholder="" required 
+					placeholder="" 
 					value="<%=objProdutoServico.getNome()%>"/>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 			<label for="marca" class="col-sm-3 control-label">Marca</label>
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="marca"
-					name="nmarca" placeholder="" required 
+					name="nmarca" placeholder="" 
 					value="<%=objProdutoServico.getMarca()%>" />
 			</div>
 		</div>
@@ -49,7 +49,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="precovenda" name="nprecovenda"
-					placeholder="" required 
+					placeholder="" 
 					value="<%=objProdutoServico.getPrecoDeVenda()%>"/>
 			</div>
 		</div>
@@ -62,7 +62,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="precocompra" name="nprecocompra"
-					placeholder="" required 
+					placeholder="" 
 						value="<%=objProdutoServico.getPrecoDeCompra()%>" />
 			</div>
 		</div>
@@ -72,7 +72,7 @@
 			<label for="lote" class="col-sm-3 control-label">Lote</label>
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="lote"
-					name="nlote" placeholder="" required 
+					name="nlote" placeholder=""
 					value="<%=objProdutoServico.getLote()%>" />
 			</div>
 		</div>
@@ -83,7 +83,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="sexo" name="nsexo"
-					placeholder="" required 
+					placeholder="" 
 					value="<%=objProdutoServico.getTipo().getDescricao()%>"/>
 			</div>
 		</div>
@@ -93,7 +93,7 @@
 
 			<div class="col-sm-8">
 				<input type="text" readonly class="form-control" id="datan" name="ndatan"
-					placeholder="" required 
+					placeholder=""
 					value="<%=ProdutoServicoController.getInstance().getdataCadastroFormatado(objProdutoServico)%>"/>
 	    </div>
 	    

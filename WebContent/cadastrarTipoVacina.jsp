@@ -15,14 +15,15 @@
 	<br />
 
 	<form class="form-horizontal" method="post" data-toggle="validator"
-		role="form" action="cadastrarTipoVacinaSucesso.jsp">
+		role="form" action="./controller?acao=cadastrarTVacina">
 		
-		<input type="hidden" name="nnovo" value="">bjTipoVacina.getId()%>">
+		<input type="hidden" name="nnovo" value="">
+		
 		
 		<div class="form-group">
 			<label for="descricao" class="col-sm-3 control-label">Descrição</label>
 
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<input type="text" class="form-control" id="descricao" name="ndescricao"
 					placeholder="Descrição" required 
 					value=""/>

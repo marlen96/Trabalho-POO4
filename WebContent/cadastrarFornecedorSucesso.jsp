@@ -11,33 +11,9 @@
 
 <jsp:include page="layout.jsp" />
 
-<div class="container" style="padding-top: 20px;">
+
 	<%
-		String apelido = request.getParameter("napelido");
-	    String cnpj =  request.getParameter("ncnpj");
-	    String razaosocial =  request.getParameter("nrazaosocial");
-	    String telefone =  request.getParameter("ntelefone");
-	    String rua =  request.getParameter("nrua");
-	    String numero =  request.getParameter("nnumero");
-	    String bairro =  request.getParameter("nbairro");
-	    String cidade =  request.getParameter("ncidade");
-	    String cep =  request.getParameter("ncep");
-	    String id = request.getParameter("nid");
-	    
-		if (apelido != null) {
-			Fornecedor fornecedor = new Fornecedor();
-		    
-			fornecedor.setNomeFantasia(apelido);
-			fornecedor.setCnpj(cnpj);
-			fornecedor.setRazaoSocial(razaosocial);
-			fornecedor.setTelefone(telefone);		
-			fornecedor.setRua(rua);
-			fornecedor.setNumero(numero);
-			fornecedor.setBairro(bairro);
-			fornecedor.setCidade(cidade);
-			fornecedor.setCep(cep);
-			FornecedorController.getInstance().persistir(fornecedor);
-	
+		if (request.getParameter("nnovo") != null) {
 
 	%>
 	
@@ -49,6 +25,14 @@
 			sucesso....</span>
 	</h1>
 
+	<%
+		} else if (request.getParameter("nid") != null) {
+	%>
+
+	<h1>
+		<span class="label label-success"> Fornecedor alterado com
+			sucesso....</span>
+	</h1>
 	<%
 		}
 	%>
@@ -90,5 +74,5 @@
 			<a href="index.jsp" class="btn btn-lg btn-warning">Voltar</a>
 		</div>
 	</div>
-</div>
+
 <jsp:include page="button.jsp" />
